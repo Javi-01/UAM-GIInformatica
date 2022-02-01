@@ -1,0 +1,518 @@
+\hypertarget{object_8h}{}\doxysection{include/object.h File Reference}
+\label{object_8h}\index{include/object.h@{include/object.h}}
+
+
+Administrar objetos.  
+
+
+{\ttfamily \#include \char`\"{}space.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}link.\+h\char`\"{}}\newline
+Include dependency graph for object.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{object_8h_acdc7844fbd4d45737d4aa56834d37829}{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+TS}}~20
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__Object}{\+\_\+\+Object}} \mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$ \mbox{\hyperlink{object_8h_abb0cd30fca5fbddf137c6c04df66bbc7}{object\+\_\+create}} (\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Crea un objet con el id recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{object_8h_a19d6d51fee809e3801893eefc789f4b4}{object\+\_\+destroy}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Destruye el objeto recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{object_8h_ac5af152381a21853c6a28cc120e8e7fe}{object\+\_\+get\+\_\+id}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Obtiene el id de un objeto recibido. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{object_8h_a19320eebcbbd38533a18c741b804b584}{object\+\_\+get\+\_\+name}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre de un objeto recibido. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{object_8h_a4b26ef1ec7057673899b58a5bf55f06a}{object\+\_\+get\+\_\+description}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Obtiene la descripción de un objeto recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{object_8h_ae88627a8873d8f08fba9c0470a19cfc0}{object\+\_\+set\+\_\+description}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object, char $\ast$description)
+\begin{DoxyCompactList}\small\item\em Modifica la descripción de un objeto recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{object_8h_ac15dc062c857503ec0ca66037caffd80}{object\+\_\+set\+\_\+name}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Cambia el nombre de un objeto por el nombre recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{object_8h_adebb77fb5d33fc70616ab3b2b64c27ce}{object\+\_\+print}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Imprime en pantalla los datos del onjeto recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{object_8h_a4ae61609d5d2de4085df83392e7ed0f2}{object\+\_\+open\+\_\+link}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} link\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Comprueba si puede puede abrir o no un cierto link. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{object_8h_afda8e2ff0ff19356cca8d2c7aff19b94}{object\+\_\+get\+\_\+link\+\_\+id}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Obtiene el id del link que puede abrir el objeto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{object_8h_a9c9233aca8e392cb4327af6a2df09a32}{object\+\_\+set\+\_\+link\+\_\+id}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id\+\_\+link)
+\begin{DoxyCompactList}\small\item\em Establece el id del link que podrá abrir el objeto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{object_8h_a680c6f63ef403404eddc895f812c17fc}{object\+\_\+set\+\_\+iluminate}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object, \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} iluminate)
+\begin{DoxyCompactList}\small\item\em Establece si el objeto puede o no iluminar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{object_8h_acc6ae3dfd6f49bafd7d5d4574e346b62}{object\+\_\+get\+\_\+iluminate}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Obtiene si el objeto puede o no iluminar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{object_8h_a2003212447400254939cc2d213d37112}{object\+\_\+is\+\_\+turnedon}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Obtiene si el objeto está o no iluminado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{object_8h_a10d4e70293997667f7666b3e33adee04}{object\+\_\+set\+\_\+turnedon}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object, \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} turnedon)
+\begin{DoxyCompactList}\small\item\em Cambia el estado de la iluminación del objeto, es decir, cambia de encendido a apagado y viceversa, en caso de que el objeto pueda iluminarse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{object_8h_a6f2835f4b5e86283178ddb49ecfc326d}{object\+\_\+get\+\_\+mobility}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Obtiene la movilidad de un objeto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{object_8h_a8d4565b3dbfaee46082b0cbd4e0e7ab8}{object\+\_\+set\+\_\+movility}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object, \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} movility)
+\begin{DoxyCompactList}\small\item\em Cambia la movilidad de un objeto por la recibida. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{object_8h_a24cf8a35e3c4f90f3eac5ef49c570185}{object\+\_\+get\+\_\+dependecy}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Obtiene el id del objeto del que el objeto indicado por parametro depende. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{object_8h_aef6e47c46e5fcf38b6588dd82aa96120}{object\+\_\+set\+\_\+dependecy}} (\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} depends)
+\begin{DoxyCompactList}\small\item\em Cambia la dependencia por la nueva indicada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Administrar objetos. 
+
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12-\/02-\/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{object_8h_acdc7844fbd4d45737d4aa56834d37829}\label{object_8h_acdc7844fbd4d45737d4aa56834d37829}} 
+\index{object.h@{object.h}!MAX\_OBJECTS@{MAX\_OBJECTS}}
+\index{MAX\_OBJECTS@{MAX\_OBJECTS}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_OBJECTS}{MAX\_OBJECTS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+TS~20}
+
+Cantidad máxima de objetos 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}\label{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}} 
+\index{object.h@{object.h}!Object@{Object}}
+\index{Object@{Object}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{Object}{Object}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__Object}{\+\_\+\+Object}} \mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}}}
+
+Estructura de los objetos 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{object_8h_abb0cd30fca5fbddf137c6c04df66bbc7}\label{object_8h_abb0cd30fca5fbddf137c6c04df66bbc7}} 
+\index{object.h@{object.h}!object\_create@{object\_create}}
+\index{object\_create@{object\_create}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_create()}{object\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}}$\ast$ object\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Crea un objet con el id recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & del objeto a crear \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+U\+LL en caso de fallo o un nuevo objeto en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_a19d6d51fee809e3801893eefc789f4b4}\label{object_8h_a19d6d51fee809e3801893eefc789f4b4}} 
+\index{object.h@{object.h}!object\_destroy@{object\_destroy}}
+\index{object\_destroy@{object\_destroy}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_destroy()}{object\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} object\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+Destruye el objeto recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_a24cf8a35e3c4f90f3eac5ef49c570185}\label{object_8h_a24cf8a35e3c4f90f3eac5ef49c570185}} 
+\index{object.h@{object.h}!object\_get\_dependecy@{object\_get\_dependecy}}
+\index{object\_get\_dependecy@{object\_get\_dependecy}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_get\_dependecy()}{object\_get\_dependecy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} object\+\_\+get\+\_\+dependecy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+Obtiene el id del objeto del que el objeto indicado por parametro depende. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+O\+\_\+\+ID en caso de fallo o el id del objeto en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_a4b26ef1ec7057673899b58a5bf55f06a}\label{object_8h_a4b26ef1ec7057673899b58a5bf55f06a}} 
+\index{object.h@{object.h}!object\_get\_description@{object\_get\_description}}
+\index{object\_get\_description@{object\_get\_description}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_get\_description()}{object\_get\_description()}}
+{\footnotesize\ttfamily const char$\ast$ object\+\_\+get\+\_\+description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+Obtiene la descripción de un objeto recibido. 
+
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL en caso de fallo o la descripcion del objeto en caso de éxito. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_ac5af152381a21853c6a28cc120e8e7fe}\label{object_8h_ac5af152381a21853c6a28cc120e8e7fe}} 
+\index{object.h@{object.h}!object\_get\_id@{object\_get\_id}}
+\index{object\_get\_id@{object\_get\_id}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_get\_id()}{object\_get\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} object\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+Obtiene el id de un objeto recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+U\+LL en caso de fallo o el id del objeto en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_acc6ae3dfd6f49bafd7d5d4574e346b62}\label{object_8h_acc6ae3dfd6f49bafd7d5d4574e346b62}} 
+\index{object.h@{object.h}!object\_get\_iluminate@{object\_get\_iluminate}}
+\index{object\_get\_iluminate@{object\_get\_iluminate}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_get\_iluminate()}{object\_get\_iluminate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} object\+\_\+get\+\_\+iluminate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+Obtiene si el objeto puede o no iluminar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna F\+A\+L\+SE si no puede iluminar o T\+R\+UE en caso de que si pueda iluminar.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_afda8e2ff0ff19356cca8d2c7aff19b94}\label{object_8h_afda8e2ff0ff19356cca8d2c7aff19b94}} 
+\index{object.h@{object.h}!object\_get\_link\_id@{object\_get\_link\_id}}
+\index{object\_get\_link\_id@{object\_get\_link\_id}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_get\_link\_id()}{object\_get\_link\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} object\+\_\+get\+\_\+link\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+Obtiene el id del link que puede abrir el objeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+U\+LL en caso de fallo o el id del link en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_a6f2835f4b5e86283178ddb49ecfc326d}\label{object_8h_a6f2835f4b5e86283178ddb49ecfc326d}} 
+\index{object.h@{object.h}!object\_get\_mobility@{object\_get\_mobility}}
+\index{object\_get\_mobility@{object\_get\_mobility}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_get\_mobility()}{object\_get\_mobility()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} object\+\_\+get\+\_\+mobility (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+Obtiene la movilidad de un objeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna F\+A\+L\+SE en caso de fallo o en caso de que el objeto no se pueda mover; o T\+R\+UE en caso de que si se pueda mover.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_a19320eebcbbd38533a18c741b804b584}\label{object_8h_a19320eebcbbd38533a18c741b804b584}} 
+\index{object.h@{object.h}!object\_get\_name@{object\_get\_name}}
+\index{object\_get\_name@{object\_get\_name}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_get\_name()}{object\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ object\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+Obtiene el nombre de un objeto recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+U\+LL en caso de fallo o el nombre del objeto en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_a2003212447400254939cc2d213d37112}\label{object_8h_a2003212447400254939cc2d213d37112}} 
+\index{object.h@{object.h}!object\_is\_turnedon@{object\_is\_turnedon}}
+\index{object\_is\_turnedon@{object\_is\_turnedon}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_is\_turnedon()}{object\_is\_turnedon()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} object\+\_\+is\+\_\+turnedon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+Obtiene si el objeto está o no iluminado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna F\+A\+L\+SE si no está iluminado o T\+R\+UE en caso de que si.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_a4ae61609d5d2de4085df83392e7ed0f2}\label{object_8h_a4ae61609d5d2de4085df83392e7ed0f2}} 
+\index{object.h@{object.h}!object\_open\_link@{object\_open\_link}}
+\index{object\_open\_link@{object\_open\_link}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_open\_link()}{object\_open\_link()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} object\+\_\+open\+\_\+link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{link\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Comprueba si puede puede abrir o no un cierto link. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+{\em link\+\_\+id} & id del link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna OK si puede abrir el link o E\+R\+R\+OR en caso contrario.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_adebb77fb5d33fc70616ab3b2b64c27ce}\label{object_8h_adebb77fb5d33fc70616ab3b2b64c27ce}} 
+\index{object.h@{object.h}!object\_print@{object\_print}}
+\index{object\_print@{object\_print}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_print()}{object\_print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} object\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+Imprime en pantalla los datos del onjeto recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR si no hay objeto o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_aef6e47c46e5fcf38b6588dd82aa96120}\label{object_8h_aef6e47c46e5fcf38b6588dd82aa96120}} 
+\index{object.h@{object.h}!object\_set\_dependecy@{object\_set\_dependecy}}
+\index{object\_set\_dependecy@{object\_set\_dependecy}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_set\_dependecy()}{object\_set\_dependecy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} object\+\_\+set\+\_\+dependecy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{depends }\end{DoxyParamCaption})}
+
+
+
+Cambia la dependencia por la nueva indicada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+{\em depends} & id del nuevo objeto del que depende \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_ae88627a8873d8f08fba9c0470a19cfc0}\label{object_8h_ae88627a8873d8f08fba9c0470a19cfc0}} 
+\index{object.h@{object.h}!object\_set\_description@{object\_set\_description}}
+\index{object\_set\_description@{object\_set\_description}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_set\_description()}{object\_set\_description()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} object\+\_\+set\+\_\+description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object,  }\item[{char $\ast$}]{description }\end{DoxyParamCaption})}
+
+
+
+Modifica la descripción de un objeto recibido. 
+
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em description} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL en caso de fallo u Okay si se ha realizado con éxito. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a680c6f63ef403404eddc895f812c17fc}\label{object_8h_a680c6f63ef403404eddc895f812c17fc}} 
+\index{object.h@{object.h}!object\_set\_iluminate@{object\_set\_iluminate}}
+\index{object\_set\_iluminate@{object\_set\_iluminate}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_set\_iluminate()}{object\_set\_iluminate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} object\+\_\+set\+\_\+iluminate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object,  }\item[{\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}}]{iluminate }\end{DoxyParamCaption})}
+
+
+
+Establece si el objeto puede o no iluminar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+{\em iluminate} & booleano que indica si podrá iluminar el objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_a9c9233aca8e392cb4327af6a2df09a32}\label{object_8h_a9c9233aca8e392cb4327af6a2df09a32}} 
+\index{object.h@{object.h}!object\_set\_link\_id@{object\_set\_link\_id}}
+\index{object\_set\_link\_id@{object\_set\_link\_id}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_set\_link\_id()}{object\_set\_link\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} object\+\_\+set\+\_\+link\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id\+\_\+link }\end{DoxyParamCaption})}
+
+
+
+Establece el id del link que podrá abrir el objeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+{\em id\+\_\+link} & id del link que podra abrir el objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_a8d4565b3dbfaee46082b0cbd4e0e7ab8}\label{object_8h_a8d4565b3dbfaee46082b0cbd4e0e7ab8}} 
+\index{object.h@{object.h}!object\_set\_movility@{object\_set\_movility}}
+\index{object\_set\_movility@{object\_set\_movility}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_set\_movility()}{object\_set\_movility()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} object\+\_\+set\+\_\+movility (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object,  }\item[{\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}}]{movility }\end{DoxyParamCaption})}
+
+
+
+Cambia la movilidad de un objeto por la recibida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+{\em movility} & nueva movilidad del objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_ac15dc062c857503ec0ca66037caffd80}\label{object_8h_ac15dc062c857503ec0ca66037caffd80}} 
+\index{object.h@{object.h}!object\_set\_name@{object\_set\_name}}
+\index{object\_set\_name@{object\_set\_name}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_set\_name()}{object\_set\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} object\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Cambia el nombre de un objeto por el nombre recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+{\em name} & nuevo nombre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{object_8h_a10d4e70293997667f7666b3e33adee04}\label{object_8h_a10d4e70293997667f7666b3e33adee04}} 
+\index{object.h@{object.h}!object\_set\_turnedon@{object\_set\_turnedon}}
+\index{object\_set\_turnedon@{object\_set\_turnedon}!object.h@{object.h}}
+\doxysubsubsection{\texorpdfstring{object\_set\_turnedon()}{object\_set\_turnedon()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} object\+\_\+set\+\_\+turnedon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object,  }\item[{\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}}]{turnedon }\end{DoxyParamCaption})}
+
+
+
+Cambia el estado de la iluminación del objeto, es decir, cambia de encendido a apagado y viceversa, en caso de que el objeto pueda iluminarse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & puntero al objeto \\
+\hline
+{\em turnedon} & booleano que indica si se apagará o se encenderá el objeto\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna OK en caso de cambiarse el estado o E\+R\+R\+OR en caso contrario
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Iván Fernández París 
+\end{DoxyAuthor}

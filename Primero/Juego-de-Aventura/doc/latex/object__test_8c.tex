@@ -1,0 +1,577 @@
+\hypertarget{object__test_8c}{}\doxysection{src/object\+\_\+test.c File Reference}
+\label{object__test_8c}\index{src/object\_test.c@{src/object\_test.c}}
+
+
+It tests player module.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}object\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}link.\+h\char`\"{}}\newline
+Include dependency graph for object\+\_\+test.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{object__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}{M\+A\+X\+\_\+\+T\+E\+S\+TS}}~32
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{object__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Main function for object unit tests. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{object__test_8c_a3836d69f92ce7149d56bafcaec83f516}{test1\+\_\+object\+\_\+create}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_add54ab5e33a1b0a93e9ddcf73591bd9f}{test2\+\_\+object\+\_\+create}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_aa88e9e9dab92ba9c58851d7a7a8415f0}{test1\+\_\+object\+\_\+get\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a1ff250f0f43297f57fcce1f3a6ae490b}{test2\+\_\+object\+\_\+get\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_ad2411bc3cc47c9905e63a3d9c561d369}{test1\+\_\+object\+\_\+get\+\_\+name}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_abdfafbc7b8588d3dcdb05fd2beb2397e}{test2\+\_\+object\+\_\+get\+\_\+name}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_afe180b78a201df7bc1629701db1d464c}{test1\+\_\+object\+\_\+get\+\_\+description}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a35d9a40796133791c157c044ea1cef85}{test2\+\_\+object\+\_\+get\+\_\+description}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_afb26b8c66d332354df8bfd57a8033b8f}{test1\+\_\+object\+\_\+set\+\_\+description}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a65e32c3642c1d9207cdd84b134c616da}{test2\+\_\+object\+\_\+set\+\_\+description}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a74e25ad653c4a32b9922fff8e4f916fd}{test1\+\_\+object\+\_\+set\+\_\+name}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_acf42b7e7be91ede243f2aaa56c4c9347}{test2\+\_\+object\+\_\+set\+\_\+name}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a77da357bf5e311962d725b890b6fac44}{test1\+\_\+object\+\_\+set\+\_\+link}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_ab8597e7c8125490236b286d10366919d}{test2\+\_\+object\+\_\+set\+\_\+link}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a05908887901134e48b6a31d0b71303c0}{test1\+\_\+object\+\_\+open\+\_\+link}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a7118d2c82e7806a4569b793c479edd31}{test2\+\_\+object\+\_\+open\+\_\+link}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a6d17c0dc75873dfdbd834b322c40475b}{test1\+\_\+object\+\_\+set\+\_\+iluminate}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a151dbc97cb1ce56e3b46bf29b97104aa}{test2\+\_\+object\+\_\+set\+\_\+iluminate}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_af8b526a9b48e2490acfa9396a0e5867b}{test1\+\_\+object\+\_\+get\+\_\+iluminate}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a87e22dc68b0458111e9573c071aac732}{test2\+\_\+object\+\_\+get\+\_\+iluminate}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_ab561aadfeafb4c3382caddf28b4060b3}{test1\+\_\+object\+\_\+set\+\_\+turnedon}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a65993aa7fcccdbe7f9433de256485db8}{test2\+\_\+object\+\_\+set\+\_\+turnedon}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a11fe154771196e5d133ba55907adb62d}{test1\+\_\+object\+\_\+is\+\_\+turnedon}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a0fc6aaa4ecd65a5597500423d8357bf3}{test2\+\_\+object\+\_\+is\+\_\+turnedon}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a995104e12c96d62c4aede0055eb268cf}{test1\+\_\+object\+\_\+set\+\_\+movility}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_af41a7aa14d5acbbf57bdd159577abf31}{test2\+\_\+object\+\_\+set\+\_\+movility}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a8a310946ba3ea83409ba14054a7194d6}{test1\+\_\+object\+\_\+get\+\_\+movility}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_a69834f988f2e765345ac96ce873dee4c}{test2\+\_\+object\+\_\+get\+\_\+movility}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_aff882e9769d27a86bd3ede47c1be29d4}{test1\+\_\+object\+\_\+get\+\_\+dependency}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_af8746713a9b762b1295bb1c4186260b8}{test2\+\_\+object\+\_\+get\+\_\+dependency}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_aef1285f1a9ad407e927375aba038a706}{test1\+\_\+object\+\_\+set\+\_\+dependency}} ()
+\item 
+void \mbox{\hyperlink{object__test_8c_aa60a8195c4200bf68d77b34705a5fd40}{test2\+\_\+object\+\_\+set\+\_\+dependency}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It tests player module. 
+
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28-\/03-\/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{object__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}\label{object__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}} 
+\index{object\_test.c@{object\_test.c}!MAX\_TESTS@{MAX\_TESTS}}
+\index{MAX\_TESTS@{MAX\_TESTS}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_TESTS}{MAX\_TESTS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+E\+S\+TS~32}
+
+Numero máximo de test que se realizaran en este modulo 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{object__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{object__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{object\_test.c@{object\_test.c}!main@{main}}
+\index{main@{main}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Main function for object unit tests. 
+
+You may execute A\+LL or a S\+I\+N\+G\+LE test 1.-\/ No parameter -\/$>$ A\+LL test are executed 2.-\/ A number means a particular test (the one identified by that number) is executed \mbox{\Hypertarget{object__test_8c_a3836d69f92ce7149d56bafcaec83f516}\label{object__test_8c_a3836d69f92ce7149d56bafcaec83f516}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_create@{test1\_object\_create}}
+\index{test1\_object\_create@{test1\_object\_create}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_create()}{test1\_object\_create()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000087}{Test}}]Test 1 para object\+\_\+create \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto creado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+object!=N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_aff882e9769d27a86bd3ede47c1be29d4}\label{object__test_8c_aff882e9769d27a86bd3ede47c1be29d4}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_get\_dependency@{test1\_object\_get\_dependency}}
+\index{test1\_object\_get\_dependency@{test1\_object\_get\_dependency}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_get\_dependency()}{test1\_object\_get\_dependency()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+dependency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000113}{Test}}]Test 1 object\+\_\+get\+\_\+dependecy \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+dependency del objeto = 4 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output 4 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_afe180b78a201df7bc1629701db1d464c}\label{object__test_8c_afe180b78a201df7bc1629701db1d464c}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_get\_description@{test1\_object\_get\_description}}
+\index{test1\_object\_get\_description@{test1\_object\_get\_description}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_get\_description()}{test1\_object\_get\_description()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000093}{Test}}]Test 1 object\+\_\+get\+\_\+description \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+nombre del objeto = adios 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==(strcmp=0) 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_aa88e9e9dab92ba9c58851d7a7a8415f0}\label{object__test_8c_aa88e9e9dab92ba9c58851d7a7a8415f0}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_get\_id@{test1\_object\_get\_id}}
+\index{test1\_object\_get\_id@{test1\_object\_get\_id}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_get\_id()}{test1\_object\_get\_id()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000089}{Test}}]Test 1 object\+\_\+get\+\_\+id \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del objeto = 25 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==25 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_af8b526a9b48e2490acfa9396a0e5867b}\label{object__test_8c_af8b526a9b48e2490acfa9396a0e5867b}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_get\_iluminate@{test1\_object\_get\_iluminate}}
+\index{test1\_object\_get\_iluminate@{test1\_object\_get\_iluminate}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_get\_iluminate()}{test1\_object\_get\_iluminate()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+iluminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000105}{Test}}]Test 1 object\+\_\+get\+\_\+iluminate \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+iluminate del objeto = T\+R\+UE 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output T\+R\+UE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a8a310946ba3ea83409ba14054a7194d6}\label{object__test_8c_a8a310946ba3ea83409ba14054a7194d6}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_get\_movility@{test1\_object\_get\_movility}}
+\index{test1\_object\_get\_movility@{test1\_object\_get\_movility}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_get\_movility()}{test1\_object\_get\_movility()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+movility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000117}{Test}}]Test 1 object\+\_\+get\+\_\+movility \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+F\+A\+L\+SE 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output F\+A\+L\+SE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_ad2411bc3cc47c9905e63a3d9c561d369}\label{object__test_8c_ad2411bc3cc47c9905e63a3d9c561d369}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_get\_name@{test1\_object\_get\_name}}
+\index{test1\_object\_get\_name@{test1\_object\_get\_name}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_get\_name()}{test1\_object\_get\_name()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000091}{Test}}]Test 1 object\+\_\+get\+\_\+name \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+nombre del objeto = adios 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==(strcmp=0) 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a11fe154771196e5d133ba55907adb62d}\label{object__test_8c_a11fe154771196e5d133ba55907adb62d}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_is\_turnedon@{test1\_object\_is\_turnedon}}
+\index{test1\_object\_is\_turnedon@{test1\_object\_is\_turnedon}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_is\_turnedon()}{test1\_object\_is\_turnedon()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+is\+\_\+turnedon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000109}{Test}}]Test 1 object\+\_\+is\+\_\+turnedon \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+turnedon del objeto = F\+A\+L\+SE 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output F\+A\+L\+SE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a05908887901134e48b6a31d0b71303c0}\label{object__test_8c_a05908887901134e48b6a31d0b71303c0}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_open\_link@{test1\_object\_open\_link}}
+\index{test1\_object\_open\_link@{test1\_object\_open\_link}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_open\_link()}{test1\_object\_open\_link()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+open\+\_\+link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000101}{Test}}]Test 1 object\+\_\+open\+\_\+link \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+id de un link 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_aef1285f1a9ad407e927375aba038a706}\label{object__test_8c_aef1285f1a9ad407e927375aba038a706}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_set\_dependency@{test1\_object\_set\_dependency}}
+\index{test1\_object\_set\_dependency@{test1\_object\_set\_dependency}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_set\_dependency()}{test1\_object\_set\_dependency()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+dependency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000115}{Test}}]Test 1 object\+\_\+set\+\_\+dependency \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+object\+\_\+set\+\_\+dependency=3 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_afb26b8c66d332354df8bfd57a8033b8f}\label{object__test_8c_afb26b8c66d332354df8bfd57a8033b8f}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_set\_description@{test1\_object\_set\_description}}
+\index{test1\_object\_set\_description@{test1\_object\_set\_description}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_set\_description()}{test1\_object\_set\_description()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000095}{Test}}]Test 1 object\+\_\+set\+\_\+description \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+String con nombre del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a6d17c0dc75873dfdbd834b322c40475b}\label{object__test_8c_a6d17c0dc75873dfdbd834b322c40475b}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_set\_iluminate@{test1\_object\_set\_iluminate}}
+\index{test1\_object\_set\_iluminate@{test1\_object\_set\_iluminate}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_set\_iluminate()}{test1\_object\_set\_iluminate()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+iluminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000103}{Test}}]Test 1 object\+\_\+set\+\_\+iluminate \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a77da357bf5e311962d725b890b6fac44}\label{object__test_8c_a77da357bf5e311962d725b890b6fac44}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_set\_link@{test1\_object\_set\_link}}
+\index{test1\_object\_set\_link@{test1\_object\_set\_link}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_set\_link()}{test1\_object\_set\_link()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000099}{Test}}]Test 1 object\+\_\+set\+\_\+link \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+id de un link 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a995104e12c96d62c4aede0055eb268cf}\label{object__test_8c_a995104e12c96d62c4aede0055eb268cf}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_set\_movility@{test1\_object\_set\_movility}}
+\index{test1\_object\_set\_movility@{test1\_object\_set\_movility}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_set\_movility()}{test1\_object\_set\_movility()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+movility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000111}{Test}}]Test 1 object\+\_\+set\+\_\+movility \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a74e25ad653c4a32b9922fff8e4f916fd}\label{object__test_8c_a74e25ad653c4a32b9922fff8e4f916fd}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_set\_name@{test1\_object\_set\_name}}
+\index{test1\_object\_set\_name@{test1\_object\_set\_name}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_set\_name()}{test1\_object\_set\_name()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000097}{Test}}]Test 1 object\+\_\+set\+\_\+description \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+String con nombre del objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_ab561aadfeafb4c3382caddf28b4060b3}\label{object__test_8c_ab561aadfeafb4c3382caddf28b4060b3}} 
+\index{object\_test.c@{object\_test.c}!test1\_object\_set\_turnedon@{test1\_object\_set\_turnedon}}
+\index{test1\_object\_set\_turnedon@{test1\_object\_set\_turnedon}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_object\_set\_turnedon()}{test1\_object\_set\_turnedon()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+turnedon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000107}{Test}}]Test 1 object\+\_\+set\+\_\+turnedon \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_add54ab5e33a1b0a93e9ddcf73591bd9f}\label{object__test_8c_add54ab5e33a1b0a93e9ddcf73591bd9f}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_create@{test2\_object\_create}}
+\index{test2\_object\_create@{test2\_object\_create}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_create()}{test2\_object\_create()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000088}{Test}}]Test 2 para object\+\_\+create \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto creado, id=4 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+object\+\_\+get\+\_\+id == 4 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_af8746713a9b762b1295bb1c4186260b8}\label{object__test_8c_af8746713a9b762b1295bb1c4186260b8}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_get\_dependency@{test2\_object\_get\_dependency}}
+\index{test2\_object\_get\_dependency@{test2\_object\_get\_dependency}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_get\_dependency()}{test2\_object\_get\_dependency()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+dependency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000114}{Test}}]Test 2 object\+\_\+get\+\_\+despendency \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Object == N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a35d9a40796133791c157c044ea1cef85}\label{object__test_8c_a35d9a40796133791c157c044ea1cef85}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_get\_description@{test2\_object\_get\_description}}
+\index{test2\_object\_get\_description@{test2\_object\_get\_description}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_get\_description()}{test2\_object\_get\_description()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000094}{Test}}]Test 2 object\+\_\+get\+\_\+description \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+object==N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a1ff250f0f43297f57fcce1f3a6ae490b}\label{object__test_8c_a1ff250f0f43297f57fcce1f3a6ae490b}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_get\_id@{test2\_object\_get\_id}}
+\index{test2\_object\_get\_id@{test2\_object\_get\_id}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_get\_id()}{test2\_object\_get\_id()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000090}{Test}}]Test 2 object\+\_\+get\+\_\+id \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+object==N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a87e22dc68b0458111e9573c071aac732}\label{object__test_8c_a87e22dc68b0458111e9573c071aac732}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_get\_iluminate@{test2\_object\_get\_iluminate}}
+\index{test2\_object\_get\_iluminate@{test2\_object\_get\_iluminate}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_get\_iluminate()}{test2\_object\_get\_iluminate()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+iluminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000106}{Test}}]Test 2 object\+\_\+get\+\_\+iluminate \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Object == N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==F\+A\+L\+SE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a69834f988f2e765345ac96ce873dee4c}\label{object__test_8c_a69834f988f2e765345ac96ce873dee4c}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_get\_movility@{test2\_object\_get\_movility}}
+\index{test2\_object\_get\_movility@{test2\_object\_get\_movility}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_get\_movility()}{test2\_object\_get\_movility()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+movility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000118}{Test}}]Test 2 object\+\_\+get\+\_\+movility \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Object == N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_abdfafbc7b8588d3dcdb05fd2beb2397e}\label{object__test_8c_abdfafbc7b8588d3dcdb05fd2beb2397e}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_get\_name@{test2\_object\_get\_name}}
+\index{test2\_object\_get\_name@{test2\_object\_get\_name}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_get\_name()}{test2\_object\_get\_name()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000092}{Test}}]Test 2 object\+\_\+get\+\_\+name \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+object==N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a0fc6aaa4ecd65a5597500423d8357bf3}\label{object__test_8c_a0fc6aaa4ecd65a5597500423d8357bf3}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_is\_turnedon@{test2\_object\_is\_turnedon}}
+\index{test2\_object\_is\_turnedon@{test2\_object\_is\_turnedon}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_is\_turnedon()}{test2\_object\_is\_turnedon()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+is\+\_\+turnedon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000110}{Test}}]Test 2 object\+\_\+is\+\_\+turnedon \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Object == N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==F\+A\+L\+SE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a7118d2c82e7806a4569b793c479edd31}\label{object__test_8c_a7118d2c82e7806a4569b793c479edd31}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_open\_link@{test2\_object\_open\_link}}
+\index{test2\_object\_open\_link@{test2\_object\_open\_link}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_open\_link()}{test2\_object\_open\_link()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+open\+\_\+link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000102}{Test}}]Test 2 object\+\_\+open\+\_\+link \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Object == N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_aa60a8195c4200bf68d77b34705a5fd40}\label{object__test_8c_aa60a8195c4200bf68d77b34705a5fd40}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_set\_dependency@{test2\_object\_set\_dependency}}
+\index{test2\_object\_set\_dependency@{test2\_object\_set\_dependency}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_set\_dependency()}{test2\_object\_set\_dependency()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+dependency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000116}{Test}}]Test 2 object\+\_\+set\+\_\+dependency \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Object == N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a65e32c3642c1d9207cdd84b134c616da}\label{object__test_8c_a65e32c3642c1d9207cdd84b134c616da}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_set\_description@{test2\_object\_set\_description}}
+\index{test2\_object\_set\_description@{test2\_object\_set\_description}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_set\_description()}{test2\_object\_set\_description()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000096}{Test}}]Test 2 object\+\_\+set\+\_\+description \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Object == N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a151dbc97cb1ce56e3b46bf29b97104aa}\label{object__test_8c_a151dbc97cb1ce56e3b46bf29b97104aa}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_set\_iluminate@{test2\_object\_set\_iluminate}}
+\index{test2\_object\_set\_iluminate@{test2\_object\_set\_iluminate}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_set\_iluminate()}{test2\_object\_set\_iluminate()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+iluminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000104}{Test}}]Test 2 object\+\_\+set\+\_\+iluminate \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Object == N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_ab8597e7c8125490236b286d10366919d}\label{object__test_8c_ab8597e7c8125490236b286d10366919d}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_set\_link@{test2\_object\_set\_link}}
+\index{test2\_object\_set\_link@{test2\_object\_set\_link}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_set\_link()}{test2\_object\_set\_link()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000100}{Test}}]Test 2 object\+\_\+set\+\_\+link \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Object == N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_af41a7aa14d5acbbf57bdd159577abf31}\label{object__test_8c_af41a7aa14d5acbbf57bdd159577abf31}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_set\_movility@{test2\_object\_set\_movility}}
+\index{test2\_object\_set\_movility@{test2\_object\_set\_movility}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_set\_movility()}{test2\_object\_set\_movility()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+movility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000112}{Test}}]Test 2 object\+\_\+set\+\_\+movility \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Object == N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_acf42b7e7be91ede243f2aaa56c4c9347}\label{object__test_8c_acf42b7e7be91ede243f2aaa56c4c9347}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_set\_name@{test2\_object\_set\_name}}
+\index{test2\_object\_set\_name@{test2\_object\_set\_name}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_set\_name()}{test2\_object\_set\_name()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000098}{Test}}]Test 2 object\+\_\+set\+\_\+description \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Object == N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a65993aa7fcccdbe7f9433de256485db8}\label{object__test_8c_a65993aa7fcccdbe7f9433de256485db8}} 
+\index{object\_test.c@{object\_test.c}!test2\_object\_set\_turnedon@{test2\_object\_set\_turnedon}}
+\index{test2\_object\_set\_turnedon@{test2\_object\_set\_turnedon}!object\_test.c@{object\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_object\_set\_turnedon()}{test2\_object\_set\_turnedon()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+turnedon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000108}{Test}}]Test 2 object\+\_\+set\+\_\+turnedon \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Object == N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==E\+R\+R\+OR 
+\end{DoxyPostcond}

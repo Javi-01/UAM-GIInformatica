@@ -1,0 +1,6 @@
+/opt/gridengine/default/spool/compute-0-3/job_scripts/94718: line 7: : command not found
+Se usan 16 hilos
+[info] Processing imagenes/4k.jpg
+[info] imagenes/4k: width=3840, height=2160, nchannels=3
+[info] Using gaussian denoising...
+Tiempo: 2.836445

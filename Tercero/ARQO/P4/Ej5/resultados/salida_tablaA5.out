@@ -1,0 +1,55 @@
+/opt/gridengine/default/spool/compute-0-3/job_scripts/94755: line 7: : command not found
+[info] Processing imagenes/SD.jpg
+[info] imagenes/SD: width=640, height=360, nchannels=3
+[info] Using gaussian denoising...
+Tiempo: 0.029003
+/opt/gridengine/default/spool/compute-0-3/job_scripts/94756: line 7: : command not found
+Se usan 16 hilos
+[info] Processing imagenes/SD.jpg
+[info] imagenes/SD: width=640, height=360, nchannels=3
+[info] Using gaussian denoising...
+Tiempo: 0.011705
+/opt/gridengine/default/spool/compute-0-3/job_scripts/94757: line 7: : command not found
+[info] Processing imagenes/HD.jpg
+[info] imagenes/HD: width=1280, height=720, nchannels=3
+[info] Using gaussian denoising...
+Tiempo: 0.103874
+/opt/gridengine/default/spool/compute-0-3/job_scripts/94758: line 7: : command not found
+Se usan 16 hilos
+[info] Processing imagenes/HD.jpg
+[info] imagenes/HD: width=1280, height=720, nchannels=3
+[info] Using gaussian denoising...
+Tiempo: 0.035403
+/opt/gridengine/default/spool/compute-0-3/job_scripts/94759: line 7: : command not found
+[info] Processing imagenes/FHD.jpg
+[info] imagenes/FHD: width=1920, height=1080, nchannels=3
+[info] Using gaussian denoising...
+Tiempo: 0.235530
+/opt/gridengine/default/spool/compute-0-3/job_scripts/94760: line 7: : command not found
+Se usan 16 hilos
+[info] Processing imagenes/FHD.jpg
+[info] imagenes/FHD: width=1920, height=1080, nchannels=3
+[info] Using gaussian denoising...
+Tiempo: 0.085533
+/opt/gridengine/default/spool/compute-0-3/job_scripts/94761: line 7: : command not found
+[info] Processing imagenes/4k.jpg
+[info] imagenes/4k: width=3840, height=2160, nchannels=3
+[info] Using gaussian denoising...
+Tiempo: 0.986294
+/opt/gridengine/default/spool/compute-0-3/job_scripts/94762: line 7: : command not found
+Se usan 16 hilos
+[info] Processing imagenes/4k.jpg
+[info] imagenes/4k: width=3840, height=2160, nchannels=3
+[info] Using gaussian denoising...
+Tiempo: 0.319783
+/opt/gridengine/default/spool/compute-0-3/job_scripts/94763: line 7: : command not found
+[info] Processing imagenes/8k.jpg
+[info] imagenes/8k: width=7680, height=4320, nchannels=3
+[info] Using gaussian denoising...
+Tiempo: 4.453183
+/opt/gridengine/default/spool/compute-0-3/job_scripts/94764: line 7: : command not found
+Se usan 16 hilos
+[info] Processing imagenes/8k.jpg
+[info] imagenes/8k: width=7680, height=4320, nchannels=3
+[info] Using gaussian denoising...
+Tiempo: 1.847228

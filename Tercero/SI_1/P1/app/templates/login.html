@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% block title %} Acceder {% endblock%} {% block
+content %}
+
+{% if mensaje %}
+<div class="error-messaje">
+  <span>{{ mensaje }}</span>
+</div>
+{% endif %}
+<div class="form-user">
+  <h1>INICIO DE SESION</h1>
+  <form action="" method="POST">
+    <label for="usuarioLogin">Usuario de Acceso: </label>
+    <input
+      name="usuarioLogin"
+      id="usuarioLogin"
+      type="text"
+      class="form-input"
+      required
+    />
+    <label for="contraseñaLogin">Contraseña: </label>
+    <input
+      name="contraseñaLogin"
+      id="contraseñaLogin"
+      type="password"
+      class="form-input"
+      required
+    />
+    <input class="btn-form-usr" type="submit" value="Acceder" />
+    <div class="change-authentication">
+      <strong>¿Aun no tienes una cuenta?</strong>
+      <a href="{{ url_for('crear_cuenta') }}">Crear Cuenta</a>
+      <div class="strong-2">
+        <strong>¿Quieres cambiar la contraseña?</strong>
+        <a href="{{ url_for('cambiar_contraseña') }}">Cambiar Contraseña</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

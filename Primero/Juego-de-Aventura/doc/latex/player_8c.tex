@@ -1,0 +1,475 @@
+\hypertarget{player_8c}{}\doxysection{src/player.c File Reference}
+\label{player_8c}\index{src/player.c@{src/player.c}}
+
+
+Implementación de la estructura de objetos y sus funciones.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}space.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inventory.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}object.\+h\char`\"{}}\newline
+Include dependency graph for player.\+c\+:
+% FIG 0
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__Player}{\+\_\+\+Player}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{player_8c_a511658c8ff616308825ae86d4bae2dd2}{player\+\_\+set\+\_\+id}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Cambia el id de un jugador por el id recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$ \mbox{\hyperlink{player_8c_a97ea1d0deda3c51ef6ce63a13dab7a38}{player\+\_\+create}} (\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Crea un jugador con el id recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{player_8c_a68e324aa5064e27d0a2f38aafb6809ad}{player\+\_\+destroy}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Destruye el jugador recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{player_8c_af5a101ec91427951c5875569a8709956}{player\+\_\+get\+\_\+id}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Obtiene el id de un jugador recibido. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{player_8c_a6622c02be2fe230a5c0df66385a13ece}{player\+\_\+get\+\_\+name}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre de un jugador recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{player_8c_aa50ce77ab79af7166d749619fd60acfe}{player\+\_\+get\+\_\+location}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Obtiene el id de la localización de un jugador recibido. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{player_8c_aada4c08fa70eeb632570dfb8baee2227}{player\+\_\+get\+\_\+num\+\_\+of\+\_\+objects}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Obtiene el número de objetos que porta el jugador recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} $\ast$ \mbox{\hyperlink{player_8c_ab8efcd8a300b674453a4492635baa54b}{player\+\_\+get\+\_\+objects}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Obtiene los ids de los objetos de un jugador recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{player_8c_ae784d0d9e557505046ef44a0d072dfd5}{player\+\_\+get\+\_\+last\+\_\+object}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Devuelve el id del último objeto que haya sido o bien añadido o eliminado del inventario del jugador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{player_8c_a020de841e7491f59a8ece0397cbf0d92}{player\+\_\+set\+\_\+max\+\_\+inv}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player, int max\+Inv)
+\begin{DoxyCompactList}\small\item\em Cambia la cantidad máxima del inventario del jugador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{player_8c_a6a30809f7775f5c2d3bef47d92769e59}{player\+\_\+set\+\_\+name}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Cambia el nombre de un jugador por el nombre recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{player_8c_a054e92b126f556153279b569f8987674}{player\+\_\+set\+\_\+location}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} location)
+\begin{DoxyCompactList}\small\item\em Cambia el id de la localización de un jugador por el id recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{player_8c_ac09d46c903eb855b65334081456215de}{player\+\_\+set\+\_\+object}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} object)
+\begin{DoxyCompactList}\small\item\em Cambia el id del objeto de un jugador por el id recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{player_8c_a78a5f69dd0fe1cb5b15758ecae60b7e5}{player\+\_\+del\+\_\+object}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} object)
+\begin{DoxyCompactList}\small\item\em Se encarga de eliminar un objeto del inventario del jugador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$ \mbox{\hyperlink{player_8c_a03c6c3a9dcd5f50e69e8b55c889613c8}{player\+\_\+get\+\_\+backpack}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Devuelve la mochila que porta el jugador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{player_8c_a68a020daf8fc0c3120b6642b507ecb60}{player\+\_\+has\+\_\+object}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id\+Object)
+\begin{DoxyCompactList}\small\item\em Comprueba si el jugador tiene el onjeto recibido como argumento. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{player_8c_ae7b6564b15458bab7680fd8ce9fd8d90}{player\+\_\+can\+\_\+take\+\_\+an\+\_\+object}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player, \mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Se encarga de comprobar si el jugador puede coger o no un determinado objeto a partir de las dependencias que tenga dicho objeto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{player_8c_aa0f2f8b4d1b63a60ef927d47aa45dbd1}{player\+\_\+print}} (\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Imprime en pantalla los datos del jugador recibido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la estructura de objetos y sus funciones. 
+
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18-\/02-\/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{player_8c_ae7b6564b15458bab7680fd8ce9fd8d90}\label{player_8c_ae7b6564b15458bab7680fd8ce9fd8d90}} 
+\index{player.c@{player.c}!player\_can\_take\_an\_object@{player\_can\_take\_an\_object}}
+\index{player\_can\_take\_an\_object@{player\_can\_take\_an\_object}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_can\_take\_an\_object()}{player\_can\_take\_an\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} player\+\_\+can\+\_\+take\+\_\+an\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player,  }\item[{\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+Se encarga de comprobar si el jugador puede coger o no un determinado objeto a partir de las dependencias que tenga dicho objeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+{\em object} & puntero al objeto\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna F\+A\+L\+SE en caso de poder coger el objeto o T\+R\+UE en caso de poder.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_a97ea1d0deda3c51ef6ce63a13dab7a38}\label{player_8c_a97ea1d0deda3c51ef6ce63a13dab7a38}} 
+\index{player.c@{player.c}!player\_create@{player\_create}}
+\index{player\_create@{player\_create}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_create()}{player\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}}$\ast$ player\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Crea un jugador con el id recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & del nuevo jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+U\+LL en caso de fallo o un nuevo jugador en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_a78a5f69dd0fe1cb5b15758ecae60b7e5}\label{player_8c_a78a5f69dd0fe1cb5b15758ecae60b7e5}} 
+\index{player.c@{player.c}!player\_del\_object@{player\_del\_object}}
+\index{player\_del\_object@{player\_del\_object}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_del\_object()}{player\_del\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} player\+\_\+del\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{object }\end{DoxyParamCaption})}
+
+
+
+Se encarga de eliminar un objeto del inventario del jugador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+{\em object} & id del objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de error o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_a68e324aa5064e27d0a2f38aafb6809ad}\label{player_8c_a68e324aa5064e27d0a2f38aafb6809ad}} 
+\index{player.c@{player.c}!player\_destroy@{player\_destroy}}
+\index{player\_destroy@{player\_destroy}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_destroy()}{player\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} player\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Destruye el jugador recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_a03c6c3a9dcd5f50e69e8b55c889613c8}\label{player_8c_a03c6c3a9dcd5f50e69e8b55c889613c8}} 
+\index{player.c@{player.c}!player\_get\_backpack@{player\_get\_backpack}}
+\index{player\_get\_backpack@{player\_get\_backpack}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_get\_backpack()}{player\_get\_backpack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}}$\ast$ player\+\_\+get\+\_\+backpack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Devuelve la mochila que porta el jugador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+U\+LL en caso de error o la mochila del jugador en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_af5a101ec91427951c5875569a8709956}\label{player_8c_af5a101ec91427951c5875569a8709956}} 
+\index{player.c@{player.c}!player\_get\_id@{player\_get\_id}}
+\index{player\_get\_id@{player\_get\_id}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_get\_id()}{player\_get\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} player\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtiene el id de un jugador recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+U\+LL en caso de fallo o el id del jugador en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_ae784d0d9e557505046ef44a0d072dfd5}\label{player_8c_ae784d0d9e557505046ef44a0d072dfd5}} 
+\index{player.c@{player.c}!player\_get\_last\_object@{player\_get\_last\_object}}
+\index{player\_get\_last\_object@{player\_get\_last\_object}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_get\_last\_object()}{player\_get\_last\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} player\+\_\+get\+\_\+last\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Devuelve el id del último objeto que haya sido o bien añadido o eliminado del inventario del jugador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+O\+\_\+\+ID si no hay objeto o el id del último objeto o bien añadido o eliminado del inventario del jugador.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_aa50ce77ab79af7166d749619fd60acfe}\label{player_8c_aa50ce77ab79af7166d749619fd60acfe}} 
+\index{player.c@{player.c}!player\_get\_location@{player\_get\_location}}
+\index{player\_get\_location@{player\_get\_location}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_get\_location()}{player\_get\_location()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} player\+\_\+get\+\_\+location (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtiene el id de la localización de un jugador recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+U\+LL en caso de fallo o el id de la localización en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_a6622c02be2fe230a5c0df66385a13ece}\label{player_8c_a6622c02be2fe230a5c0df66385a13ece}} 
+\index{player.c@{player.c}!player\_get\_name@{player\_get\_name}}
+\index{player\_get\_name@{player\_get\_name}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_get\_name()}{player\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ player\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtiene el nombre de un jugador recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+U\+LL en caso de fallo o el nombre del jugador en caso de exito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_aada4c08fa70eeb632570dfb8baee2227}\label{player_8c_aada4c08fa70eeb632570dfb8baee2227}} 
+\index{player.c@{player.c}!player\_get\_num\_of\_objects@{player\_get\_num\_of\_objects}}
+\index{player\_get\_num\_of\_objects@{player\_get\_num\_of\_objects}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_get\_num\_of\_objects()}{player\_get\_num\_of\_objects()}}
+{\footnotesize\ttfamily int player\+\_\+get\+\_\+num\+\_\+of\+\_\+objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtiene el número de objetos que porta el jugador recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna -\/1 en caso de E\+R\+R\+OR o el número de objetos en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_ab8efcd8a300b674453a4492635baa54b}\label{player_8c_ab8efcd8a300b674453a4492635baa54b}} 
+\index{player.c@{player.c}!player\_get\_objects@{player\_get\_objects}}
+\index{player\_get\_objects@{player\_get\_objects}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_get\_objects()}{player\_get\_objects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}$\ast$ player\+\_\+get\+\_\+objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtiene los ids de los objetos de un jugador recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+U\+LL en caso de fallo o un array de ids de los objetos en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_a68a020daf8fc0c3120b6642b507ecb60}\label{player_8c_a68a020daf8fc0c3120b6642b507ecb60}} 
+\index{player.c@{player.c}!player\_has\_object@{player\_has\_object}}
+\index{player\_has\_object@{player\_has\_object}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_has\_object()}{player\_has\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} player\+\_\+has\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id\+Object }\end{DoxyParamCaption})}
+
+
+
+Comprueba si el jugador tiene el onjeto recibido como argumento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+{\em id\+Object} & id del objeto a comprobar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna T\+R\+UE en caso de que lo tenga o F\+A\+L\+SE en el caso contrario.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_aa0f2f8b4d1b63a60ef927d47aa45dbd1}\label{player_8c_aa0f2f8b4d1b63a60ef927d47aa45dbd1}} 
+\index{player.c@{player.c}!player\_print@{player\_print}}
+\index{player\_print@{player\_print}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_print()}{player\_print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} player\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Imprime en pantalla los datos del jugador recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR si no hay objeto o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_a511658c8ff616308825ae86d4bae2dd2}\label{player_8c_a511658c8ff616308825ae86d4bae2dd2}} 
+\index{player.c@{player.c}!player\_set\_id@{player\_set\_id}}
+\index{player\_set\_id@{player\_set\_id}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_set\_id()}{player\_set\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} player\+\_\+set\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Cambia el id de un jugador por el id recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador. \\
+\hline
+{\em id} & nuevo id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_a054e92b126f556153279b569f8987674}\label{player_8c_a054e92b126f556153279b569f8987674}} 
+\index{player.c@{player.c}!player\_set\_location@{player\_set\_location}}
+\index{player\_set\_location@{player\_set\_location}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_set\_location()}{player\_set\_location()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} player\+\_\+set\+\_\+location (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{location }\end{DoxyParamCaption})}
+
+
+
+Cambia el id de la localización de un jugador por el id recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+{\em location} & id del nuevo espacio del jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_a020de841e7491f59a8ece0397cbf0d92}\label{player_8c_a020de841e7491f59a8ece0397cbf0d92}} 
+\index{player.c@{player.c}!player\_set\_max\_inv@{player\_set\_max\_inv}}
+\index{player\_set\_max\_inv@{player\_set\_max\_inv}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_set\_max\_inv()}{player\_set\_max\_inv()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} player\+\_\+set\+\_\+max\+\_\+inv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player,  }\item[{int}]{max\+Inv }\end{DoxyParamCaption})}
+
+
+
+Cambia la cantidad máxima del inventario del jugador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+{\em max\+Inv} & tamaño máximo de la mochila del jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_a6a30809f7775f5c2d3bef47d92769e59}\label{player_8c_a6a30809f7775f5c2d3bef47d92769e59}} 
+\index{player.c@{player.c}!player\_set\_name@{player\_set\_name}}
+\index{player\_set\_name@{player\_set\_name}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_set\_name()}{player\_set\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} player\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Cambia el nombre de un jugador por el nombre recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+{\em name} & nuevo nombre del jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{player_8c_ac09d46c903eb855b65334081456215de}\label{player_8c_ac09d46c903eb855b65334081456215de}} 
+\index{player.c@{player.c}!player\_set\_object@{player\_set\_object}}
+\index{player\_set\_object@{player\_set\_object}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{player\_set\_object()}{player\_set\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} player\+\_\+set\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$}]{player,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{object }\end{DoxyParamCaption})}
+
+
+
+Cambia el id del objeto de un jugador por el id recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & puntero al jugador \\
+\hline
+{\em object} & nuevo objeto del jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}

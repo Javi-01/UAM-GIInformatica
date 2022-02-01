@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% block title %} Confirmar_compra {% endblock %}
+{% block content %}
+<div class="confirm-cart">
+  <h1>Confirma la compra</h1>
+  {% if error %}
+  <div class="error-messaje">
+    <span>{{ error }}</span>
+  </div>
+  {% elif pagado %}
+  <div class="ok-messaje">
+    <span>{{ pagado }}</span>
+    <a href="{{ url_for('historial') }}">Consulte su compra</a>
+  </div>
+  {% else %}
+  <div class="confirm-cart-data">
+    <p>Precio: <strong>{{ summary['precio'] }} €</strong></p>
+    <p>Precio con IVA: <strong>{{ summary['precio_iva'] }} €</strong></p>
+    <p>Puntos disponibles: <strong>{{ summary['puntos'] }} </strong></p>
+    <p>Saldo: <strong>{{ summary['saldo'] }} €</strong></p>
+  </div>
+  <form action="" method="POST">
+    <div class="confirm-cart-buy">
+      <input type="submit" value="Realizar compra" />
+    </div>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

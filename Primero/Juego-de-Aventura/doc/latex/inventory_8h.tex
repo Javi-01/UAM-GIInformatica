@@ -1,0 +1,387 @@
+\hypertarget{inventory_8h}{}\doxysection{include/inventory.h File Reference}
+\label{inventory_8h}\index{include/inventory.h@{include/inventory.h}}
+
+
+It defines the header of inventory.  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+Include dependency graph for inventory.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{inventory_8h_a1fe145406f18dcc3acb828239c475033}{U\+N\+D\+I\+F\+I\+N\+E\+D\+\_\+\+S\+I\+ZE}}~-\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__BackPack}{\+\_\+\+Back\+Pack}} \mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$ \mbox{\hyperlink{inventory_8h_a781f8ca449d61a9ea1040aa52a44b925}{inventory\+\_\+create}} ()
+\begin{DoxyCompactList}\small\item\em Crea un nuevo inventario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inventory_8h_adc6563d38375436fb387b473e06621ec}{inventory\+\_\+destroy}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack)
+\begin{DoxyCompactList}\small\item\em Elimina un inventario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{inventory_8h_a85df8111679dc510754193c157c854f0}{inventory\+\_\+add\+\_\+object}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} new\+Object)
+\begin{DoxyCompactList}\small\item\em Añade objeto al inventario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{inventory_8h_a606e19f583b88a07f1b9c072e866007d}{inventory\+\_\+remove\+\_\+object}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Elimina objeto del inventario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{inventory_8h_ae5fbf3e9edd39e160d3ce8f27d1359ba}{inventory\+\_\+get\+\_\+object}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack, int position)
+\begin{DoxyCompactList}\small\item\em Obtiene objeto del inventario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{inventory_8h_a7170ba4749c5d245ecdbf4ff1b3df22f}{inventory\+\_\+get\+\_\+last\+\_\+object}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack)
+\begin{DoxyCompactList}\small\item\em Obtiene el último objeto introducido al inventario. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inventory_8h_add3833f904b54edfeb6858afe78c03b5}{inventory\+\_\+get\+\_\+max\+Obj}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack)
+\begin{DoxyCompactList}\small\item\em Obtiene la cantidad máxima de objetos en el inventario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$ \mbox{\hyperlink{inventory_8h_a7b431e682f7c36e7c3d3e64159aa41cb}{inventory\+\_\+get\+\_\+set}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack)
+\begin{DoxyCompactList}\small\item\em Obtiene el conjunto del inventario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{inventory_8h_a79e21eb3ca4718cbd0c23806aadd2ced}{inventory\+\_\+set\+\_\+max\+Obj}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack, int max\+Obj)
+\begin{DoxyCompactList}\small\item\em Cambia el número máximo de objetos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{inventory_8h_a4f8fb77504bf66926d736f6f9668341a}{inventory\+\_\+set\+\_\+set}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack, \mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Cambia el conjunto del inventario. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inventory_8h_ac7c39b5352882295eef71ff19b2ec483}{inventory\+\_\+num\+\_\+obj}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack)
+\begin{DoxyCompactList}\small\item\em Devuelve la cantidad actual de objetos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inventory_8h_acea0017d3e8097f3c8b7c57f6a0bf0fc}{inventory\+\_\+print}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack)
+\begin{DoxyCompactList}\small\item\em Imprime el inventario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{inventory_8h_a92e3b41c142d7a55d51b380a8e7f114a}{inventory\+\_\+have\+\_\+id}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} object)
+\begin{DoxyCompactList}\small\item\em Comprueba si el inventario tiene un objeto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} $\ast$ \mbox{\hyperlink{inventory_8h_a8fbe3c83cfa4da0ef384da422a9cb778}{inventory\+\_\+get\+\_\+objects}} (\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$back\+Pack)
+\begin{DoxyCompactList}\small\item\em Devuelve los ids almacenados en el inventario (en el set del inventario). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It defines the header of inventory. 
+
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+30-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{inventory_8h_a1fe145406f18dcc3acb828239c475033}\label{inventory_8h_a1fe145406f18dcc3acb828239c475033}} 
+\index{inventory.h@{inventory.h}!UNDIFINED\_SIZE@{UNDIFINED\_SIZE}}
+\index{UNDIFINED\_SIZE@{UNDIFINED\_SIZE}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{UNDIFINED\_SIZE}{UNDIFINED\_SIZE}}
+{\footnotesize\ttfamily \#define U\+N\+D\+I\+F\+I\+N\+E\+D\+\_\+\+S\+I\+ZE~-\/1}
+
+Tamaño no definido 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{inventory_8h_a3be0a61ad5b9479086f394df0f692344}\label{inventory_8h_a3be0a61ad5b9479086f394df0f692344}} 
+\index{inventory.h@{inventory.h}!BackPack@{BackPack}}
+\index{BackPack@{BackPack}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{BackPack}{BackPack}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__BackPack}{\+\_\+\+Back\+Pack}} \mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}}}
+
+Estructura de inventario 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{inventory_8h_a85df8111679dc510754193c157c854f0}\label{inventory_8h_a85df8111679dc510754193c157c854f0}} 
+\index{inventory.h@{inventory.h}!inventory\_add\_object@{inventory\_add\_object}}
+\index{inventory\_add\_object@{inventory\_add\_object}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_add\_object()}{inventory\_add\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} inventory\+\_\+add\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{new\+Object }\end{DoxyParamCaption})}
+
+
+
+Añade objeto al inventario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a inventario \\
+\hline
+{\em new\+Object} & Id del objeto añadido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo u Okay en caso contrario. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_a781f8ca449d61a9ea1040aa52a44b925}\label{inventory_8h_a781f8ca449d61a9ea1040aa52a44b925}} 
+\index{inventory.h@{inventory.h}!inventory\_create@{inventory\_create}}
+\index{inventory\_create@{inventory\_create}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_create()}{inventory\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}}$\ast$ inventory\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crea un nuevo inventario. 
+
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o un nuevo inventario en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_adc6563d38375436fb387b473e06621ec}\label{inventory_8h_adc6563d38375436fb387b473e06621ec}} 
+\index{inventory.h@{inventory.h}!inventory\_destroy@{inventory\_destroy}}
+\index{inventory\_destroy@{inventory\_destroy}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_destroy()}{inventory\_destroy()}}
+{\footnotesize\ttfamily void inventory\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack }\end{DoxyParamCaption})}
+
+
+
+Elimina un inventario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a el inventario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_a7170ba4749c5d245ecdbf4ff1b3df22f}\label{inventory_8h_a7170ba4749c5d245ecdbf4ff1b3df22f}} 
+\index{inventory.h@{inventory.h}!inventory\_get\_last\_object@{inventory\_get\_last\_object}}
+\index{inventory\_get\_last\_object@{inventory\_get\_last\_object}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_get\_last\_object()}{inventory\_get\_last\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} inventory\+\_\+get\+\_\+last\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack }\end{DoxyParamCaption})}
+
+
+
+Obtiene el último objeto introducido al inventario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a inventario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+O\+\_\+\+ID en caso de fallo o el Id del objeto en caso contrario. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_add3833f904b54edfeb6858afe78c03b5}\label{inventory_8h_add3833f904b54edfeb6858afe78c03b5}} 
+\index{inventory.h@{inventory.h}!inventory\_get\_maxObj@{inventory\_get\_maxObj}}
+\index{inventory\_get\_maxObj@{inventory\_get\_maxObj}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_get\_maxObj()}{inventory\_get\_maxObj()}}
+{\footnotesize\ttfamily int inventory\+\_\+get\+\_\+max\+Obj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack }\end{DoxyParamCaption})}
+
+
+
+Obtiene la cantidad máxima de objetos en el inventario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a inventario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna -\/1 en caso de fallo o la cantidad. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_ae5fbf3e9edd39e160d3ce8f27d1359ba}\label{inventory_8h_ae5fbf3e9edd39e160d3ce8f27d1359ba}} 
+\index{inventory.h@{inventory.h}!inventory\_get\_object@{inventory\_get\_object}}
+\index{inventory\_get\_object@{inventory\_get\_object}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_get\_object()}{inventory\_get\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} inventory\+\_\+get\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Obtiene objeto del inventario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a inventario. \\
+\hline
+{\em position} & número de posicion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+O\+\_\+\+ID en caso de fallo o el Id del objeto en caso contrario. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_a8fbe3c83cfa4da0ef384da422a9cb778}\label{inventory_8h_a8fbe3c83cfa4da0ef384da422a9cb778}} 
+\index{inventory.h@{inventory.h}!inventory\_get\_objects@{inventory\_get\_objects}}
+\index{inventory\_get\_objects@{inventory\_get\_objects}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_get\_objects()}{inventory\_get\_objects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}$\ast$ inventory\+\_\+get\+\_\+objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack }\end{DoxyParamCaption})}
+
+
+
+Devuelve los ids almacenados en el inventario (en el set del inventario). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a inventario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL en caso de fallo que el set del inventario no tenga objetos o un array de ids en caso de que los haya. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_a7b431e682f7c36e7c3d3e64159aa41cb}\label{inventory_8h_a7b431e682f7c36e7c3d3e64159aa41cb}} 
+\index{inventory.h@{inventory.h}!inventory\_get\_set@{inventory\_get\_set}}
+\index{inventory\_get\_set@{inventory\_get\_set}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_get\_set()}{inventory\_get\_set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}}$\ast$ inventory\+\_\+get\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack }\end{DoxyParamCaption})}
+
+
+
+Obtiene el conjunto del inventario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a inventario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el set en caso contrario. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_a92e3b41c142d7a55d51b380a8e7f114a}\label{inventory_8h_a92e3b41c142d7a55d51b380a8e7f114a}} 
+\index{inventory.h@{inventory.h}!inventory\_have\_id@{inventory\_have\_id}}
+\index{inventory\_have\_id@{inventory\_have\_id}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_have\_id()}{inventory\_have\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} inventory\+\_\+have\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{object }\end{DoxyParamCaption})}
+
+
+
+Comprueba si el inventario tiene un objeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a inventario. \\
+\hline
+{\em object} & id del objeto a comprobar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE en caso de contenerlo y F\+A\+L\+SE en caso contrario 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_ac7c39b5352882295eef71ff19b2ec483}\label{inventory_8h_ac7c39b5352882295eef71ff19b2ec483}} 
+\index{inventory.h@{inventory.h}!inventory\_num\_obj@{inventory\_num\_obj}}
+\index{inventory\_num\_obj@{inventory\_num\_obj}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_num\_obj()}{inventory\_num\_obj()}}
+{\footnotesize\ttfamily int inventory\+\_\+num\+\_\+obj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack }\end{DoxyParamCaption})}
+
+
+
+Devuelve la cantidad actual de objetos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a inventario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna -\/1 en caso de fallo o la cantidad en caso contrario. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_acea0017d3e8097f3c8b7c57f6a0bf0fc}\label{inventory_8h_acea0017d3e8097f3c8b7c57f6a0bf0fc}} 
+\index{inventory.h@{inventory.h}!inventory\_print@{inventory\_print}}
+\index{inventory\_print@{inventory\_print}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_print()}{inventory\_print()}}
+{\footnotesize\ttfamily void inventory\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack }\end{DoxyParamCaption})}
+
+
+
+Imprime el inventario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a inventario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_a606e19f583b88a07f1b9c072e866007d}\label{inventory_8h_a606e19f583b88a07f1b9c072e866007d}} 
+\index{inventory.h@{inventory.h}!inventory\_remove\_object@{inventory\_remove\_object}}
+\index{inventory\_remove\_object@{inventory\_remove\_object}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_remove\_object()}{inventory\_remove\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} inventory\+\_\+remove\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Elimina objeto del inventario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a inventario. \\
+\hline
+{\em id} & id del objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo u Okay en caso contrario. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_a79e21eb3ca4718cbd0c23806aadd2ced}\label{inventory_8h_a79e21eb3ca4718cbd0c23806aadd2ced}} 
+\index{inventory.h@{inventory.h}!inventory\_set\_maxObj@{inventory\_set\_maxObj}}
+\index{inventory\_set\_maxObj@{inventory\_set\_maxObj}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_set\_maxObj()}{inventory\_set\_maxObj()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} inventory\+\_\+set\+\_\+max\+Obj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack,  }\item[{int}]{max\+Obj }\end{DoxyParamCaption})}
+
+
+
+Cambia el número máximo de objetos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a inventario. \\
+\hline
+{\em max\+Obj} & nuevo máximo de objetos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo u OK en caso contrario. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{inventory_8h_a4f8fb77504bf66926d736f6f9668341a}\label{inventory_8h_a4f8fb77504bf66926d736f6f9668341a}} 
+\index{inventory.h@{inventory.h}!inventory\_set\_set@{inventory\_set\_set}}
+\index{inventory\_set\_set@{inventory\_set\_set}!inventory.h@{inventory.h}}
+\doxysubsubsection{\texorpdfstring{inventory\_set\_set()}{inventory\_set\_set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} inventory\+\_\+set\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inventory_8h_a3be0a61ad5b9479086f394df0f692344}{Back\+Pack}} $\ast$}]{back\+Pack,  }\item[{\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+Cambia el conjunto del inventario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Pack} & puntero a inventario. \\
+\hline
+{\em set} & nuevo set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo u OK en caso contrario. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}

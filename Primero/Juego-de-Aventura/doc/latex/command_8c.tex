@@ -1,0 +1,82 @@
+\hypertarget{command_8c}{}\doxysection{src/command.c File Reference}
+\label{command_8c}\index{src/command.c@{src/command.c}}
+
+
+It implements the command interpreter.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$strings.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}command.\+h\char`\"{}}\newline
+Include dependency graph for command.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{command_8c_a2b1bd24d2eddf8081d8c541e4cc4fd4b}{C\+M\+D\+\_\+\+L\+E\+N\+G\+HT}}~30
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{command_8h_ab1f9bf350cc390d2bd227a2d6596cefb}{T\+\_\+\+Command}} \mbox{\hyperlink{command_8c_a7ad92506157db30fe6e1941d62752291}{command\+\_\+get\+\_\+user\+\_\+input}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el comando que introduce el usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{command_8c_a3574ce85761f52cf9b70d061831533ee}{cmd\+\_\+to\+\_\+str}} \mbox{[}\mbox{\hyperlink{command_8h_ae180fe89f0ae48ce5c80ffaa18de9271}{N\+\_\+\+C\+MD}}\mbox{]}\mbox{[}\mbox{\hyperlink{command_8h_a8d93932dcdc527c13e06b688b68c7ffc}{N\+\_\+\+C\+M\+DT}}\mbox{]} = \{\{\char`\"{}\char`\"{}, \char`\"{}No command\char`\"{}\}, \{\char`\"{}\char`\"{}, \char`\"{}Unknown\char`\"{}\}, \{\char`\"{}e\char`\"{}, \char`\"{}Exit\char`\"{}\}, \{\char`\"{}rl\char`\"{}, \char`\"{}Roll\char`\"{}\}, \{\char`\"{}t\char`\"{}, \char`\"{}Take\char`\"{}\}, \{\char`\"{}d\char`\"{}, \char`\"{}Drop\char`\"{}\}, \{\char`\"{}m\char`\"{}, \char`\"{}Move\char`\"{}\}, \{\char`\"{}i\char`\"{}, \char`\"{}Inspect\char`\"{}\}, \{\char`\"{}on\char`\"{}, \char`\"{}Turnon\char`\"{}\}, \{\char`\"{}off\char`\"{}, \char`\"{}Turnoff\char`\"{}\}, \{\char`\"{}o\char`\"{}, \char`\"{}Open\char`\"{}\}, \{\char`\"{}s\char`\"{}, \char`\"{}Save\char`\"{}\}, \{\char`\"{}l\char`\"{}, \char`\"{}Load\char`\"{}\}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It implements the command interpreter. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/01-\/2020 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{command_8c_a2b1bd24d2eddf8081d8c541e4cc4fd4b}\label{command_8c_a2b1bd24d2eddf8081d8c541e4cc4fd4b}} 
+\index{command.c@{command.c}!CMD\_LENGHT@{CMD\_LENGHT}}
+\index{CMD\_LENGHT@{CMD\_LENGHT}!command.c@{command.c}}
+\doxysubsubsection{\texorpdfstring{CMD\_LENGHT}{CMD\_LENGHT}}
+{\footnotesize\ttfamily \#define C\+M\+D\+\_\+\+L\+E\+N\+G\+HT~30}
+
+Tamaño máximo de la cadena del comando 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{command_8c_a7ad92506157db30fe6e1941d62752291}\label{command_8c_a7ad92506157db30fe6e1941d62752291}} 
+\index{command.c@{command.c}!command\_get\_user\_input@{command\_get\_user\_input}}
+\index{command\_get\_user\_input@{command\_get\_user\_input}!command.c@{command.c}}
+\doxysubsubsection{\texorpdfstring{command\_get\_user\_input()}{command\_get\_user\_input()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{command_8h_ab1f9bf350cc390d2bd227a2d6596cefb}{T\+\_\+\+Command}} command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene el comando que introduce el usuario. 
+
+\begin{DoxyReturn}{Returns}
+cmd (comando correspondiente al intoducido por el usuario).
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{command_8c_a3574ce85761f52cf9b70d061831533ee}\label{command_8c_a3574ce85761f52cf9b70d061831533ee}} 
+\index{command.c@{command.c}!cmd\_to\_str@{cmd\_to\_str}}
+\index{cmd\_to\_str@{cmd\_to\_str}!command.c@{command.c}}
+\doxysubsubsection{\texorpdfstring{cmd\_to\_str}{cmd\_to\_str}}
+{\footnotesize\ttfamily char$\ast$ cmd\+\_\+to\+\_\+str\mbox{[}\mbox{\hyperlink{command_8h_ae180fe89f0ae48ce5c80ffaa18de9271}{N\+\_\+\+C\+MD}}\mbox{]}\mbox{[}\mbox{\hyperlink{command_8h_a8d93932dcdc527c13e06b688b68c7ffc}{N\+\_\+\+C\+M\+DT}}\mbox{]} = \{\{\char`\"{}\char`\"{}, \char`\"{}No command\char`\"{}\}, \{\char`\"{}\char`\"{}, \char`\"{}Unknown\char`\"{}\}, \{\char`\"{}e\char`\"{}, \char`\"{}Exit\char`\"{}\}, \{\char`\"{}rl\char`\"{}, \char`\"{}Roll\char`\"{}\}, \{\char`\"{}t\char`\"{}, \char`\"{}Take\char`\"{}\}, \{\char`\"{}d\char`\"{}, \char`\"{}Drop\char`\"{}\}, \{\char`\"{}m\char`\"{}, \char`\"{}Move\char`\"{}\}, \{\char`\"{}i\char`\"{}, \char`\"{}Inspect\char`\"{}\}, \{\char`\"{}on\char`\"{}, \char`\"{}Turnon\char`\"{}\}, \{\char`\"{}off\char`\"{}, \char`\"{}Turnoff\char`\"{}\}, \{\char`\"{}o\char`\"{}, \char`\"{}Open\char`\"{}\}, \{\char`\"{}s\char`\"{}, \char`\"{}Save\char`\"{}\}, \{\char`\"{}l\char`\"{}, \char`\"{}Load\char`\"{}\}\}}
+
+Comandos escritos 

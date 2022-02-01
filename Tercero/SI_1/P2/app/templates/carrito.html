@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% block title %} Carrito {% endblock %}
+{% block content %}
+<div class="cart-content">
+  {% if session['carrito'] %}
+  <h1>Informacion del Carrito</h1>
+  {% for item in range(0, session['carrito']|length) %}
+  <div class="cart-element">
+    <div class="cart-element-img">
+      <img
+        src="{{ url_for('static', filename=session['carrito'][item]['pelicula']['poster'] )}}"
+        alt="No se ha podido cargar la imagen"
+      />
+    </div>
+    <div class="cart-element-data">
+      <div class="cart-element-data-principal">
+        <h3>{{ session['carrito'][item]['pelicula']['titulo'] }}</h3>
+        <p>
+          Precio:
+          <strong
+            >
+            {{ session['carrito'][item]['precio_total'] }} €
+          </strong>
+        </p>
+      </div>
+      <div class="cart-element-data-options">
+          {% for prod in session['carrito'][item]['productos'] %}
+            <div class="cart-element-data-elems">
+              <div class="cart-element-data-edition">
+                <strong>{{ prod['edicion'] }}</strong> edition
+              </div>
+              <div class="cart-element-data-links">
+                <a href="{{ url_for('aumentar_item_carrito', product_id=prod['id']) }}">
+                  ( <img
+                    src="{{ url_for('static', filename='/icon' + '/mas.png' )}}"
+                    alt=""
+                  /> )
+                </a>
+                <strong>{{ prod['cantidad'] }}</strong>
+                {% if prod['cantidad'] > 1 %}
+                  <a href="{{ url_for('reducir_item_carrito', product_id=prod['id']) }}">
+                    ( <img
+                    src="{{ url_for('static', filename='/icon' + '/menos.png' )}}"
+                    alt=""
+                  /> )
+                  </a>
+                {% else %}
+                  <a href="{{ url_for('reducir_item_carrito', product_id=prod['id']) }}">
+                    <a href="{{ url_for('reducir_item_carrito', product_id=prod['id']) }}">
+                      <img
+                      src="{{ url_for('static', filename='/icon' + '/delete.png' )}}"
+                      alt=""
+                    />
+                  </a>
+                {% endif %}
+              </div>
+              <div class="cart-element-data-price">
+                Precio/item <strong>{{ prod['precio'] }}</strong> €
+              </div>
+            </div>
+            {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  <div class="cart-final-actions">
+    <a href="{{ url_for('limpiar_carrito') }}">Limpiar Carrito</a>
+    <form action="" method="POST">
+      <input type="submit" value="Confirmar Carrito" />
+    </form>
+    <p>Subtotal ({{ session['total_cantidad'] }} productos) <strong>{{session['total_precio']}} </strong>€</p>
+  </div>
+  {% else %}
+  <h1>El carrito no tiene ningun elemento</h1>
+  {% endif %}
+</div>
+{% endblock %}

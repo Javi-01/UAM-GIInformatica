@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% block title %} Registro {% endblock
+%} {% block content %}
+
+{% if mensaje %}
+<div class="error-messaje">
+  <span>{{ mensaje }}</span>
+</div>
+{% endif %}
+<!-- FORMULARIO DE REGISTRO -->
+<div class="form-user">
+  <h1>REGISTRO DE USUARIO</h1>
+  <form id="formulario" method="POST">
+    <div>
+      <label id="name">Nombre de Usuario: </label>
+      <input
+        name="usuario"
+        id="usuario"
+        type="text"
+        class="form-input"
+        onblur="validarUsuario()"
+      />
+      <span class="help-text"></span>
+    </div>
+    <div>
+      <label for="contraseña1">Contraseña: </label>
+      <input
+        name="contraseña1"
+        id="contraseña1"
+        type="password"
+        class="form-input"
+      />
+      <span class="help-text"></span>
+    </div>
+    <div id="pswd-info">
+      <h4>contraseña debería cumplir con los siguientes requerimientos:</h4>
+      <ul>
+        <li id="letter">Al menos debería tener <strong>una letra</strong></li>
+        <li id="capital">
+          Al menos debería tener <strong>una letra en mayúsculas</strong>
+        </li>
+        <li id="number">Al menos debería tener <strong>un número</strong></li>
+        <li id="length">
+          Debería tener <strong>8 carácteres</strong> como mínimo
+        </li>
+      </ul>
+    </div>
+    <div>
+      <label for="contraseña2">Confirma la Contraseña: </label>
+      <input
+        name="contraseña2"
+        id="contraseña2"
+        type="password"
+        class="form-input"
+        onblur="validarContraseña()"
+      />
+      <span class="help-text"></span>
+    </div>
+    <div>
+      <label for="correo">Correo electrónico: </label>
+      <input
+        name="correo"
+        id="correo"
+        type="text"
+        class="form-input"
+        onblur="validarCorreo()"
+      />
+      <span class="help-text"></span>
+    </div>
+    <div>
+      <label for="tarjeta">Tarjeta de credito: </label>
+      <input
+        name="tarjeta"
+        id="tarjeta"
+        type="text"
+        placeholder="16 digitos"
+        class="form-input"
+        onblur="validarTarjeta()"
+      />
+      <span class="help-text"></span>
+    </div>
+    <div>
+      <label for="direccion">Direccion de vivienda: </label>
+      <input
+        name="direccion"
+        id="direccion"
+        type="text"
+        class="form-input"
+        onblur="validarDireccion()"
+      />
+      <span class="help-text"></span>
+    </div>
+    <input type="submit" id ="botonInput" value="Crear Cuenta" class="btn-form-usr" />
+    <div class="change-authentication">
+      <strong>¿Tienes ya una cuenta?</strong>
+      <a href="{{ url_for('login') }}">Acceder</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,851 @@
+\hypertarget{space__test_8c}{}\doxysection{src/space\+\_\+test.c File Reference}
+\label{space__test_8c}\index{src/space\_test.c@{src/space\_test.c}}
+
+
+It tests space module.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}space.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}space\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}link.\+h\char`\"{}}\newline
+Include dependency graph for space\+\_\+test.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{space__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}{M\+A\+X\+\_\+\+T\+E\+S\+TS}}~52
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{space__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Main function for S\+P\+A\+CE unit tests. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{space__test_8c_a69278cc022dc5688d4725f8d36317b30}{test1\+\_\+space\+\_\+create}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a012cd3cf37a8d91e2d7098a264c29d65}{test2\+\_\+space\+\_\+create}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a2569bab6cfeec15f722d232bb8c78c9e}{test1\+\_\+space\+\_\+set\+\_\+name}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a5a868ba017602ba6b58447cb394e81a6}{test2\+\_\+space\+\_\+set\+\_\+name}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_aa24a337830006e33706ab6ac1c416b47}{test3\+\_\+space\+\_\+set\+\_\+name}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a3d3457a89f705948102cf1e5d4a7b45b}{test1\+\_\+space\+\_\+set\+\_\+north}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a3bc7fe26c1e36ffd195099a9983206e1}{test2\+\_\+space\+\_\+set\+\_\+north}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a21938e16547b3080e9251f960117a859}{test1\+\_\+space\+\_\+set\+\_\+south}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_ac9f950741f12ccfcc5ad5d9e71d3d90a}{test2\+\_\+space\+\_\+set\+\_\+south}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_ab1f093af4be3ca8e525d0517cc846f47}{test1\+\_\+space\+\_\+set\+\_\+east}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a5df66d103388be4518c379b224f53770}{test2\+\_\+space\+\_\+set\+\_\+east}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_ab680a8797f793dffd58546074b87d21f}{test1\+\_\+space\+\_\+set\+\_\+west}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_aa51b05ffd99b7bbd8f2dfc23c8f85870}{test2\+\_\+space\+\_\+set\+\_\+west}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a087e9efe152864bbb919b3d4208f66b7}{test1\+\_\+space\+\_\+set\+\_\+up}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a93508104720cd2f5ba4ac9652d8d238e}{test2\+\_\+space\+\_\+set\+\_\+up}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_acfdc180b8543b1fd7e320423416a7eec}{test1\+\_\+space\+\_\+set\+\_\+down}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a4d579ee19e22dfc43891f0dca5db14a6}{test2\+\_\+space\+\_\+set\+\_\+down}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_ad12c42523c517507566c5c68b1527689}{test1\+\_\+space\+\_\+get\+\_\+name}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_aee88ed31c63efc674051a4563aed86e2}{test2\+\_\+space\+\_\+get\+\_\+name}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a3a87f1e1e173d622bfbd3bcd14e060ca}{test1\+\_\+space\+\_\+get\+\_\+north}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a61891c9cebb9d26dc9f149ad8341517c}{test2\+\_\+space\+\_\+get\+\_\+north}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a8e345065f58565e131bdb3a9d0096ed5}{test1\+\_\+space\+\_\+get\+\_\+south}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a40fe07c07c1069023b362a9e506c4c59}{test2\+\_\+space\+\_\+get\+\_\+south}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a354adb2722b06ec65b7212d2736d6417}{test1\+\_\+space\+\_\+get\+\_\+east}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a249293510e61c6d5465f52c14343d02b}{test2\+\_\+space\+\_\+get\+\_\+east}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a1f08c6866885bfc093717f57b1b86539}{test1\+\_\+space\+\_\+get\+\_\+west}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_af1cf02b01c007aec0684186b39666c32}{test2\+\_\+space\+\_\+get\+\_\+west}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a27def98869466837b2b9e46c8979b795}{test1\+\_\+space\+\_\+get\+\_\+up}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a293a03e22f1bc96f193cc84abfd23fa4}{test2\+\_\+space\+\_\+get\+\_\+up}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a31b56fea7bd46484d0e2e21dda7add5d}{test1\+\_\+space\+\_\+get\+\_\+down}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a4390a534575e1516d30140e8e40e3b52}{test2\+\_\+space\+\_\+get\+\_\+down}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a920df9e02482f4f1e6a5ebcaec523860}{test1\+\_\+space\+\_\+get\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_af9087176b0d3c41d83a17a4918b13e31}{test2\+\_\+space\+\_\+get\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a690640f83a54cc4014cd1702b55e89bc}{test1\+\_\+space\+\_\+object\+\_\+presence}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a7d98debe9ee97c755e02b700ace07d10}{test2\+\_\+space\+\_\+object\+\_\+presence}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a871c964198bb9b8e085e4762654fdca1}{test1\+\_\+space\+\_\+del\+\_\+object}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a5727fc65ee0f976061f63d2bfd7e95fe}{test2\+\_\+space\+\_\+del\+\_\+object}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a068c22b91236896ae1b077a8f7059458}{test1\+\_\+space\+\_\+set\+\_\+gdesc}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_af40c7a664b529a39c3d98dca3d0af708}{test2\+\_\+space\+\_\+set\+\_\+gdesc}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a3b6d16613ee2f3940fe7c92f3934508a}{test1\+\_\+space\+\_\+get\+\_\+gdesc}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a3422f19fd8a821a06ccba2feb52034c2}{test2\+\_\+space\+\_\+get\+\_\+gdesc}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a208ae9352ff979024f6ebef4e791356a}{test1\+\_\+space\+\_\+set\+\_\+object}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a6349e2b547c71dee23b96d8bbf7a1806}{test2\+\_\+space\+\_\+set\+\_\+object}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_a9a9da97ed6f49f2ae325177caecfea9c}{test1\+\_\+space\+\_\+get\+\_\+description}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_aebfa57e927e8f871e73425975c11976b}{test2\+\_\+space\+\_\+get\+\_\+description}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_ad6031d4d04caf609f2b167f8efc0a0b1}{test1\+\_\+space\+\_\+set\+\_\+iluminado}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_aedb2fa0b877ded8c2aa4ad862676d7bd}{test2\+\_\+space\+\_\+set\+\_\+iluminado}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_ad92c1bb6fd3d65db69b0984fd0a47cd2}{test1\+\_\+space\+\_\+get\+\_\+iluminado}} ()
+\item 
+void \mbox{\hyperlink{space__test_8c_acda7d8b7bc32f9510c0e10c88346e13e}{test2\+\_\+space\+\_\+get\+\_\+iluminado}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It tests space module. 
+
+\begin{DoxyAuthor}{Author}
+Profesores Pprog 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{space__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}\label{space__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}} 
+\index{space\_test.c@{space\_test.c}!MAX\_TESTS@{MAX\_TESTS}}
+\index{MAX\_TESTS@{MAX\_TESTS}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_TESTS}{MAX\_TESTS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+E\+S\+TS~52}
+
+Numero máximo de test que se realizaran en este modulo 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{space__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{space__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{space\_test.c@{space\_test.c}!main@{main}}
+\index{main@{main}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Main function for S\+P\+A\+CE unit tests. 
+
+You may execute A\+LL or a S\+I\+N\+G\+LE test 1.-\/ No parameter -\/$>$ A\+LL test are executed 2.-\/ A number means a particular test (the one identified by that number) is executed \mbox{\Hypertarget{space__test_8c_a69278cc022dc5688d4725f8d36317b30}\label{space__test_8c_a69278cc022dc5688d4725f8d36317b30}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_create@{test1\_space\_create}}
+\index{test1\_space\_create@{test1\_space\_create}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_create()}{test1\_space\_create()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000150}{Test}}]Test creación espacio \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Space ID 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Puntero a espacio NO N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a871c964198bb9b8e085e4762654fdca1}\label{space__test_8c_a871c964198bb9b8e085e4762654fdca1}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_del\_object@{test1\_space\_del\_object}}
+\index{test1\_space\_del\_object@{test1\_space\_del\_object}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_del\_object()}{test1\_space\_del\_object()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+del\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000177}{Test}}]Test space\+\_\+del\+\_\+object \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+espacio y objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==F\+A\+L\+SE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a9a9da97ed6f49f2ae325177caecfea9c}\label{space__test_8c_a9a9da97ed6f49f2ae325177caecfea9c}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_get\_description@{test1\_space\_get\_description}}
+\index{test1\_space\_get\_description@{test1\_space\_get\_description}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_get\_description()}{test1\_space\_get\_description()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+get\+\_\+description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000187}{Test}}]Test space\+\_\+get\+\_\+description / space\+\_\+get\+\_\+long\+\_\+description \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+space no creado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==0 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a31b56fea7bd46484d0e2e21dda7add5d}\label{space__test_8c_a31b56fea7bd46484d0e2e21dda7add5d}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_get\_down@{test1\_space\_get\_down}}
+\index{test1\_space\_get\_down@{test1\_space\_get\_down}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_get\_down()}{test1\_space\_get\_down()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+get\+\_\+down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000199}{Test}}]Test space\+\_\+get\+\_\+down \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del espacio a abajo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a354adb2722b06ec65b7212d2736d6417}\label{space__test_8c_a354adb2722b06ec65b7212d2736d6417}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_get\_east@{test1\_space\_get\_east}}
+\index{test1\_space\_get\_east@{test1\_space\_get\_east}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_get\_east()}{test1\_space\_get\_east()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+get\+\_\+east (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000169}{Test}}]Test space\+\_\+get\+\_\+east \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del espacio al este 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==link 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a3b6d16613ee2f3940fe7c92f3934508a}\label{space__test_8c_a3b6d16613ee2f3940fe7c92f3934508a}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_get\_gdesc@{test1\_space\_get\_gdesc}}
+\index{test1\_space\_get\_gdesc@{test1\_space\_get\_gdesc}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_get\_gdesc()}{test1\_space\_get\_gdesc()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+get\+\_\+gdesc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000181}{Test}}]Test space\+\_\+get\+\_\+gdesc \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+espacio y cadena 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output!=N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a920df9e02482f4f1e6a5ebcaec523860}\label{space__test_8c_a920df9e02482f4f1e6a5ebcaec523860}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_get\_id@{test1\_space\_get\_id}}
+\index{test1\_space\_get\_id@{test1\_space\_get\_id}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_get\_id()}{test1\_space\_get\_id()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000173}{Test}}]Test space\+\_\+get\+\_\+id \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+espacio ~\newline
+ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==link 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_ad92c1bb6fd3d65db69b0984fd0a47cd2}\label{space__test_8c_ad92c1bb6fd3d65db69b0984fd0a47cd2}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_get\_iluminado@{test1\_space\_get\_iluminado}}
+\index{test1\_space\_get\_iluminado@{test1\_space\_get\_iluminado}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_get\_iluminado()}{test1\_space\_get\_iluminado()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+get\+\_\+iluminado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000191}{Test}}]Test space\+\_\+get\+\_\+iluminado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+space no creado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==F\+A\+L\+SE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_ad12c42523c517507566c5c68b1527689}\label{space__test_8c_ad12c42523c517507566c5c68b1527689}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_get\_name@{test1\_space\_get\_name}}
+\index{test1\_space\_get\_name@{test1\_space\_get\_name}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_get\_name()}{test1\_space\_get\_name()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000163}{Test}}]Test space\+\_\+get\+\_\+name \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+String con nombre del espacio 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+strcmp==0 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a3a87f1e1e173d622bfbd3bcd14e060ca}\label{space__test_8c_a3a87f1e1e173d622bfbd3bcd14e060ca}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_get\_north@{test1\_space\_get\_north}}
+\index{test1\_space\_get\_north@{test1\_space\_get\_north}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_get\_north()}{test1\_space\_get\_north()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+get\+\_\+north (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000165}{Test}}]Test space\+\_\+get\+\_\+north \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del espacio al norte 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==link 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a8e345065f58565e131bdb3a9d0096ed5}\label{space__test_8c_a8e345065f58565e131bdb3a9d0096ed5}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_get\_south@{test1\_space\_get\_south}}
+\index{test1\_space\_get\_south@{test1\_space\_get\_south}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_get\_south()}{test1\_space\_get\_south()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+get\+\_\+south (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000167}{Test}}]Test space\+\_\+get\+\_\+south \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del espacio al sur 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==link 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a27def98869466837b2b9e46c8979b795}\label{space__test_8c_a27def98869466837b2b9e46c8979b795}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_get\_up@{test1\_space\_get\_up}}
+\index{test1\_space\_get\_up@{test1\_space\_get\_up}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_get\_up()}{test1\_space\_get\_up()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+get\+\_\+up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000195}{Test}}]Test space\+\_\+get\+\_\+up \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del espacio a arriba 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a1f08c6866885bfc093717f57b1b86539}\label{space__test_8c_a1f08c6866885bfc093717f57b1b86539}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_get\_west@{test1\_space\_get\_west}}
+\index{test1\_space\_get\_west@{test1\_space\_get\_west}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_get\_west()}{test1\_space\_get\_west()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+get\+\_\+west (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000171}{Test}}]Test space\+\_\+get\+\_\+west \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del espacio al oeste 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==link 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a690640f83a54cc4014cd1702b55e89bc}\label{space__test_8c_a690640f83a54cc4014cd1702b55e89bc}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_object\_presence@{test1\_space\_object\_presence}}
+\index{test1\_space\_object\_presence@{test1\_space\_object\_presence}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_object\_presence()}{test1\_space\_object\_presence()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+object\+\_\+presence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000175}{Test}}]Test space\+\_\+object\+\_\+presence \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+espacio y objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==F\+A\+L\+SE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_acfdc180b8543b1fd7e320423416a7eec}\label{space__test_8c_acfdc180b8543b1fd7e320423416a7eec}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_set\_down@{test1\_space\_set\_down}}
+\index{test1\_space\_set\_down@{test1\_space\_set\_down}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_set\_down()}{test1\_space\_set\_down()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+set\+\_\+down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000197}{Test}}]Test space\+\_\+set\+\_\+down \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del espacio a abajo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_ab1f093af4be3ca8e525d0517cc846f47}\label{space__test_8c_ab1f093af4be3ca8e525d0517cc846f47}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_set\_east@{test1\_space\_set\_east}}
+\index{test1\_space\_set\_east@{test1\_space\_set\_east}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_set\_east()}{test1\_space\_set\_east()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+set\+\_\+east (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000159}{Test}}]Test space\+\_\+set\+\_\+east \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del espacio al este 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a068c22b91236896ae1b077a8f7059458}\label{space__test_8c_a068c22b91236896ae1b077a8f7059458}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_set\_gdesc@{test1\_space\_set\_gdesc}}
+\index{test1\_space\_set\_gdesc@{test1\_space\_set\_gdesc}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_set\_gdesc()}{test1\_space\_set\_gdesc()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+set\+\_\+gdesc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000179}{Test}}]Test space\+\_\+set\+\_\+gdesc \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+espacio y cadena 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_ad6031d4d04caf609f2b167f8efc0a0b1}\label{space__test_8c_ad6031d4d04caf609f2b167f8efc0a0b1}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_set\_iluminado@{test1\_space\_set\_iluminado}}
+\index{test1\_space\_set\_iluminado@{test1\_space\_set\_iluminado}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_set\_iluminado()}{test1\_space\_set\_iluminado()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+set\+\_\+iluminado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000189}{Test}}]Test space\+\_\+set\+\_\+iluminado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+spcae no creado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a2569bab6cfeec15f722d232bb8c78c9e}\label{space__test_8c_a2569bab6cfeec15f722d232bb8c78c9e}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_set\_name@{test1\_space\_set\_name}}
+\index{test1\_space\_set\_name@{test1\_space\_set\_name}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_set\_name()}{test1\_space\_set\_name()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+set\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000152}{Test}}]Test space\+\_\+set\+\_\+name \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+String con nombre del espacio 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a3d3457a89f705948102cf1e5d4a7b45b}\label{space__test_8c_a3d3457a89f705948102cf1e5d4a7b45b}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_set\_north@{test1\_space\_set\_north}}
+\index{test1\_space\_set\_north@{test1\_space\_set\_north}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_set\_north()}{test1\_space\_set\_north()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+set\+\_\+north (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000155}{Test}}]Test space\+\_\+set\+\_\+north \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del espacio al norte 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a208ae9352ff979024f6ebef4e791356a}\label{space__test_8c_a208ae9352ff979024f6ebef4e791356a}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_set\_object@{test1\_space\_set\_object}}
+\index{test1\_space\_set\_object@{test1\_space\_set\_object}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_set\_object()}{test1\_space\_set\_object()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+set\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000183}{Test}}]Test space\+\_\+set\+\_\+object \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+espacio 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a21938e16547b3080e9251f960117a859}\label{space__test_8c_a21938e16547b3080e9251f960117a859}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_set\_south@{test1\_space\_set\_south}}
+\index{test1\_space\_set\_south@{test1\_space\_set\_south}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_set\_south()}{test1\_space\_set\_south()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+set\+\_\+south (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000157}{Test}}]Test space\+\_\+set\+\_\+south \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del espacio al sur 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a087e9efe152864bbb919b3d4208f66b7}\label{space__test_8c_a087e9efe152864bbb919b3d4208f66b7}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_set\_up@{test1\_space\_set\_up}}
+\index{test1\_space\_set\_up@{test1\_space\_set\_up}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_set\_up()}{test1\_space\_set\_up()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+set\+\_\+up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000193}{Test}}]Test space\+\_\+set\+\_\+up \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del espacio a arriba 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_ab680a8797f793dffd58546074b87d21f}\label{space__test_8c_ab680a8797f793dffd58546074b87d21f}} 
+\index{space\_test.c@{space\_test.c}!test1\_space\_set\_west@{test1\_space\_set\_west}}
+\index{test1\_space\_set\_west@{test1\_space\_set\_west}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_space\_set\_west()}{test1\_space\_set\_west()}}
+{\footnotesize\ttfamily void test1\+\_\+space\+\_\+set\+\_\+west (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000161}{Test}}]Test space\+\_\+set\+\_\+west \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+ID del espacio al oeste 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a012cd3cf37a8d91e2d7098a264c29d65}\label{space__test_8c_a012cd3cf37a8d91e2d7098a264c29d65}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_create@{test2\_space\_create}}
+\index{test2\_space\_create@{test2\_space\_create}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_create()}{test2\_space\_create()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000151}{Test}}]Test creación espacio \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Space ID 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Space\+\_\+\+ID == Space Id dado 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a5727fc65ee0f976061f63d2bfd7e95fe}\label{space__test_8c_a5727fc65ee0f976061f63d2bfd7e95fe}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_del\_object@{test2\_space\_del\_object}}
+\index{test2\_space\_del\_object@{test2\_space\_del\_object}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_del\_object()}{test2\_space\_del\_object()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+del\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000178}{Test}}]Test space\+\_\+del\+\_\+object \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+espacio y objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_aebfa57e927e8f871e73425975c11976b}\label{space__test_8c_aebfa57e927e8f871e73425975c11976b}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_get\_description@{test2\_space\_get\_description}}
+\index{test2\_space\_get\_description@{test2\_space\_get\_description}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_get\_description()}{test2\_space\_get\_description()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+get\+\_\+description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000188}{Test}}]Test space\+\_\+get\+\_\+description / space\+\_\+get\+\_\+long\+\_\+description \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+space creado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==0 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a4390a534575e1516d30140e8e40e3b52}\label{space__test_8c_a4390a534575e1516d30140e8e40e3b52}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_get\_down@{test2\_space\_get\_down}}
+\index{test2\_space\_get\_down@{test2\_space\_get\_down}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_get\_down()}{test2\_space\_get\_down()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+get\+\_\+down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000200}{Test}}]Test space\+\_\+get\+\_\+down \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a249293510e61c6d5465f52c14343d02b}\label{space__test_8c_a249293510e61c6d5465f52c14343d02b}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_get\_east@{test2\_space\_get\_east}}
+\index{test2\_space\_get\_east@{test2\_space\_get\_east}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_get\_east()}{test2\_space\_get\_east()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+get\+\_\+east (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000170}{Test}}]Test space\+\_\+get\+\_\+east \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a3422f19fd8a821a06ccba2feb52034c2}\label{space__test_8c_a3422f19fd8a821a06ccba2feb52034c2}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_get\_gdesc@{test2\_space\_get\_gdesc}}
+\index{test2\_space\_get\_gdesc@{test2\_space\_get\_gdesc}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_get\_gdesc()}{test2\_space\_get\_gdesc()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+get\+\_\+gdesc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000182}{Test}}]Test space\+\_\+get\+\_\+gdesc \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+espacio y cadena 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+strcmp==0 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_af9087176b0d3c41d83a17a4918b13e31}\label{space__test_8c_af9087176b0d3c41d83a17a4918b13e31}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_get\_id@{test2\_space\_get\_id}}
+\index{test2\_space\_get\_id@{test2\_space\_get\_id}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_get\_id()}{test2\_space\_get\_id()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000174}{Test}}]Test space\+\_\+get\+\_\+id \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_acda7d8b7bc32f9510c0e10c88346e13e}\label{space__test_8c_acda7d8b7bc32f9510c0e10c88346e13e}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_get\_iluminado@{test2\_space\_get\_iluminado}}
+\index{test2\_space\_get\_iluminado@{test2\_space\_get\_iluminado}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_get\_iluminado()}{test2\_space\_get\_iluminado()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+get\+\_\+iluminado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000192}{Test}}]Test space\+\_\+get\+\_\+iluminado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+space creado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==T\+R\+UE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_aee88ed31c63efc674051a4563aed86e2}\label{space__test_8c_aee88ed31c63efc674051a4563aed86e2}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_get\_name@{test2\_space\_get\_name}}
+\index{test2\_space\_get\_name@{test2\_space\_get\_name}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_get\_name()}{test2\_space\_get\_name()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000164}{Test}}]Test space\+\_\+get\+\_\+name \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a61891c9cebb9d26dc9f149ad8341517c}\label{space__test_8c_a61891c9cebb9d26dc9f149ad8341517c}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_get\_north@{test2\_space\_get\_north}}
+\index{test2\_space\_get\_north@{test2\_space\_get\_north}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_get\_north()}{test2\_space\_get\_north()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+get\+\_\+north (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000166}{Test}}]Test space\+\_\+get\+\_\+north \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a40fe07c07c1069023b362a9e506c4c59}\label{space__test_8c_a40fe07c07c1069023b362a9e506c4c59}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_get\_south@{test2\_space\_get\_south}}
+\index{test2\_space\_get\_south@{test2\_space\_get\_south}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_get\_south()}{test2\_space\_get\_south()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+get\+\_\+south (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000168}{Test}}]Test space\+\_\+get\+\_\+south \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a293a03e22f1bc96f193cc84abfd23fa4}\label{space__test_8c_a293a03e22f1bc96f193cc84abfd23fa4}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_get\_up@{test2\_space\_get\_up}}
+\index{test2\_space\_get\_up@{test2\_space\_get\_up}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_get\_up()}{test2\_space\_get\_up()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+get\+\_\+up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000196}{Test}}]Test space\+\_\+get\+\_\+up \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_af1cf02b01c007aec0684186b39666c32}\label{space__test_8c_af1cf02b01c007aec0684186b39666c32}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_get\_west@{test2\_space\_get\_west}}
+\index{test2\_space\_get\_west@{test2\_space\_get\_west}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_get\_west()}{test2\_space\_get\_west()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+get\+\_\+west (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000172}{Test}}]Test space\+\_\+get\+\_\+west \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a7d98debe9ee97c755e02b700ace07d10}\label{space__test_8c_a7d98debe9ee97c755e02b700ace07d10}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_object\_presence@{test2\_space\_object\_presence}}
+\index{test2\_space\_object\_presence@{test2\_space\_object\_presence}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_object\_presence()}{test2\_space\_object\_presence()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+object\+\_\+presence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000176}{Test}}]Test space\+\_\+object\+\_\+presence \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+espacio y objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==T\+R\+UE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a4d579ee19e22dfc43891f0dca5db14a6}\label{space__test_8c_a4d579ee19e22dfc43891f0dca5db14a6}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_set\_down@{test2\_space\_set\_down}}
+\index{test2\_space\_set\_down@{test2\_space\_set\_down}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_set\_down()}{test2\_space\_set\_down()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+set\+\_\+down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000198}{Test}}]Test space\+\_\+set\+\_\+down \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a5df66d103388be4518c379b224f53770}\label{space__test_8c_a5df66d103388be4518c379b224f53770}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_set\_east@{test2\_space\_set\_east}}
+\index{test2\_space\_set\_east@{test2\_space\_set\_east}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_set\_east()}{test2\_space\_set\_east()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+set\+\_\+east (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000160}{Test}}]Test space\+\_\+set\+\_\+east \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_af40c7a664b529a39c3d98dca3d0af708}\label{space__test_8c_af40c7a664b529a39c3d98dca3d0af708}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_set\_gdesc@{test2\_space\_set\_gdesc}}
+\index{test2\_space\_set\_gdesc@{test2\_space\_set\_gdesc}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_set\_gdesc()}{test2\_space\_set\_gdesc()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+set\+\_\+gdesc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000180}{Test}}]Test space\+\_\+set\+\_\+gdesc \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+espacio y cadena 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+strcmp==0 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_aedb2fa0b877ded8c2aa4ad862676d7bd}\label{space__test_8c_aedb2fa0b877ded8c2aa4ad862676d7bd}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_set\_iluminado@{test2\_space\_set\_iluminado}}
+\index{test2\_space\_set\_iluminado@{test2\_space\_set\_iluminado}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_set\_iluminado()}{test2\_space\_set\_iluminado()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+set\+\_\+iluminado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000190}{Test}}]Test space\+\_\+set\+\_\+iluminado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+space creado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a5a868ba017602ba6b58447cb394e81a6}\label{space__test_8c_a5a868ba017602ba6b58447cb394e81a6}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_set\_name@{test2\_space\_set\_name}}
+\index{test2\_space\_set\_name@{test2\_space\_set\_name}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_set\_name()}{test2\_space\_set\_name()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+set\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000153}{Test}}]Test space\+\_\+set\+\_\+name \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a3bc7fe26c1e36ffd195099a9983206e1}\label{space__test_8c_a3bc7fe26c1e36ffd195099a9983206e1}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_set\_north@{test2\_space\_set\_north}}
+\index{test2\_space\_set\_north@{test2\_space\_set\_north}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_set\_north()}{test2\_space\_set\_north()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+set\+\_\+north (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000156}{Test}}]Test space\+\_\+set\+\_\+north \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a6349e2b547c71dee23b96d8bbf7a1806}\label{space__test_8c_a6349e2b547c71dee23b96d8bbf7a1806}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_set\_object@{test2\_space\_set\_object}}
+\index{test2\_space\_set\_object@{test2\_space\_set\_object}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_set\_object()}{test2\_space\_set\_object()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+set\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000184}{Test}}]Test space\+\_\+set\+\_\+object \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_ac9f950741f12ccfcc5ad5d9e71d3d90a}\label{space__test_8c_ac9f950741f12ccfcc5ad5d9e71d3d90a}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_set\_south@{test2\_space\_set\_south}}
+\index{test2\_space\_set\_south@{test2\_space\_set\_south}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_set\_south()}{test2\_space\_set\_south()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+set\+\_\+south (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000158}{Test}}]Test space\+\_\+set\+\_\+south \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_a93508104720cd2f5ba4ac9652d8d238e}\label{space__test_8c_a93508104720cd2f5ba4ac9652d8d238e}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_set\_up@{test2\_space\_set\_up}}
+\index{test2\_space\_set\_up@{test2\_space\_set\_up}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_set\_up()}{test2\_space\_set\_up()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+set\+\_\+up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000194}{Test}}]Test space\+\_\+set\+\_\+up \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_aa51b05ffd99b7bbd8f2dfc23c8f85870}\label{space__test_8c_aa51b05ffd99b7bbd8f2dfc23c8f85870}} 
+\index{space\_test.c@{space\_test.c}!test2\_space\_set\_west@{test2\_space\_set\_west}}
+\index{test2\_space\_set\_west@{test2\_space\_set\_west}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_space\_set\_west()}{test2\_space\_set\_west()}}
+{\footnotesize\ttfamily void test2\+\_\+space\+\_\+set\+\_\+west (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000162}{Test}}]Test space\+\_\+set\+\_\+west \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a espacio = N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{space__test_8c_aa24a337830006e33706ab6ac1c416b47}\label{space__test_8c_aa24a337830006e33706ab6ac1c416b47}} 
+\index{space\_test.c@{space\_test.c}!test3\_space\_set\_name@{test3\_space\_set\_name}}
+\index{test3\_space\_set\_name@{test3\_space\_set\_name}!space\_test.c@{space\_test.c}}
+\doxysubsubsection{\texorpdfstring{test3\_space\_set\_name()}{test3\_space\_set\_name()}}
+{\footnotesize\ttfamily void test3\+\_\+space\+\_\+set\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000154}{Test}}]Test space\+\_\+set\+\_\+name \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+puntero a space\+\_\+name = N\+U\+LL (puntero a space = N\+ON N\+U\+LL) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}

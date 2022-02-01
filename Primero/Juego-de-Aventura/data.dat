@@ -1,0 +1,49 @@
+
+#s:1|Inicio|-1|-1|1|-1|-1|-1|       |       |       |       |Inicio del juego|Patio, ante ti se encuentra la entrada al castillo |true|
+#s:2|Casilla 2|1|2|4|3|-1|-1|       |       |       |       |Recepcion|Todo esta sucio pero no hay nada destacable |true|
+#s:3|Casilla 3|-1|-1|-1|2|-1|-1|       |       |       |       |Capilla|No hay nada destacable |true|
+#s:4|Casilla 4|-1|3|-1|-1|-1|-1|       |       |       |       |Armeria|No hay nada destacable |true|
+#s:5|Casilla 5|4|-1|5|-1|-1|-1|       |       |       |       |Pasillo|No tiene nada especial |true|
+#s:6|Casilla 6|5|7|8|6|-1|-1|       |       |       |       |Salon del trono|No hay nada destacable |false|
+#s:7|Abismo|-1|6|-1|-1|-1|-1|       | (O O) |  \m/  |       |Que es esto|Mueres en el abismo |true|
+#s:8|Libreria|-1|-1|-1|7|-1|9|       |       |       |       |Antigua libreria|Pocos pensarian en encontrar algo de valor aqui |false|
+#s:9|Piso de Abajo|-1|10|-1|-1|9|-1|       |       |       |       |Pasillo oscuro|Al final hay una gran puerta dorada |false|
+#s:10|Tumba del faraon|-1|-1|-1|10|-1|-1|       |       |       |       |Todo esta oscuro... |Tumba del rey|false|
+#s:11|Casilla 11|8|11|-1|-1|-1|-1|       |       |       |       |Habitaciones del rey |Hay una puerta negra|false|
+#s:12|Camara de gas|-1|-1|-1|11|-1|-1|       | (O O) |  \m/  |       |Que es esto |Cuidado con el gas|false|
+
+#o:1|cartel_entrada|1|Bienvenido al castillo se recomienda traer una linterna|false|-1|-1|false|false|
+#o:2|cartel_recepcion|2|Muchos han muerto en el interior quedando aqui sus cosas|false|-1|-1|false|false|
+#o:3|estatua|5|Para poder salir del castillo tendras que llevar al rey unas ofrendas|false|-1|-1|false|false|
+#o:4|nota|6|M*******, E******, *s*****|false|-1|-1|false|false|
+#o:5|incripcion_pared|9|B*****, *******e, Y****, G****|false|-1|-1|false|false|
+#o:6|linterna|3|linterna para iluminar las zonas oscuras|true|-1|-1|true|false|
+#o:7|libro_mugriento|3|Libro mugriento que sirve para abrir la puerta que lleva al segundo piso (estanteria, link del 8 al 9)|true|-1|9|false|false|
+#o:8|llave_plata|4|llave que abre la puerta de plata (link de la casilla 5 a la 6)|true|-1|5|false|false|
+#o:9|llave_negra|2|llave que abre la puerta de la muerte (link de la casilla 6 a la 7)|true|-1|6|false|false|
+#o:10|llave_oro|12|llave que abre la puerta de oro (link de la casilla 9 a la 10)|true|-1|10|false|false|
+#o:11|tumba|10|tumba final del juego|false|-1|-1|false|false|
+#o:12|mascarilla|4|mascarilla para sobrevivir en la máscara de gas|true|-1|-1|false|false|
+#o:13|medallon|3|Hay un hueco|true|-1|-1|false|false|
+#o:14|espada|4|Parece digna de un rey|true|-1|-1|false|false|
+#o:15|escudo|4|Parece que acompaña a una espada|true|-1|-1|false|false|
+#o:16|biblia|8|Amen|true|-1|-1|false|false|
+#o:17|diamante|11|Parece que puede ser incrustado en algo|true|13|-1|false|false|
+#o:18|grial|8|Muy ornamentado, parece ser de alguien importante|true|-1|-1|false|false|
+#o:19|yelmo|11|Es demasiado bueno para ser de un guarda|true|-1|-1|false|false|
+#o:20|bocata|1|No sirve para nada, pero a quien no le alegra encontrarse un buen bocata|true|-1|-1|false|false|
+
+#p:1|ply1|1|4|0|
+
+#l:1|Pasillos|1|2|0|
+#l:2|Pasillos|2|3|0|
+#l:3|Pasillos|2|4|0|
+#l:4|Pasillos|2|5|0|
+#l:5|Puerta_de_plata|5|6|1|
+#l:6|Pasillo|6|7|1|
+#l:7|Puerta_negra|6|8|0|
+#l:8|Pasillos|6|11|0|
+#l:9|Libreria|8|9|1|
+#l:10|Puerta_de_oro|9|10|1|
+#l:11|Pasillos|11|12|0|
+#l:12|Pasillos|11|12|0|

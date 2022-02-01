@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% block title %} Pelicula {% endblock %} 
+{% block content %}
+<div class="movie-content">
+  <div class="movie-content-left">
+    <section>
+      <h2 id="title">{{ movie.titulo }}</h2>
+      <article>
+        <h2>Informacion general:</h2>
+        <p>
+          {{ movie.titulo }}, es una apasionante trama de {{ movie.categoria }},
+          dirigida por <strong>{{ movie.director }}</strong> publicada en el año
+          {{ movie.anno }}
+        </p>
+      </article>
+      <article>
+        <h2>Descripcion:</h2>
+        <p>{{ movie.descripcion }}</p>
+      </article>
+    </section>
+
+    <div class="actor-elements">
+      {% for actores in movie.actores %}
+      <ul class="actor-element">
+        <li>
+          <img
+            src="{{ url_for('static', filename=actores.foto )}}"
+            alt="No se ha podido cargar la imagen"
+          />
+        </li>
+        <li class="actor-title">
+          <strong>{{ actores.nombre }}</strong> interpreta a
+          <strong>{{ actores.personaje }}</strong>
+        </li>
+      </ul>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="movie-content-right">
+    <img
+      src="{{ url_for('static', filename=movie.poster )}}"
+      alt="No se ha podido cargar la imagen"
+    />
+    <p class="p-content">
+      La pelicula tiene un precio de: <strong>{{ movie.precio }} €</strong>
+    </p>
+    <form action="" method="POST">
+      <input type="submit" value="Añadir al Carrito" />
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div class="home-content">
+  <div class="movie-form">
+    <form action="" method="POST">
+      <div class="search-movie">
+        <label for="search">Nombre de la pelicula: </label>
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Busqueda.."
+        />
+      </div>
+      <div class="search-movie">
+        <label for="num_actors">Número de actores: </label>
+        <input
+          type="number"
+          name="num_actors"
+          id="num_actors"
+          placeholder="Introduce el número de actores que quieres que salgan al filtrar"
+        />
+      </div>
+      <div class="select-categories">
+        <label for="categories">Selecciona una categoria: </label>
+        <select id="categories" name="categories">
+          {% for category in categories %} {% if category == selected_category
+          %}
+          <option id="{{category}}" selected>{{ category }}</option>
+          {% else %}
+          <option id="{{category}}">{{ category }}</option>
+          {% endif %} {% endfor %}
+        </select>
+        <input type="submit" value="Buscar" />
+      </div>
+    </form>
+  </div>
+  {% if top_actors %}
+  <div class="top-actor-header">
+    <h2>  Top de Actores para peliculas de "{{ category }}" </h2>
+  </div>
+  <div class="filter-actors">
+    {% for actor in top_actors %}
+        <div class="filter-actors-element">
+          <p class="filter-actors-title">Actor</p>
+          <p class="filter-actors-title">Actuaciones</p>
+          <p class="filter-actors-title">Debut</p>
+          <p class="filter-actors-title">1ª Pelicula</p>
+          <p class="filter-actors-title">Directores</p>
+          <p><img
+            src="{{ url_for('static', filename='/img' + '/character.png' )}}"
+            alt="No se ha podido cargar la imagen"
+          />{{ actor.nombre }}</p>
+          <p>{{ actor.num_actuaciones }}</p>
+          <p>{{ actor.debut }}</p>
+          <a href="{{ url_for('pelicula', pelicula_id=actor.id )}}">
+            <p><img
+                src="{{ url_for('static', filename='/img' + '/base_movie.jpg' )}}"
+                alt="No se ha podido cargar la imagen"
+              />{{ actor.pelicula_debut }}</p>
+          </a>
+          <ul>
+          {% for dir in actor.director %}
+              <li>{{ dir }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+    {% endfor %}
+</div>
+  {% else %}
+  <h2>  No has realizado ninguna búsqueda de actores </h2>
+  {% endif %}
+  <hr>
+  <div class="top-actor-header">
+    <h2>  Peliculas filtradas </h2>
+  </div>
+  <div class="movie-elements">
+    {% for movie in movies %}
+    <a href="{{ url_for('pelicula', pelicula_id=movie.id )}}">
+      <div class="movie-element">
+        <img
+          src="{{ url_for('static', filename=movie.poster )}}"
+          alt="No se ha podido cargar la imagen"
+        />
+        <div class="movie-title">
+          <p>{{ movie.titulo }}</p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

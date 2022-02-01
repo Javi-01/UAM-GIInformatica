@@ -1,0 +1,18 @@
+-Nombres de Autores:
+	Iván Fernández París
+	Javier Fraile Iglesias
+
+
+-Normativa de entrega cumplida en su totalidad: Realizado: Se ha leido varias veces la funcionalidad de los metodos para entender 			correctamente el enunciado.
+
+-Contar paquetes de una traza: Realizado: Se ha comprobado que el frame del ultimo paquete corresponde a uno menos del numero de 			paquetes de ejecutar el fichero de practica1.py porque depende de cuando canceles la captura del trafico.
+
+-Contar paquetes de la interfaz de red: Parcialmente-Realizado : EL propio programa los cuenta cuando se para la ejecución.
+
+-Almacenar en una traza el tráfico capturado en vivo: Realizado: Se ha comprobado en varios paquetes que los valores capturados en la 	simulacion de wireshark coincide con los valores de la terminal
+
+-Modificar fecha correctamente: Realizado: Al abrir una traza generada, observamos en wireshark que la fecha se ve adelantada 30 minutos
+
+-Imprimir los N primeros bytes de un paquete y validarlo con Wireshark (captura de pantalla): Realizado: Los 32 bytes que hemos indicado en la simulacion se imprimen correctamente.
+
+-Cuestionario "Ejercicios de captura de tráfico": Realizado: Se entrega un fichero .pdf donde se comentan esos ejercicios.

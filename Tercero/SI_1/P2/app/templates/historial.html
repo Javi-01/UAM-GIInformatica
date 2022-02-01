@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% block title %} Historial_usuario {% endblock %}
+{% block content %} {% if session['usuario'] %}
+<div class="user-history">
+  <h1>¡Bienvenido {{ session['usuario'] }} !</h1>
+  <div class="user-history-header">
+    <div class="user-history-header-left">
+      <div class="history-points">
+        <span><strong>Puntos: </strong></span>
+        <span> {{ puntos }}</span>
+        <img
+          src="{{ url_for('static', filename='icon/' + 'descuento.png' )}}"
+          alt="*"
+        />
+      </div>
+      <div class="history-balance">
+        <span><strong>Saldo: </strong></span>
+        <span>{{ saldo }}</span>
+        <img
+          src="{{ url_for('static', filename='icon/' + 'monedas.png' )}}"
+          alt="$"
+        />
+      </div>
+    </div>
+    <div class="user-history-header-right">
+      <form action="/historial/saldo" method="POST">
+        <div class="history-add-balance">
+          <label for="saldo"
+            >Introduce si desea añadir saldo a su cuenta:
+          </label>
+          <input name="saldo" id="saldo" type="text" class="saldo-input" />
+          <input type="submit" value="Añadir saldo" class="btn-saldo-usr" />
+        </div>
+      </form>
+    </div>
+  </div>
+  {% if info_general %}
+  <div class="cont-menu">
+    {% for compra in info_general %}
+    <div class="cont-enlace">
+      <div class="opcion">
+        <p>{{info_general[compra]['fecha']}}</p>
+        <p class="icono">+</p>
+      </div>
+
+      <div class="enlace">
+        <table class="tabla">
+          <thead class="cabecera">
+            <tr class="tr">
+              <th class="columnas">Nombre pelicula</th>
+              <th class="columnas">Cantidad de artículos</th>
+              <th class="columnas">Precio por artículo (Sin IVA)</th>
+              <th class="columnas">Version de la pelicula comprada</th>
+            </tr>
+          </thead>
+          {% for pelicula in info_individual[compra] %}
+            <tr class="tr">
+              <td class="filas">
+                <a
+                  href="{{ url_for('pelicula', pelicula_id=pelicula['movie_id']) }}"
+                >
+                  <div class="table-movie-element">
+                    <img
+                      src="{{ url_for('static', filename=pelicula['poster']) }}"
+                      alt="No se ha podido cargar la imagen"
+                    />
+                    <div class="table-movie-title">
+                      <p>{{pelicula['movie_title']}}</p>
+                    </div>
+                  </div>
+                </a>
+              </td>
+              <td class="filas">{{pelicula['quantity']}}</td>
+              <td class="filas">{{pelicula['price']}}</td>
+              <td class="filas">{{pelicula['description']}}</td>
+            </tr>
+          {% endfor %}
+        </table>
+        <table class="tablaInfo">
+          <thead class="cabecera">
+            <tr>
+              <th class="columnasInfo">Status compra</th>
+              <th class="columnasInfo">Num. total artículos</th>
+              <th class="columnasInfo">Precio final (Con IVA)</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="filasInfo">{{info_general[compra]['status']}}</td>
+            <td class="filasInfo">{{info_general[compra]['num_articulos']}}</td>
+            <td class="filasInfo">{{info_general[compra]['precio_total']}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+  {% else %}
+
+  <h2>No has realizado ninguna compra compra</h2>
+  {% endif %} {% else %}
+  <h1>No has iniciado sesion con ningun usuario</h1>
+  {% endif %} {% endblock %}

@@ -1,0 +1,160 @@
+\hypertarget{dialogue_8c}{}\doxysection{src/dialogue.c File Reference}
+\label{dialogue_8c}\index{src/dialogue.c@{src/dialogue.c}}
+
+
+Modulo de dialogos.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}command.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dialogue.\+h\char`\"{}}\newline
+Include dependency graph for dialogue.\+c\+:
+% FIG 0
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__Dialogue}{\+\_\+\+Dialogue}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dialogue_8c_a24298fa9c2f15a130a2d465106232def}{dialogue\+\_\+explicative\+\_\+phrase\+\_\+selection}} (\mbox{\hyperlink{struct__Dialogue}{Dialogue}} $\ast$dialogue, \mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Escoge la frase explicativa correcta. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct__Dialogue}{Dialogue}} $\ast$ \mbox{\hyperlink{dialogue_8c_acb150833c6f301d0311c2af653a56464}{dialogue\+\_\+create}} ()
+\begin{DoxyCompactList}\small\item\em Crea dialogo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{dialogue_8c_aa4043f1e971b702b32a8328af7be9df5}{dialogue\+\_\+destroy}} (\mbox{\hyperlink{struct__Dialogue}{Dialogue}} $\ast$dialogue)
+\begin{DoxyCompactList}\small\item\em Destruye diálogo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{dialogue_8c_a2210bc81474b94774bd7938aa7b61fa8}{dialogue\+\_\+set\+\_\+command}} (\mbox{\hyperlink{struct__Dialogue}{Dialogue}} $\ast$dialogue, char $\ast$command, char $\ast$status)
+\begin{DoxyCompactList}\small\item\em Cambia el último comando. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{dialogue_8c_a9d1dd6d5586afc96b029de8f65a5e8ad}{dialogue\+\_\+get\+\_\+explicative\+\_\+phrase}} (void $\ast$game, char $\ast$command, char $\ast$status)
+\begin{DoxyCompactList}\small\item\em Obtiene la frase correspondiente al último comando ejecutado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Modulo de dialogos. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/04-\/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dialogue_8c_acb150833c6f301d0311c2af653a56464}\label{dialogue_8c_acb150833c6f301d0311c2af653a56464}} 
+\index{dialogue.c@{dialogue.c}!dialogue\_create@{dialogue\_create}}
+\index{dialogue\_create@{dialogue\_create}!dialogue.c@{dialogue.c}}
+\doxysubsubsection{\texorpdfstring{dialogue\_create()}{dialogue\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct__Dialogue}{Dialogue}}$\ast$ dialogue\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crea dialogo. 
+
+\begin{DoxyReturn}{Returns}
+Retorna N\+U\+LL en caso de fallo o un nuevo dialogo en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{dialogue_8c_aa4043f1e971b702b32a8328af7be9df5}\label{dialogue_8c_aa4043f1e971b702b32a8328af7be9df5}} 
+\index{dialogue.c@{dialogue.c}!dialogue\_destroy@{dialogue\_destroy}}
+\index{dialogue\_destroy@{dialogue\_destroy}!dialogue.c@{dialogue.c}}
+\doxysubsubsection{\texorpdfstring{dialogue\_destroy()}{dialogue\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} dialogue\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__Dialogue}{Dialogue}} $\ast$}]{dialogue }\end{DoxyParamCaption})}
+
+
+
+Destruye diálogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & puntero al diálogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{dialogue_8c_a24298fa9c2f15a130a2d465106232def}\label{dialogue_8c_a24298fa9c2f15a130a2d465106232def}} 
+\index{dialogue.c@{dialogue.c}!dialogue\_explicative\_phrase\_selection@{dialogue\_explicative\_phrase\_selection}}
+\index{dialogue\_explicative\_phrase\_selection@{dialogue\_explicative\_phrase\_selection}!dialogue.c@{dialogue.c}}
+\doxysubsubsection{\texorpdfstring{dialogue\_explicative\_phrase\_selection()}{dialogue\_explicative\_phrase\_selection()}}
+{\footnotesize\ttfamily void dialogue\+\_\+explicative\+\_\+phrase\+\_\+selection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__Dialogue}{Dialogue}} $\ast$}]{dialogue,  }\item[{\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Escoge la frase explicativa correcta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & puntero al diálogo \\
+\hline
+{\em game} & puntero a game \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{dialogue_8c_a9d1dd6d5586afc96b029de8f65a5e8ad}\label{dialogue_8c_a9d1dd6d5586afc96b029de8f65a5e8ad}} 
+\index{dialogue.c@{dialogue.c}!dialogue\_get\_explicative\_phrase@{dialogue\_get\_explicative\_phrase}}
+\index{dialogue\_get\_explicative\_phrase@{dialogue\_get\_explicative\_phrase}!dialogue.c@{dialogue.c}}
+\doxysubsubsection{\texorpdfstring{dialogue\_get\_explicative\_phrase()}{dialogue\_get\_explicative\_phrase()}}
+{\footnotesize\ttfamily char$\ast$ dialogue\+\_\+get\+\_\+explicative\+\_\+phrase (\begin{DoxyParamCaption}\item[{void $\ast$}]{game,  }\item[{char $\ast$}]{command,  }\item[{char $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+Obtiene la frase correspondiente al último comando ejecutado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & puntero a game \\
+\hline
+{\em command} & último comando del juego \\
+\hline
+{\em status} & último status del juego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{dialogue_8c_a2210bc81474b94774bd7938aa7b61fa8}\label{dialogue_8c_a2210bc81474b94774bd7938aa7b61fa8}} 
+\index{dialogue.c@{dialogue.c}!dialogue\_set\_command@{dialogue\_set\_command}}
+\index{dialogue\_set\_command@{dialogue\_set\_command}!dialogue.c@{dialogue.c}}
+\doxysubsubsection{\texorpdfstring{dialogue\_set\_command()}{dialogue\_set\_command()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} dialogue\+\_\+set\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__Dialogue}{Dialogue}} $\ast$}]{dialogue,  }\item[{char $\ast$}]{command,  }\item[{char $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+Cambia el último comando. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & puntero al diálogo \\
+\hline
+{\em command} & ultimo comando del juego \\
+\hline
+{\em status} & ultimo status del juego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás 
+\end{DoxyAuthor}

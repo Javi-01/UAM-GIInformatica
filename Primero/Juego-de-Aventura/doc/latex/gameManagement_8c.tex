@@ -1,0 +1,204 @@
+\hypertarget{gameManagement_8c}{}\doxysection{src/game\+Management.c File Reference}
+\label{gameManagement_8c}\index{src/gameManagement.c@{src/gameManagement.c}}
+
+
+It implements the game\+Management module.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}game\+Management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}link.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+Include dependency graph for game\+Management.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{gameManagement_8c_a0513d5ddba603f9eaf2db1845f3e58a5}{game\+\_\+management\+\_\+spaces}} (\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Añade todas las casillas (y sus conexiones) desde el fichero. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{gameManagement_8c_a70e26050cf754df73ef8f9d99d4d8de1}{game\+\_\+management\+\_\+objects}} (\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Añade todos los objetos desde el fichero. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{gameManagement_8c_ae6cac3b95f1372de73c4001bd930b95a}{game\+\_\+management\+\_\+player}} (\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Añade al jugador desde el fichero. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{gameManagement_8c_a48c1190121f0c8b0c24efce399b70a96}{game\+\_\+management\+\_\+links}} (\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Añade todos los enlaces y su estado desde el fichero. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{gameManagement_8c_aa8c1688b52d1433de45138a9e44856fb}{game\+\_\+management\+\_\+save}} (\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de guardar la partida de un fichero en el estado en el que se quedó \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{gameManagement_8c_afec68c063a60726a1429d20740dcb9ef}{game\+\_\+management\+\_\+load}} (\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de cargar la partida de un fichero en el estado en el que se quedó \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It implements the game\+Management module. 
+
+It implements the game spaces lecture.
+
+\begin{DoxyAuthor}{Author}
+Modificado Javier Fraile Iglesias e Iván Fernández París y José Miguel Nicolás García 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11-\/02-\/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+Modificado Javier Fraile Iglesias e Iván Fernández París 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11-\/02-\/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gameManagement_8c_a48c1190121f0c8b0c24efce399b70a96}\label{gameManagement_8c_a48c1190121f0c8b0c24efce399b70a96}} 
+\index{gameManagement.c@{gameManagement.c}!game\_management\_links@{game\_management\_links}}
+\index{game\_management\_links@{game\_management\_links}!gameManagement.c@{gameManagement.c}}
+\doxysubsubsection{\texorpdfstring{game\_management\_links()}{game\_management\_links()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} game\+\_\+management\+\_\+links (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Añade todos los enlaces y su estado desde el fichero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & puntero al juego \\
+\hline
+{\em filename} & nombre del fichero con los datos del juego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{gameManagement_8c_afec68c063a60726a1429d20740dcb9ef}\label{gameManagement_8c_afec68c063a60726a1429d20740dcb9ef}} 
+\index{gameManagement.c@{gameManagement.c}!game\_management\_load@{game\_management\_load}}
+\index{game\_management\_load@{game\_management\_load}!gameManagement.c@{gameManagement.c}}
+\doxysubsubsection{\texorpdfstring{game\_management\_load()}{game\_management\_load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} game\+\_\+management\+\_\+load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Funcion encargada de cargar la partida de un fichero en el estado en el que se quedó 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & puntero al juego \\
+\hline
+{\em filename} & nombre del fichero con los datos del juego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias e Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{gameManagement_8c_a70e26050cf754df73ef8f9d99d4d8de1}\label{gameManagement_8c_a70e26050cf754df73ef8f9d99d4d8de1}} 
+\index{gameManagement.c@{gameManagement.c}!game\_management\_objects@{game\_management\_objects}}
+\index{game\_management\_objects@{game\_management\_objects}!gameManagement.c@{gameManagement.c}}
+\doxysubsubsection{\texorpdfstring{game\_management\_objects()}{game\_management\_objects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} game\+\_\+management\+\_\+objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Añade todos los objetos desde el fichero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & puntero al juego \\
+\hline
+{\em filename} & nombre del fichero con los datos del juego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García e Iván Fernández París la parte de realizar la lectura de la descripción de un objeto, si es movible, si se enciende... 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{gameManagement_8c_ae6cac3b95f1372de73c4001bd930b95a}\label{gameManagement_8c_ae6cac3b95f1372de73c4001bd930b95a}} 
+\index{gameManagement.c@{gameManagement.c}!game\_management\_player@{game\_management\_player}}
+\index{game\_management\_player@{game\_management\_player}!gameManagement.c@{gameManagement.c}}
+\doxysubsubsection{\texorpdfstring{game\_management\_player()}{game\_management\_player()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} game\+\_\+management\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Añade al jugador desde el fichero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & puntero al juego \\
+\hline
+{\em filename} & nombre del fichero con los datos del juego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez Reinoso 
+\end{DoxyAuthor}
+$<$ Reads data.\+dat to create the game board\mbox{\Hypertarget{gameManagement_8c_aa8c1688b52d1433de45138a9e44856fb}\label{gameManagement_8c_aa8c1688b52d1433de45138a9e44856fb}} 
+\index{gameManagement.c@{gameManagement.c}!game\_management\_save@{game\_management\_save}}
+\index{game\_management\_save@{game\_management\_save}!gameManagement.c@{gameManagement.c}}
+\doxysubsubsection{\texorpdfstring{game\_management\_save()}{game\_management\_save()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} game\+\_\+management\+\_\+save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Funcion encargada de guardar la partida de un fichero en el estado en el que se quedó 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & puntero al juego \\
+\hline
+{\em filename} & nombre del fichero con los datos del juego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias e Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{gameManagement_8c_a0513d5ddba603f9eaf2db1845f3e58a5}\label{gameManagement_8c_a0513d5ddba603f9eaf2db1845f3e58a5}} 
+\index{gameManagement.c@{gameManagement.c}!game\_management\_spaces@{game\_management\_spaces}}
+\index{game\_management\_spaces@{game\_management\_spaces}!gameManagement.c@{gameManagement.c}}
+\doxysubsubsection{\texorpdfstring{game\_management\_spaces()}{game\_management\_spaces()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} game\+\_\+management\+\_\+spaces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Añade todas las casillas (y sus conexiones) desde el fichero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & puntero al juego \\
+\hline
+{\em filename} & nombre del fichero con los datos del juego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Modificado por Javier Fraile Iglesias e Iván Fernández París 
+\end{DoxyAuthor}

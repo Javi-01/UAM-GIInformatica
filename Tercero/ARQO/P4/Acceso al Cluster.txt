@@ -1,0 +1,10 @@
+Credenciales acceso al Cluster:
+
+*Conectado con la VPN de la UAM y teniendo la IP del Cluster
+
+-IP del Cluster: 150.244.56.153
+-Usuario: arqo37
+-Contraseña: qSYWwCU
+
+Acceso desde MobaXTerm:
+- ssh arqo37@150.244.56.153

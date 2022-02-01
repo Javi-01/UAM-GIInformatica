@@ -1,0 +1,48 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content %}
+
+<h1 class="mb-4">Welcome to your cart"{{ user.username }}" </h1>
+{% if cart|length > 0 %}
+        <table class="table table-striped">
+            <tr>
+                <th>Book</th>
+                <th>Quantity</th>
+                <th>Edit</th>
+                <th>Price/ud.</th>
+                <th>Total price item</th>
+                <th></th>
+            </tr>
+            {% for item in cart %}
+            <tr>
+                        <td><h6>{{ item.book_title }}</h6></td>
+                        <td>{{ item.quantity }}</td>
+                        <td>
+                            {% if user.is_authenticated %}
+                                <form action="{% url 'cart_add' slug=item.book_slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <input type="submit" value="Add" class="btn btn-primary"/>
+                                </form>
+                            {% endif %}
+                        </td>
+                        <td>{{item.price}} $</td>
+                        <td>{{item.total_price}} $</td>
+                        <td>
+                            <form action="{% url 'cart_remove' slug=item.book_slug %}" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" value="Clean item" class="btn btn-outline-danger"/>
+                            </form>
+                        </td>
+                    </tr>
+            {% endfor %}
+        </table>
+
+        <div class="d-flex w-100 justify-content-around p-3">
+            <h4>Total Price: <small class="text-muted">{{carrito.get_total_price}} $</small></h4>
+            <a href="{% url 'order_create' %}" class="btn btn-outline-success">Confirm Cart</a>
+        </div>
+{% else %}
+    <h5>Your Cart is currently empty</h5>
+{% endif  %}
+{% endblock %}

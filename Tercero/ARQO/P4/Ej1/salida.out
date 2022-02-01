@@ -1,0 +1,56 @@
+/opt/gridengine/default/spool/compute-0-1/job_scripts/92979: line 7: : command not found
+/opt/gridengine/default/spool/compute-0-1/job_scripts/92979: line 9: : command not found
+Hay 16 cores disponibles
+Prueba para OMP_NUM_THREADS con 16 hilos
+Hola, soy el hilo 8 de 16
+Hola, soy el hilo 3 de 16
+Hola, soy el hilo 0 de 16
+Hola, soy el hilo 1 de 16
+Hola, soy el hilo 7 de 16
+Hola, soy el hilo 11 de 16
+Hola, soy el hilo 9 de 16
+Hola, soy el hilo 4 de 16
+Hola, soy el hilo 6 de 16
+Hola, soy el hilo 12 de 16
+Hola, soy el hilo 15 de 16
+Hola, soy el hilo 5 de 16
+Hola, soy el hilo 14 de 16
+Hola, soy el hilo 10 de 16
+Hola, soy el hilo 13 de 16
+Hola, soy el hilo 2 de 16
+-----------------------------------------------
+Prueba para omp_set_num_threads(int num_threads) con 16 hilos
+Hola, soy el hilo 8 de 16
+Hola, soy el hilo 11 de 16
+Hola, soy el hilo 12 de 16
+Hola, soy el hilo 7 de 16
+Hola, soy el hilo 10 de 16
+Hola, soy el hilo 5 de 16
+Hola, soy el hilo 3 de 16
+Hola, soy el hilo 1 de 16
+Hola, soy el hilo 2 de 16
+Hola, soy el hilo 9 de 16
+Hola, soy el hilo 0 de 16
+Hola, soy el hilo 6 de 16
+Hola, soy el hilo 14 de 16
+Hola, soy el hilo 4 de 16
+Hola, soy el hilo 13 de 16
+Hola, soy el hilo 15 de 16
+-----------------------------------------------
+Prueba para #pragma omp parallel num_threads(numthr) con 16 hilos
+Hola, soy el hilo 8 de 16
+Hola, soy el hilo 10 de 16
+Hola, soy el hilo 15 de 16
+Hola, soy el hilo 1 de 16
+Hola, soy el hilo 9 de 16
+Hola, soy el hilo 4 de 16
+Hola, soy el hilo 5 de 16
+Hola, soy el hilo 2 de 16
+Hola, soy el hilo 0 de 16
+Hola, soy el hilo 6 de 16
+Hola, soy el hilo 13 de 16
+Hola, soy el hilo 3 de 16
+Hola, soy el hilo 11 de 16
+Hola, soy el hilo 12 de 16
+Hola, soy el hilo 14 de 16
+Hola, soy el hilo 7 de 16

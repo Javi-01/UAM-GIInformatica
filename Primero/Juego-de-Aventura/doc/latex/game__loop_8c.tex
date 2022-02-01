@@ -1,0 +1,137 @@
+\hypertarget{game__loop_8c}{}\doxysection{src/game\+\_\+loop.c File Reference}
+\label{game__loop_8c}\index{src/game\_loop.c@{src/game\_loop.c}}
+
+
+It defines the game loop.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}graphic\+\_\+engine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}command.\+h\char`\"{}}\newline
+Include dependency graph for game\+\_\+loop.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{game__loop_8c_a1c78d6052c905d10401d2424b6979772}{game\+\_\+loop\+\_\+init}} (\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$$\ast$game, \mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$$\ast$gengine, char $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Crea un juego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__loop_8c_ad56107f3b486e6258ad56da39407785a}{game\+\_\+loop\+\_\+run}} (\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$game, \mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$gengine, char $\ast$log\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Ejecuta cada una de las iteraciones del juego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__loop_8c_a395965726eadd591bc6c02fed4709a4e}{game\+\_\+loop\+\_\+cleanup}} (\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$game, \mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$gengine)
+\begin{DoxyCompactList}\small\item\em Destruye game y graphic engine creando memoria. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__loop_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Función main que ejecuta todo el juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It defines the game loop. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/01-\/2020 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game__loop_8c_a395965726eadd591bc6c02fed4709a4e}\label{game__loop_8c_a395965726eadd591bc6c02fed4709a4e}} 
+\index{game\_loop.c@{game\_loop.c}!game\_loop\_cleanup@{game\_loop\_cleanup}}
+\index{game\_loop\_cleanup@{game\_loop\_cleanup}!game\_loop.c@{game\_loop.c}}
+\doxysubsubsection{\texorpdfstring{game\_loop\_cleanup()}{game\_loop\_cleanup()}}
+{\footnotesize\ttfamily void game\+\_\+loop\+\_\+cleanup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$}]{gengine }\end{DoxyParamCaption})}
+
+
+
+Destruye game y graphic engine creando memoria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & puntero a game \\
+\hline
+{\em gengine} & puntero a graphic\+\_\+engine\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{game__loop_8c_a1c78d6052c905d10401d2424b6979772}\label{game__loop_8c_a1c78d6052c905d10401d2424b6979772}} 
+\index{game\_loop.c@{game\_loop.c}!game\_loop\_init@{game\_loop\_init}}
+\index{game\_loop\_init@{game\_loop\_init}!game\_loop.c@{game\_loop.c}}
+\doxysubsubsection{\texorpdfstring{game\_loop\_init()}{game\_loop\_init()}}
+{\footnotesize\ttfamily int game\+\_\+loop\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$$\ast$}]{game,  }\item[{\mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$$\ast$}]{gengine,  }\item[{char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Crea un juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & doble puntero a game \\
+\hline
+{\em gengine} & doble puntero a graphic\+\_\+engine \\
+\hline
+{\em file\+\_\+name} & nombre del fichero que servirá para cargar los datos del juego (data.\+dat) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si no ocurrió ningún tipo de error o 1 en caso contrario
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Modificada por Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{game__loop_8c_ad56107f3b486e6258ad56da39407785a}\label{game__loop_8c_ad56107f3b486e6258ad56da39407785a}} 
+\index{game\_loop.c@{game\_loop.c}!game\_loop\_run@{game\_loop\_run}}
+\index{game\_loop\_run@{game\_loop\_run}!game\_loop.c@{game\_loop.c}}
+\doxysubsubsection{\texorpdfstring{game\_loop\_run()}{game\_loop\_run()}}
+{\footnotesize\ttfamily void game\+\_\+loop\+\_\+run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$}]{gengine,  }\item[{char $\ast$}]{log\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Ejecuta cada una de las iteraciones del juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & puntero a game \\
+\hline
+{\em gengine} & puntero a graphic\+\_\+engine \\
+\hline
+{\em log\+File\+Name} & nombre del fichero donde será almacenada la informaciñon acerca de la ejecución de los comandos\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Modificada por Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{game__loop_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{game__loop_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{game\_loop.c@{game\_loop.c}!main@{main}}
+\index{main@{main}!game\_loop.c@{game\_loop.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Función main que ejecuta todo el juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & número de argumentos introducidos por terminal \\
+\hline
+{\em argv} & argumentos introducidos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si no ocurrió ningún tipo de error o 1 en caso contrario
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Modificada por Iván Fernández París 
+\end{DoxyAuthor}

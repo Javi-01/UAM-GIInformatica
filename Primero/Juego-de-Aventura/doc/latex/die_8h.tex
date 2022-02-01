@@ -1,0 +1,287 @@
+\hypertarget{die_8h}{}\doxysection{include/die.h File Reference}
+\label{die_8h}\index{include/die.h@{include/die.h}}
+
+
+Administrar un dado.  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+Include dependency graph for die.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__Die}{\+\_\+\+Die}} \mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$ \mbox{\hyperlink{die_8h_ab0347cf2d476293fb642700ac5952914}{die\+\_\+create}} (\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id, long max, long min)
+\begin{DoxyCompactList}\small\item\em Crea un dado con el id, el número máximo y el mínimo recibidos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{die_8h_a2115999335e58f733d846be485cfb783}{die\+\_\+destroy}} (\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Destruye el dado recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{die_8h_afafc56aafeb40dbf889c421cace3d919}{die\+\_\+roll}} (\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Hace una tirada del dado generando un número aleatorio entre el máx y el min del dado recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{die_8h_a57c9a2627bb3a1ca04fe55d72bd6a5ea}{die\+\_\+get\+\_\+id}} (\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Obtiene el id de un dado recibido. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{die_8h_a053ff499ba8b133f7bfba1a777768601}{die\+\_\+get\+\_\+max}} (\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Obtiene el número máximo de un dado recibido. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{die_8h_a23223676cefaf90e9de03129c1f23d43}{die\+\_\+get\+\_\+min}} (\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Obtiene el número mínimo de un dado recibido. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{die_8h_a3fd7859d03a0a489c9b26d32a3015c9a}{die\+\_\+get\+\_\+num}} (\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Obtiene el número de la última tirada de un dado recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{die_8h_adaa24f5d6f8b177b16d35dac2f7386a4}{die\+\_\+set\+\_\+max}} (\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$die, long new\+Max)
+\begin{DoxyCompactList}\small\item\em Cambia el número máximo de un dado recibido, por un nuevo máximo recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{die_8h_a03b0a3b7de5b0fe92f7188dc7dc9571b}{die\+\_\+set\+\_\+min}} (\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$die, long new\+Min)
+\begin{DoxyCompactList}\small\item\em Cambia el número mínimo de un dado recibido, por un nuevo mínimo recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{die_8h_a6ab2e5a9dcbd7ba3bf9ac6ebb183ac97}{die\+\_\+print}} (\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Imprime todos los campos del dado recibido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Administrar un dado. 
+
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04-\/03-\/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}\label{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}} 
+\index{die.h@{die.h}!Die@{Die}}
+\index{Die@{Die}!die.h@{die.h}}
+\doxysubsubsection{\texorpdfstring{Die}{Die}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__Die}{\+\_\+\+Die}} \mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}}}
+
+Estructura del dado 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{die_8h_ab0347cf2d476293fb642700ac5952914}\label{die_8h_ab0347cf2d476293fb642700ac5952914}} 
+\index{die.h@{die.h}!die\_create@{die\_create}}
+\index{die\_create@{die\_create}!die.h@{die.h}}
+\doxysubsubsection{\texorpdfstring{die\_create()}{die\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}}$\ast$ die\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id,  }\item[{long}]{max,  }\item[{long}]{min }\end{DoxyParamCaption})}
+
+
+
+Crea un dado con el id, el número máximo y el mínimo recibidos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & del nuevo dado \\
+\hline
+{\em max} & número máximo al que llegará el dado \\
+\hline
+{\em min} & número mínimo al que llegará el dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+U\+LL en caso de fallo o un nuevo dado en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{die_8h_a2115999335e58f733d846be485cfb783}\label{die_8h_a2115999335e58f733d846be485cfb783}} 
+\index{die.h@{die.h}!die\_destroy@{die\_destroy}}
+\index{die\_destroy@{die\_destroy}!die.h@{die.h}}
+\doxysubsubsection{\texorpdfstring{die\_destroy()}{die\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} die\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+Destruye el dado recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em die} & puntero al dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{die_8h_a57c9a2627bb3a1ca04fe55d72bd6a5ea}\label{die_8h_a57c9a2627bb3a1ca04fe55d72bd6a5ea}} 
+\index{die.h@{die.h}!die\_get\_id@{die\_get\_id}}
+\index{die\_get\_id@{die\_get\_id}!die.h@{die.h}}
+\doxysubsubsection{\texorpdfstring{die\_get\_id()}{die\_get\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} die\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+Obtiene el id de un dado recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em die} & puntero al dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna N\+O\+\_\+\+ID en caso de fallo o el id del dado en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{die_8h_a053ff499ba8b133f7bfba1a777768601}\label{die_8h_a053ff499ba8b133f7bfba1a777768601}} 
+\index{die.h@{die.h}!die\_get\_max@{die\_get\_max}}
+\index{die\_get\_max@{die\_get\_max}!die.h@{die.h}}
+\doxysubsubsection{\texorpdfstring{die\_get\_max()}{die\_get\_max()}}
+{\footnotesize\ttfamily long die\+\_\+get\+\_\+max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+Obtiene el número máximo de un dado recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em die} & puntero al dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna -\/1 en caso de fallo o el número máximo del dado en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{die_8h_a23223676cefaf90e9de03129c1f23d43}\label{die_8h_a23223676cefaf90e9de03129c1f23d43}} 
+\index{die.h@{die.h}!die\_get\_min@{die\_get\_min}}
+\index{die\_get\_min@{die\_get\_min}!die.h@{die.h}}
+\doxysubsubsection{\texorpdfstring{die\_get\_min()}{die\_get\_min()}}
+{\footnotesize\ttfamily long die\+\_\+get\+\_\+min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+Obtiene el número mínimo de un dado recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em die} & puntero al dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna -\/1 en caso de fallo o el número minimo del dado en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{die_8h_a3fd7859d03a0a489c9b26d32a3015c9a}\label{die_8h_a3fd7859d03a0a489c9b26d32a3015c9a}} 
+\index{die.h@{die.h}!die\_get\_num@{die\_get\_num}}
+\index{die\_get\_num@{die\_get\_num}!die.h@{die.h}}
+\doxysubsubsection{\texorpdfstring{die\_get\_num()}{die\_get\_num()}}
+{\footnotesize\ttfamily long die\+\_\+get\+\_\+num (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+Obtiene el número de la última tirada de un dado recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em die} & puntero al dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna -\/1 en caso de fallo o el número de la última tirada del dado en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{die_8h_a6ab2e5a9dcbd7ba3bf9ac6ebb183ac97}\label{die_8h_a6ab2e5a9dcbd7ba3bf9ac6ebb183ac97}} 
+\index{die.h@{die.h}!die\_print@{die\_print}}
+\index{die\_print@{die\_print}!die.h@{die.h}}
+\doxysubsubsection{\texorpdfstring{die\_print()}{die\_print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} die\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+Imprime todos los campos del dado recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em die} & puntero al dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{die_8h_afafc56aafeb40dbf889c421cace3d919}\label{die_8h_afafc56aafeb40dbf889c421cace3d919}} 
+\index{die.h@{die.h}!die\_roll@{die\_roll}}
+\index{die\_roll@{die\_roll}!die.h@{die.h}}
+\doxysubsubsection{\texorpdfstring{die\_roll()}{die\_roll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} die\+\_\+roll (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+Hace una tirada del dado generando un número aleatorio entre el máx y el min del dado recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em die} & puntero al dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{die_8h_adaa24f5d6f8b177b16d35dac2f7386a4}\label{die_8h_adaa24f5d6f8b177b16d35dac2f7386a4}} 
+\index{die.h@{die.h}!die\_set\_max@{die\_set\_max}}
+\index{die\_set\_max@{die\_set\_max}!die.h@{die.h}}
+\doxysubsubsection{\texorpdfstring{die\_set\_max()}{die\_set\_max()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} die\+\_\+set\+\_\+max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$}]{die,  }\item[{long}]{new\+Max }\end{DoxyParamCaption})}
+
+
+
+Cambia el número máximo de un dado recibido, por un nuevo máximo recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em die} & puntero al dado \\
+\hline
+{\em new\+Max} & nuevo número máximo del dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{die_8h_a03b0a3b7de5b0fe92f7188dc7dc9571b}\label{die_8h_a03b0a3b7de5b0fe92f7188dc7dc9571b}} 
+\index{die.h@{die.h}!die\_set\_min@{die\_set\_min}}
+\index{die\_set\_min@{die\_set\_min}!die.h@{die.h}}
+\doxysubsubsection{\texorpdfstring{die\_set\_min()}{die\_set\_min()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} die\+\_\+set\+\_\+min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$}]{die,  }\item[{long}]{new\+Min }\end{DoxyParamCaption})}
+
+
+
+Cambia el número mínimo de un dado recibido, por un nuevo mínimo recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em die} & puntero al dado \\
+\hline
+{\em new\+Min} & nuevo número mínimo del dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez 
+\end{DoxyAuthor}

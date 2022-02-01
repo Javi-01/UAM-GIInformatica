@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+   Home
+{% endblock %}
+
+{% block content %}
+
+    <div class="mt-2 w-50">
+      <form class="d-flex" action= "search/" method="GET">
+        <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-dark">Search</button>
+      </form>
+    </div>
+
+  <h2 class="mt-4">5 most popular books</h2>
+  <div class="row row-cols-1 row-cols-md-5 g-4">
+      {% for b1 in mayor %}
+      <a href="{{ b1.get_absolute_url }}" class="text-decoration-none">
+        <div class="col">
+          <div class="card h-100">
+            <img src="{%static 'covers/'%}{{ b1.path_to_cover_image }}" class="img-thumbnail" alt="Image not found">
+            <div class="card-body">
+              <h5 class="card-title">{{ b1.title }}</h5>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Score {{ b1.score }}</small>
+            </div>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+  </div>
+
+  <hr class="mt-4">
+
+  <h2 class="mt-2">5 most recent books</h2>
+  <div class="row row-cols-1 row-cols-md-5 g-4">
+    {% for b2 in recents %}
+    <a href="{{ b2.get_absolute_url }}" class="text-decoration-none">
+      <div class="col">
+        <div class="card h-100">
+          <img src="{%static 'covers/'%}{{ b2.path_to_cover_image }}" class="img-thumbnail" alt="Imagen no encontrada">
+          <div class="card-body">
+            <h5 class="card-title">{{ b2.title }}</h5>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Published {{ b2.date }}</small>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+
+{% endblock content %}

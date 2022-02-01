@@ -1,0 +1,110 @@
+\hypertarget{struct__Game}{}\doxysection{\+\_\+\+Game Struct Reference}
+\label{struct__Game}\index{\_Game@{\_Game}}
+
+
+Collaboration diagram for \+\_\+\+Game\+:
+% FIG 0
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$ \mbox{\hyperlink{struct__Game_ab4180417d9148f8abb2233ca6c4ecfe5}{spaces}} \mbox{[}\mbox{\hyperlink{space_8h_a5f54fd55f983a2e33ce076cd9f587e82}{M\+A\+X\+\_\+\+S\+P\+A\+C\+ES}}+1\mbox{]}
+\item 
+\mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}} $\ast$ \mbox{\hyperlink{struct__Game_acf0d86e2331b09230ba20bc31624b917}{object}} \mbox{[}\mbox{\hyperlink{object_8h_acdc7844fbd4d45737d4aa56834d37829}{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+TS}}+1\mbox{]}
+\item 
+\mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}} $\ast$ \mbox{\hyperlink{struct__Game_a31406605782d71ec00c4bf258ea76267}{player}}
+\item 
+\mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}} $\ast$ \mbox{\hyperlink{struct__Game_a0d6009b5dcb080489c192a9198fa7d46}{die}}
+\item 
+\mbox{\hyperlink{command_8h_ab1f9bf350cc390d2bd227a2d6596cefb}{T\+\_\+\+Command}} \mbox{\hyperlink{struct__Game_a27727b50ea0904a1fe9e1c55c27f2cf1}{last\+\_\+cmd}}
+\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{struct__Game_ab42af3e37c32a66d145a9e99dedecf88}{last\+\_\+cmd\+\_\+status}}
+\item 
+\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$ \mbox{\hyperlink{struct__Game_ac0b7120da2aad265b1c9ca894ce31413}{link}} \mbox{[}\mbox{\hyperlink{link_8h_a660ed1ec8604982002a0d6eced0e0367}{M\+A\+X\+\_\+\+L\+I\+N\+KS}}+1\mbox{]}
+\item 
+char \mbox{\hyperlink{struct__Game_ab2180095ef4140d5cb8882121e9bfd95}{last\+\_\+move}} \mbox{[}\mbox{\hyperlink{game_8c_aabf4f709c8199e41cf279c77112345fe}{M\+A\+X\+\_\+\+L\+EN}}\mbox{]}
+\item 
+char \mbox{\hyperlink{struct__Game_ab4d146597759e9366270538050e79b76}{last\+Description}} \mbox{[}\mbox{\hyperlink{types_8h_a92ed8507d1cd2331ad09275c5c4c1c89}{W\+O\+R\+D\+\_\+\+S\+I\+ZE}}+1\mbox{]}
+\item 
+\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{struct__Game_a1fcf833ca40d4a6f5fdf95ae0782e155}{game\+\_\+finished}}
+\item 
+\mbox{\hyperlink{struct__Dialogue}{Dialogue}} $\ast$ \mbox{\hyperlink{struct__Game_a15beffb9162cf746b75d11aff2f59ab3}{dialogue}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+!$<$ Game interface implementation
+
+$<$ Estrucutura de game 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct__Game_a15beffb9162cf746b75d11aff2f59ab3}\label{struct__Game_a15beffb9162cf746b75d11aff2f59ab3}} 
+\index{\_Game@{\_Game}!dialogue@{dialogue}}
+\index{dialogue@{dialogue}!\_Game@{\_Game}}
+\doxysubsubsection{\texorpdfstring{dialogue}{dialogue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct__Dialogue}{Dialogue}}$\ast$ \+\_\+\+Game\+::dialogue}
+
+Diálogos del juego \mbox{\Hypertarget{struct__Game_a0d6009b5dcb080489c192a9198fa7d46}\label{struct__Game_a0d6009b5dcb080489c192a9198fa7d46}} 
+\index{\_Game@{\_Game}!die@{die}}
+\index{die@{die}!\_Game@{\_Game}}
+\doxysubsubsection{\texorpdfstring{die}{die}}
+{\footnotesize\ttfamily \mbox{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}}$\ast$ \+\_\+\+Game\+::die}
+
+Puntero a la estructura del dado \mbox{\Hypertarget{struct__Game_a1fcf833ca40d4a6f5fdf95ae0782e155}\label{struct__Game_a1fcf833ca40d4a6f5fdf95ae0782e155}} 
+\index{\_Game@{\_Game}!game\_finished@{game\_finished}}
+\index{game\_finished@{game\_finished}!\_Game@{\_Game}}
+\doxysubsubsection{\texorpdfstring{game\_finished}{game\_finished}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \+\_\+\+Game\+::game\+\_\+finished}
+
+Indica si el juego ha finalizado \mbox{\Hypertarget{struct__Game_a27727b50ea0904a1fe9e1c55c27f2cf1}\label{struct__Game_a27727b50ea0904a1fe9e1c55c27f2cf1}} 
+\index{\_Game@{\_Game}!last\_cmd@{last\_cmd}}
+\index{last\_cmd@{last\_cmd}!\_Game@{\_Game}}
+\doxysubsubsection{\texorpdfstring{last\_cmd}{last\_cmd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{command_8h_ab1f9bf350cc390d2bd227a2d6596cefb}{T\+\_\+\+Command}} \+\_\+\+Game\+::last\+\_\+cmd}
+
+Puntero a la estructura command \mbox{\Hypertarget{struct__Game_ab42af3e37c32a66d145a9e99dedecf88}\label{struct__Game_ab42af3e37c32a66d145a9e99dedecf88}} 
+\index{\_Game@{\_Game}!last\_cmd\_status@{last\_cmd\_status}}
+\index{last\_cmd\_status@{last\_cmd\_status}!\_Game@{\_Game}}
+\doxysubsubsection{\texorpdfstring{last\_cmd\_status}{last\_cmd\_status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \+\_\+\+Game\+::last\+\_\+cmd\+\_\+status}
+
+Status del último comando ejecutado \mbox{\Hypertarget{struct__Game_ab2180095ef4140d5cb8882121e9bfd95}\label{struct__Game_ab2180095ef4140d5cb8882121e9bfd95}} 
+\index{\_Game@{\_Game}!last\_move@{last\_move}}
+\index{last\_move@{last\_move}!\_Game@{\_Game}}
+\doxysubsubsection{\texorpdfstring{last\_move}{last\_move}}
+{\footnotesize\ttfamily char \+\_\+\+Game\+::last\+\_\+move\mbox{[}\mbox{\hyperlink{game_8c_aabf4f709c8199e41cf279c77112345fe}{M\+A\+X\+\_\+\+L\+EN}}\mbox{]}}
+
+cadena con la ultima direccion del movimiento \mbox{\Hypertarget{struct__Game_ab4d146597759e9366270538050e79b76}\label{struct__Game_ab4d146597759e9366270538050e79b76}} 
+\index{\_Game@{\_Game}!lastDescription@{lastDescription}}
+\index{lastDescription@{lastDescription}!\_Game@{\_Game}}
+\doxysubsubsection{\texorpdfstring{lastDescription}{lastDescription}}
+{\footnotesize\ttfamily char \+\_\+\+Game\+::last\+Description\mbox{[}\mbox{\hyperlink{types_8h_a92ed8507d1cd2331ad09275c5c4c1c89}{W\+O\+R\+D\+\_\+\+S\+I\+ZE}}+1\mbox{]}}
+
+cadena con la ultima descripcion inspeccionada \mbox{\Hypertarget{struct__Game_ac0b7120da2aad265b1c9ca894ce31413}\label{struct__Game_ac0b7120da2aad265b1c9ca894ce31413}} 
+\index{\_Game@{\_Game}!link@{link}}
+\index{link@{link}!\_Game@{\_Game}}
+\doxysubsubsection{\texorpdfstring{link}{link}}
+{\footnotesize\ttfamily \mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}}$\ast$ \+\_\+\+Game\+::link\mbox{[}\mbox{\hyperlink{link_8h_a660ed1ec8604982002a0d6eced0e0367}{M\+A\+X\+\_\+\+L\+I\+N\+KS}}+1\mbox{]}}
+
+Puntero a la estructura link \mbox{\Hypertarget{struct__Game_acf0d86e2331b09230ba20bc31624b917}\label{struct__Game_acf0d86e2331b09230ba20bc31624b917}} 
+\index{\_Game@{\_Game}!object@{object}}
+\index{object@{object}!\_Game@{\_Game}}
+\doxysubsubsection{\texorpdfstring{object}{object}}
+{\footnotesize\ttfamily \mbox{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}}$\ast$ \+\_\+\+Game\+::object\mbox{[}\mbox{\hyperlink{object_8h_acdc7844fbd4d45737d4aa56834d37829}{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+TS}}+1\mbox{]}}
+
+Puntero a la estructura object \mbox{\Hypertarget{struct__Game_a31406605782d71ec00c4bf258ea76267}\label{struct__Game_a31406605782d71ec00c4bf258ea76267}} 
+\index{\_Game@{\_Game}!player@{player}}
+\index{player@{player}!\_Game@{\_Game}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}}$\ast$ \+\_\+\+Game\+::player}
+
+Puntero a la estructura player \mbox{\Hypertarget{struct__Game_ab4180417d9148f8abb2233ca6c4ecfe5}\label{struct__Game_ab4180417d9148f8abb2233ca6c4ecfe5}} 
+\index{\_Game@{\_Game}!spaces@{spaces}}
+\index{spaces@{spaces}!\_Game@{\_Game}}
+\doxysubsubsection{\texorpdfstring{spaces}{spaces}}
+{\footnotesize\ttfamily \mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}}$\ast$ \+\_\+\+Game\+::spaces\mbox{[}\mbox{\hyperlink{space_8h_a5f54fd55f983a2e33ce076cd9f587e82}{M\+A\+X\+\_\+\+S\+P\+A\+C\+ES}}+1\mbox{]}}
+
+Puntero a la estructura space 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{game_8c}{game.\+c}}\end{DoxyCompactItemize}

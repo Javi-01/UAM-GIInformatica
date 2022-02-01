@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% block title %} Cambio_contraseña {% endblock %}
+{% block content %}
+
+{% if mensaje %}
+<div class="error-messaje">
+  <span>{{ mensaje }}</span>
+</div>
+{% endif %}
+<!-- FORMULARIO DE CAMBIO DE CONTRASEÑA -->
+<div class="form-user">
+  <h1>CAMBIO DE CONTRASEÑA</h1>
+  <form action="" method="POST">
+    <label for="usuario">Nombre de Usuario: </label>
+    <input
+      name="usuarioChange"
+      id="usuario"
+      class="form-input"
+      type="text"
+      required
+    />
+    <label for="correo">Correo electrónico: </label>
+    <input
+      name="correo"
+      id="correo"
+      class="form-input"
+      type="email"
+      required
+    />
+    <label for="contraseña">Contraseña: </label>
+    <input
+      name="contraseña"
+      id="contraseña"
+      class="form-input"
+      type="password"
+      required
+    />
+    <div id="pswd-info">
+      <h4>contraseña debería cumplir con los siguientes requerimientos:</h4>
+      <ul>
+        <li id="letter">Al menos debería tener <strong>una letra</strong></li>
+        <li id="capital">
+          Al menos debería tener <strong>una letra en mayúsculas</strong>
+        </li>
+        <li id="number">Al menos debería tener <strong>un número</strong></li>
+        <li id="length">
+          Debería tener <strong>8 carácteres</strong> como mínimo
+        </li>
+      </ul>
+    </div>
+    <input class = "btn-form-usr" type="submit" value="Confirmar" />
+    <div class="change-authentication">
+      <a href="{{ url_for('login') }}"> <strong>Volver</strong></a>
+    </div>
+  </form>
+</div>
+{% endblock %}

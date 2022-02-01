@@ -1,0 +1,771 @@
+/*Estilos Generales*/
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.body-main-content {
+  display: grid;
+  grid-template-rows:auto 1fr auto;
+  gap: 20px;
+  margin-left: 15%;
+}
+
+/*Estilos de la Barra de Navegacion*/
+.side-bar {
+  position: fixed;
+  overflow-y: hidden;
+  width: 15%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #333;
+}
+
+.side-bat-top {
+  display: flex;
+
+}
+
+.side-bar a {
+  text-decoration: none;
+}
+
+.side-bar h1 {
+  color: white;
+  text-align: center;
+  line-height: 90px;
+  border-bottom: 1px solid white;
+  margin-bottom: 50px;
+}
+
+.side-bar a h3 {
+  list-style-type: none;
+  padding: 15px;
+  border-bottom: 1px solid #f2f2f2b0;
+  border-left: 5px transparent;
+  color: white;
+  font-weight: normal;
+}
+
+.side-bar a h3:hover {
+  background-color: #111;
+  border-left: 5px solid white;
+  font-weight: bold;
+}
+
+.side-bar-bottom {
+  position: absolute;
+  text-align: center;
+  margin: 5px;
+  bottom: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.side-bar-bottom-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-bar-bottom-element img {
+  max-width: 30%;
+}
+
+
+.side-bar-bottom-element a {
+  color: white;
+}
+
+.side-bar-bottom-element a:hover {
+  font-weight: bold;
+  color: white;
+}
+
+.banner-users-online {
+  background-color: #333;
+  padding: 10px;
+}
+
+.banner-users-online p{
+  text-align: end;
+  margin-right: 20px;
+  color: white;
+}
+/*Estilos del Footer*/
+
+.footer-content {
+  margin-top: 100px;
+  margin-bottom: 30px;
+
+}
+
+.footer-reason {
+  padding: 5px;
+  text-align: center;
+  background-color: rgb(158, 158, 158);
+}
+
+.footer-authors {
+  background-color: rgb(189, 189, 189);
+  text-align: center;
+  padding: 5px;
+}
+
+.footer-authors a {
+  text-decoration: none;
+  color: black;
+}
+
+/*ESTILOS PARA LA PAGINA PRINCIPAL*/
+
+.movie-element {
+  float: left;
+  overflow: visible;
+  background: #fefefe;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #ccc;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 20px;
+  max-width: 20%;
+}
+
+.movie-element:hover {
+  border: 3px solid #ccc;
+}
+
+.movie-element img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.movie-title {
+  text-align: center;
+  text-decoration: none;
+  color: #030303;
+  font-weight: bold;
+}
+
+.movie-form form {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.search-movie label {
+  margin-right: 100%;
+}
+
+.search-movie input[type="search"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0px 8px 0px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.select-categories label {
+  margin-right: 100%;
+}
+.select-categories select {
+  width: 40%;
+  padding: 12px;
+  margin: 8px 0px 8px 0px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.select-categories input[type="submit"] {
+  width: 20%;
+  padding: 12px;
+  margin-left: 50px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #333;
+  color: white;
+}
+
+.select-categories input[type="submit"]:hover {
+  background-color: #111;
+  width: 25%;
+}
+
+/*Estilos para el formulario de Registro de Usuario y Login*/
+.error-messaje {
+  border: 10px;
+  width: 90%;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #ff3333;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.error-messaje span{
+  color: #f2f2f2;
+  font-weight: bold;
+}
+
+.form-user {
+  border: 10px;
+  width: 90%;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.form-user h1 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0px 8px 0px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn-form-usr {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0px 8px 0px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn-form-usr {
+  background-color: #333;
+  color: white;
+}
+
+.btn-form-usr:hover {
+  background-color: #111;
+}
+
+.change-authentication {
+  padding-top: 10px;
+}
+
+.change-authentication a {
+  color: black;
+}
+
+.change-authentication .strong-2 {
+  float: right;
+}
+
+/*Validacion de la contraseña JQUERY*/
+
+#pswd-info {
+  padding: 15px;
+  background: #fefefe;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px #ccc;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+}
+
+#pswd-info h4 {
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
+.invalid {
+  padding-left: 22px;
+  line-height: 24px;
+  color: red;
+}
+.valid {
+  padding-left: 22px;
+  line-height: 24px;
+  color: green;
+}
+
+#pswd-info {
+  display: none;
+}
+
+/*Formulario incorrecto*/
+
+.invalid-form {
+  outline: none;
+  border: 3px solid red;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0px 8px 0px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.valid-form {
+  width: 100%;
+  border: 2px solid green;
+  padding: 12px;
+  margin: 8px 0px 8px 0px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/*ESTILOS PARA LA PAGINA DE LA PELICULA*/
+
+.movie-content {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+.movie-content-left,
+.movie-content-right {
+  margin: 20px;
+}
+
+.movie-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.movie-content-left #title {
+  font-weight: bold;
+  font-size: 75px;
+  margin-bottom: 40px;
+}
+
+.movie-content-left article {
+  margin-bottom: 15px;
+}
+
+.movie-content-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.movie-content-right img {
+  width: 100%;
+}
+
+.movie-content input {
+  margin-left: auto;
+  display: block;
+  border: 1px solid #333;
+  padding: 12px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.movie-content input {
+  background-color: #333;
+  color: white;
+}
+
+.movie-content input:hover {
+  background-color: #111;
+}
+
+/* Estilo para la presentacion de los actores */
+
+.actor-element {
+  float: left;
+  overflow: visible;
+  background: #fefefe;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #ccc;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 20px;
+  max-width: 15%;
+}
+
+.actor-element img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.actor-title {
+  text-align: center;
+  text-decoration: none;
+  color: #030303;
+}
+
+.actor-form {
+  margin: 20px;
+}
+
+/*ESTILOS PARA LA PAGINA DEL CARRITO */
+.cart-content {
+  margin: 20px;
+}
+.cart-content h1 {
+  margin-bottom: 15px;
+}
+
+.cart-element {
+  border: 1px solid #030303;
+  background-color: #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.cart-element {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-height: 250px;
+  max-width: 75%;
+}
+
+.cart-element-img,
+.cart-element-data,
+.cart-element-options {
+  padding: 10px;
+}
+
+.cart-element-img img {
+  height: 200px;
+  border-radius: 5px;
+}
+
+.cart-element-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-element-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.cart-element-options a {
+  width: 40%;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.cart-element-options a:hover {
+  width: 50%;
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  background-color: #111;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.cart-final-actions {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cart-final-actions a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid #333;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  text-align: center;
+  width: 30%;
+}
+
+.cart-final-actions a:hover {
+  text-decoration: none;
+  color: white;
+  display: block;
+  border: 1px solid #333;
+  padding: 10px;
+  background-color: firebrick;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+}
+
+.cart-final-actions input {
+  color: white;
+  background-color: #333;
+  border: 1px solid #333;
+  font-size: medium;
+  padding: 10px;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.cart-final-actions input:hover {
+  color: white;
+  background-color: forestgreen;
+  font-size: medium;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+/* ESTILOS PARA LA PAGINA DEL HISTORIAL */
+
+.user-history {
+  margin: 20px;
+}
+
+.user-history h1 {
+  margin-bottom: 100px;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.user-history-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.user-history-left,
+.user-history-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.history-points,
+.history-balance {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.history-points img,
+.history-balance img {
+  height: 30px;
+}
+
+.user-history-balance img {
+  height: 30px;
+}
+
+.history-add-balance {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-add-balance #saldo{
+  width: 80%;
+  padding: 10px;
+}
+
+.history-add-balance input[type='submit'] {
+  width: 50%;
+  border-radius: 5px;
+  color: white;
+  background-color: #333;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.history-add-balance input[type='submit']:hover {
+  width: 60%;
+  border-radius: 5px;
+  color: white;
+  background-color: forestgreen;
+  padding: 10px;
+  
+}
+.cont-menu {
+  margin-top: 100px;
+  box-sizing: border-box;
+  width: 600px;
+}
+
+.cont-menu .cont-enlace {
+  box-shadow: 0px 0px 2px 1px white;
+}
+
+/* Estilos para las opciones */
+.cont-menu .cont-enlace .opcion {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  margin-top: 10px;
+  padding: 13px 15px;
+  font-size: 22px;
+}
+
+/* Estilos para el simbolo '+' */
+.cont-menu .cont-enlace .opcion .icono {
+  background-color: white;
+  color: #333;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  width: 26px;
+  border-radius: 5px;
+}
+
+/* Efecto para aparacer y desaparecer enlaces */
+.cont-menu .cont-enlace .enlace {
+  height: 0;
+  overflow: hidden;
+}
+
+.cont-menu .cont-enlace .animation {
+  height: 100%;
+}
+
+/*ESTILOS PARA LA PAGINA DE CONFIRMAR COMPRA*/
+.confirm-cart {
+  margin: 20px;
+}
+
+.confirm-cart h1 {
+  margin-bottom: 15px;
+}
+
+.confirm-cart-data {
+  padding-top: 10px;
+  display: block;
+}
+
+.confirm-cart-data p {
+  padding-bottom: 10px;
+}
+
+.confirm-cart-checkbox {
+  margin-top: 10px;
+  font-size: medium;
+  margin-bottom: 20px;
+}
+
+.confirm-cart-checkbox input[type="checkbox"] {
+  border-radius: 50%;
+}
+
+.confirm-cart-buy input {
+  float: right;
+  color: white;
+  background-color: #333;
+  border: 1px solid #333;
+  font-size: medium;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.confirm-cart-buy input:hover {
+  color: white;
+  float: right;
+  background-color: forestgreen;
+  font-size: medium;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+/* Estilo tablas peliculas*/
+.tabla {
+  margin-top: 5px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border: 3px solid black;
+}
+
+.cabecera {
+  background-color: #333;
+  color: white;
+  box-shadow: 10px 3px 5px #ccc;
+  border-bottom: solid 2px gray;
+}
+
+.columnas {
+  padding: 20px;
+}
+
+.filas {
+  padding: 20px;
+  text-align: right;
+  border-bottom: solid 2px #333;
+  background-color: whitesmoke;
+}
+
+/* Estilo tablas informacion pedido*/
+.tablaInfo {
+  margin-top: 5px;
+  border-collapse: collapse;
+  background-color: white;
+  border: 3px solid black;
+  float: right;
+}
+
+.columnasInfo {
+  padding: 20px;
+}
+
+.filasInfo {
+  padding: 20px;
+  text-align: right;
+  border-bottom: solid 2px #333;
+  background-color: whitesmoke;
+}
+
+/* Imagenes tablas */
+.table-movie-element {
+  margin-left: 80px;
+  overflow: visible;
+  background: #fefefe;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #ccc;
+  border: 1px solid #ccc;
+  max-width: 50%;
+}
+
+.table-movie-element:hover {
+  border: 3px solid #ccc;
+}
+
+.table-movie-element img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.table-movie-title {
+  text-align: center;
+  text-decoration: none;
+  color: #030303;
+  font-weight: bold;
+}

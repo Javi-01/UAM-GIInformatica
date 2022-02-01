@@ -1,0 +1,180 @@
+\hypertarget{screen_8h}{}\doxysection{include/screen.h File Reference}
+\label{screen_8h}\index{include/screen.h@{include/screen.h}}
+
+
+It defines a screen.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{screen_8h_aab63df3ae7b979d59ea0188055ea0763}{S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR}}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__Area}{\+\_\+\+Area}} \mbox{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{screen_8h_a9dbb6c251337c03c078dc330caee48d2}{screen\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Crea la pantalla, si ya hay una creada la destruye. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{screen_8h_a3d6d82dde2bb4f3ddc4d276dabe313ef}{screen\+\_\+destroy}} ()
+\begin{DoxyCompactList}\small\item\em Destruye la pantalla. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{screen_8h_a3eaa0547a956d39b6c55c9593524e0d1}{screen\+\_\+paint}} ()
+\begin{DoxyCompactList}\small\item\em Pinta la pantalla colores azul, negro y blanco. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}} $\ast$ \mbox{\hyperlink{screen_8h_a194528bec3ed3b57618a8f2df9bea743}{screen\+\_\+area\+\_\+init}} (int x, int y, int width, int height)
+\begin{DoxyCompactList}\small\item\em Inicializa el area que usará la pantalla. Retorna el area a usar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{screen_8h_aca5123ed5a7afb75e79c0001e5d1df4f}{screen\+\_\+area\+\_\+destroy}} (\mbox{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}} $\ast$area)
+\begin{DoxyCompactList}\small\item\em Destruye el area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{screen_8h_a0950dc68cba3d491b909a8abaac1c666}{screen\+\_\+area\+\_\+clear}} (\mbox{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}} $\ast$area)
+\begin{DoxyCompactList}\small\item\em Limpia y resetea el area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{screen_8h_af77fa9df4f7170e1e3bf1c6209b7f0c2}{screen\+\_\+area\+\_\+reset\+\_\+cursor}} (\mbox{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}} $\ast$area)
+\begin{DoxyCompactList}\small\item\em Resetea el cursor a unas coordenadas en concreto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{screen_8h_a4f4cd4c7899c096d6c90cc33de9a9814}{screen\+\_\+area\+\_\+puts}} (\mbox{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}} $\ast$area, char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Imprime una cadena de caracteres en la pantalla. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It defines a screen. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07-\/02-\/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{screen_8h_aab63df3ae7b979d59ea0188055ea0763}\label{screen_8h_aab63df3ae7b979d59ea0188055ea0763}} 
+\index{screen.h@{screen.h}!SCREEN\_MAX\_STR@{SCREEN\_MAX\_STR}}
+\index{SCREEN\_MAX\_STR@{SCREEN\_MAX\_STR}!screen.h@{screen.h}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_MAX\_STR}{SCREEN\_MAX\_STR}}
+{\footnotesize\ttfamily \#define S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR~100}
+
+Macro para el máximo tramaño de la pantalla 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{screen_8h_acfdfc42f6522d75fa3c16713afde8127}\label{screen_8h_acfdfc42f6522d75fa3c16713afde8127}} 
+\index{screen.h@{screen.h}!Area@{Area}}
+\index{Area@{Area}!screen.h@{screen.h}}
+\doxysubsubsection{\texorpdfstring{Area}{Area}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__Area}{\+\_\+\+Area}} \mbox{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}}}
+
+Estructura del area 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{screen_8h_a0950dc68cba3d491b909a8abaac1c666}\label{screen_8h_a0950dc68cba3d491b909a8abaac1c666}} 
+\index{screen.h@{screen.h}!screen\_area\_clear@{screen\_area\_clear}}
+\index{screen\_area\_clear@{screen\_area\_clear}!screen.h@{screen.h}}
+\doxysubsubsection{\texorpdfstring{screen\_area\_clear()}{screen\_area\_clear()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+Limpia y resetea el area. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8h_aca5123ed5a7afb75e79c0001e5d1df4f}\label{screen_8h_aca5123ed5a7afb75e79c0001e5d1df4f}} 
+\index{screen.h@{screen.h}!screen\_area\_destroy@{screen\_area\_destroy}}
+\index{screen\_area\_destroy@{screen\_area\_destroy}!screen.h@{screen.h}}
+\doxysubsubsection{\texorpdfstring{screen\_area\_destroy()}{screen\_area\_destroy()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+Destruye el area. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8h_a194528bec3ed3b57618a8f2df9bea743}\label{screen_8h_a194528bec3ed3b57618a8f2df9bea743}} 
+\index{screen.h@{screen.h}!screen\_area\_init@{screen\_area\_init}}
+\index{screen\_area\_init@{screen\_area\_init}!screen.h@{screen.h}}
+\doxysubsubsection{\texorpdfstring{screen\_area\_init()}{screen\_area\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}}$\ast$ screen\+\_\+area\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Inicializa el area que usará la pantalla. Retorna el area a usar. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8h_a4f4cd4c7899c096d6c90cc33de9a9814}\label{screen_8h_a4f4cd4c7899c096d6c90cc33de9a9814}} 
+\index{screen.h@{screen.h}!screen\_area\_puts@{screen\_area\_puts}}
+\index{screen\_area\_puts@{screen\_area\_puts}!screen.h@{screen.h}}
+\doxysubsubsection{\texorpdfstring{screen\_area\_puts()}{screen\_area\_puts()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+puts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}} $\ast$}]{area,  }\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Imprime una cadena de caracteres en la pantalla. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8h_af77fa9df4f7170e1e3bf1c6209b7f0c2}\label{screen_8h_af77fa9df4f7170e1e3bf1c6209b7f0c2}} 
+\index{screen.h@{screen.h}!screen\_area\_reset\_cursor@{screen\_area\_reset\_cursor}}
+\index{screen\_area\_reset\_cursor@{screen\_area\_reset\_cursor}!screen.h@{screen.h}}
+\doxysubsubsection{\texorpdfstring{screen\_area\_reset\_cursor()}{screen\_area\_reset\_cursor()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+reset\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+Resetea el cursor a unas coordenadas en concreto. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8h_a3d6d82dde2bb4f3ddc4d276dabe313ef}\label{screen_8h_a3d6d82dde2bb4f3ddc4d276dabe313ef}} 
+\index{screen.h@{screen.h}!screen\_destroy@{screen\_destroy}}
+\index{screen\_destroy@{screen\_destroy}!screen.h@{screen.h}}
+\doxysubsubsection{\texorpdfstring{screen\_destroy()}{screen\_destroy()}}
+{\footnotesize\ttfamily void screen\+\_\+destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruye la pantalla. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8h_a9dbb6c251337c03c078dc330caee48d2}\label{screen_8h_a9dbb6c251337c03c078dc330caee48d2}} 
+\index{screen.h@{screen.h}!screen\_init@{screen\_init}}
+\index{screen\_init@{screen\_init}!screen.h@{screen.h}}
+\doxysubsubsection{\texorpdfstring{screen\_init()}{screen\_init()}}
+{\footnotesize\ttfamily void screen\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crea la pantalla, si ya hay una creada la destruye. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8h_a3eaa0547a956d39b6c55c9593524e0d1}\label{screen_8h_a3eaa0547a956d39b6c55c9593524e0d1}} 
+\index{screen.h@{screen.h}!screen\_paint@{screen\_paint}}
+\index{screen\_paint@{screen\_paint}!screen.h@{screen.h}}
+\doxysubsubsection{\texorpdfstring{screen\_paint()}{screen\_paint()}}
+{\footnotesize\ttfamily void screen\+\_\+paint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pinta la pantalla colores azul, negro y blanco. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}

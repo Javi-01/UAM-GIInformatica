@@ -1,0 +1,143 @@
+\hypertarget{graphic__engine_8h}{}\doxysection{include/graphic\+\_\+engine.h File Reference}
+\label{graphic__engine_8h}\index{include/graphic\_engine.h@{include/graphic\_engine.h}}
+
+
+It defines a textual graphic engine.  
+
+
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+Include dependency graph for graphic\+\_\+engine.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__Graphic__engine}{\+\_\+\+Graphic\+\_\+engine}} \mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$ \mbox{\hyperlink{graphic__engine_8h_a8c3d9abe7282bee1d77d23ea80a4bdec}{graphic\+\_\+engine\+\_\+create}} ()
+\begin{DoxyCompactList}\small\item\em Inicia todo el motor gráfico (declara todos los componentes de la estructura Graphic\+\_\+engine e inicializa la salida por pantalla). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphic__engine_8h_a5a5eac4ef2033c5ad71aa6895f362f79}{graphic\+\_\+engine\+\_\+destroy}} (\mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$ge)
+\begin{DoxyCompactList}\small\item\em Destruye todos los componentes del tipo de dato Graphic\+\_\+engine, destruye la salida por pantalla creada y libera la memoria. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphic__engine_8h_a0e275aa477d5fa59e903da33a2a40a5d}{graphic\+\_\+engine\+\_\+paint\+\_\+game}} (\mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$ge, \mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Dibuja toda la interfaz gráfica mostrada en la pantalla. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphic__engine_8h_a112605879db4582a6d9cd6c12bd0e90c}{graphic\+\_\+engine\+\_\+write\+\_\+command}} (\mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$ge, char $\ast$str)
+\begin{DoxyCompactList}\small\item\em NO aparece en el.\+c. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It defines a textual graphic engine. 
+
+\begin{DoxyAuthor}{Author}
+Edited by Iván Fernández París 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07-\/02-\/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07-\/02-\/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}\label{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}} 
+\index{graphic\_engine.h@{graphic\_engine.h}!Graphic\_engine@{Graphic\_engine}}
+\index{Graphic\_engine@{Graphic\_engine}!graphic\_engine.h@{graphic\_engine.h}}
+\doxysubsubsection{\texorpdfstring{Graphic\_engine}{Graphic\_engine}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__Graphic__engine}{\+\_\+\+Graphic\+\_\+engine}} \mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}}}
+
+Estrucutura graphic engine 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graphic__engine_8h_a8c3d9abe7282bee1d77d23ea80a4bdec}\label{graphic__engine_8h_a8c3d9abe7282bee1d77d23ea80a4bdec}} 
+\index{graphic\_engine.h@{graphic\_engine.h}!graphic\_engine\_create@{graphic\_engine\_create}}
+\index{graphic\_engine\_create@{graphic\_engine\_create}!graphic\_engine.h@{graphic\_engine.h}}
+\doxysubsubsection{\texorpdfstring{graphic\_engine\_create()}{graphic\_engine\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}}$\ast$ graphic\+\_\+engine\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia todo el motor gráfico (declara todos los componentes de la estructura Graphic\+\_\+engine e inicializa la salida por pantalla). 
+
+\begin{DoxyReturn}{Returns}
+Devuelve un puntero al Graphic\+\_\+engine creado.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{graphic__engine_8h_a5a5eac4ef2033c5ad71aa6895f362f79}\label{graphic__engine_8h_a5a5eac4ef2033c5ad71aa6895f362f79}} 
+\index{graphic\_engine.h@{graphic\_engine.h}!graphic\_engine\_destroy@{graphic\_engine\_destroy}}
+\index{graphic\_engine\_destroy@{graphic\_engine\_destroy}!graphic\_engine.h@{graphic\_engine.h}}
+\doxysubsubsection{\texorpdfstring{graphic\_engine\_destroy()}{graphic\_engine\_destroy()}}
+{\footnotesize\ttfamily void graphic\+\_\+engine\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$}]{ge }\end{DoxyParamCaption})}
+
+
+
+Destruye todos los componentes del tipo de dato Graphic\+\_\+engine, destruye la salida por pantalla creada y libera la memoria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ge} & puntero a graphic\+\_\+engine\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{graphic__engine_8h_a0e275aa477d5fa59e903da33a2a40a5d}\label{graphic__engine_8h_a0e275aa477d5fa59e903da33a2a40a5d}} 
+\index{graphic\_engine.h@{graphic\_engine.h}!graphic\_engine\_paint\_game@{graphic\_engine\_paint\_game}}
+\index{graphic\_engine\_paint\_game@{graphic\_engine\_paint\_game}!graphic\_engine.h@{graphic\_engine.h}}
+\doxysubsubsection{\texorpdfstring{graphic\_engine\_paint\_game()}{graphic\_engine\_paint\_game()}}
+{\footnotesize\ttfamily void graphic\+\_\+engine\+\_\+paint\+\_\+game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$}]{ge,  }\item[{\mbox{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Dibuja toda la interfaz gráfica mostrada en la pantalla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ge} & puntero a graphic\+\_\+engine \\
+\hline
+{\em game} & puntero a game\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Modificado por Iván Fernández París 
+\end{DoxyAuthor}
+$<$ Paint the in the map area\mbox{\Hypertarget{graphic__engine_8h_a112605879db4582a6d9cd6c12bd0e90c}\label{graphic__engine_8h_a112605879db4582a6d9cd6c12bd0e90c}} 
+\index{graphic\_engine.h@{graphic\_engine.h}!graphic\_engine\_write\_command@{graphic\_engine\_write\_command}}
+\index{graphic\_engine\_write\_command@{graphic\_engine\_write\_command}!graphic\_engine.h@{graphic\_engine.h}}
+\doxysubsubsection{\texorpdfstring{graphic\_engine\_write\_command()}{graphic\_engine\_write\_command()}}
+{\footnotesize\ttfamily void graphic\+\_\+engine\+\_\+write\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}} $\ast$}]{ge,  }\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+NO aparece en el.\+c. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ge} & puntero a graphic\+\_\+engine \\
+\hline
+{\em str} & cadena\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/estilo.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Modak|Open Sans"
+      rel="stylesheet"
+    />
+    <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+  </head>
+
+  <body>
+    <!-- BARRA DE NAVEGACION -->
+  <div class="side-bar">
+      <a href="{{ url_for('home') }}">
+        <h1>VENTA DVDs</h1>
+        <a {% if request.path == "/home" or request.path == "/" %} class="side-bar-active"{% endif %} href="{{ url_for('home') }}">
+          <h3>Home</h3>
+        </a>
+        <a {% if request.path == "/carrito" %} class="side-bar-active"{% endif %} href="{{ url_for('carrito') }}">
+          <h3>Carrito</h3>
+        </a>
+        {% if not session['usuario'] %}
+        <a {% if request.path == "/create_user" %} class="side-bar-active"{% endif %} href="{{ url_for('crear_cuenta') }}">
+          <h3>Crear una Cuenta</h3>
+        </a>
+        <a {% if request.path == "/login" %} class="side-bar-active"{% endif %} href="{{ url_for('login') }}">
+          <h3>Acceder</h3>
+        </a>
+
+      {% else %}
+      <div class="side-bar-bottom">
+        <div class="side-bar-bottom-element">
+          <a {% if request.path == "/historial" %} class="side-bar-buttom-active"{% endif %} href="{{ url_for('historial') }}">
+            <img
+              src="{{ url_for('static', filename='/icon' + '/user.png' )}}"
+              alt=""
+            />
+            <p>{{ session['usuario'] }}</p></a
+          >
+        </div>
+
+        <div class="side-bar-bottom-element">
+          <a href="{{ url_for('logout') }}">
+            <img
+              src="{{ url_for('static', filename='/icon' + '/logout.png' )}}"
+              alt=""
+            />
+            <p>Log out</p></a
+          >
+        </div>
+      </div>
+        {% endif %}
+  </div>
+    <div class="body-main-content">
+      <div class="banner-users-online" id = "users">
+        <p><strong> Usuarios simultáneos: <span id="info-usuarios"> 1 </span></strong></p>
+      </div>
+      <!-- BLOQUE PRINCIPAL DE CONTENIDO -->
+      <div class="main-content">
+        {% block content %} {% endblock %}
+      </div>
+      <!-- PIE DE PAGINA -->
+      <div class="footer-content">
+        <footer>
+          <div class="footer-reason">
+            <p>
+                <strong>
+                Página web diseñada como proyecto de la asignatura Sistemas
+                Informáticos de la UAM
+              </strong>
+              </p>
+            </div>
+          <div class="footer-authors">
+            <p>
+              <strong>Javier Fraile Iglesias</strong> :
+              <a> javier.frailei@estudiante.uam.es </a>
+            </p>
+            <p>
+              <strong>Iván Fernández París</strong> :
+              <a> ivan.fernandezparis@estudiante.uam.es</a>
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script
+    src="{{ url_for('static', filename='js/' + 'validador_password.js') }}"
+  ></script>
+  <script
+    src="{{ url_for('static', filename='js/' + 'validador_formulario.js') }}"
+  ></script>
+  <script
+    src="{{ url_for('static', filename='js/' + 'historial.js') }}"
+  ></script>
+  <script
+    src="{{ url_for('static', filename='js/' + 'usuarios_simultaneos.js') }}">
+  </script>
+  <script
+  src="{{ url_for('static', filename='js/' + 'eliminar_mensaje.js') }}">
+</script>
+</html>

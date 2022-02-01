@@ -1,0 +1,8 @@
+createdb -U alumnodb si1
+dropdb -U alumnodb si1
+gunzip -c dump_v1.5-P3.sql.gz | psql si1 alumnodb
+
+virtualenv -p python3 si1pyenv
+source si1pyenv/bin/activate
+pip3 install Flask SQLAlchemy Flask-SQLAlchemy SQLAlchemy-Utils psycopg2 itsdangerous Flask-Session
+deactivate

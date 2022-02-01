@@ -1,0 +1,517 @@
+\hypertarget{game__test_8c}{}\doxysection{src/game\+\_\+test.c File Reference}
+\label{game__test_8c}\index{src/game\_test.c@{src/game\_test.c}}
+
+
+It tests game module.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}link.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}command.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}space.\+h\char`\"{}}\newline
+Include dependency graph for game\+\_\+test.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{game__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}{M\+A\+X\+\_\+\+T\+E\+S\+TS}}~26
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{game__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Main function for G\+A\+ME unit tests. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__test_8c_a1d5c70cf073b025bb5d74413cecd929b}{test1\+\_\+game\+\_\+create}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a04c9f940a26c3ec8249f5b1403c7a5c7}{test2\+\_\+game\+\_\+create}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a867d2e7bebdfa55ee8b8a73764c46f5b}{test1\+\_\+game\+\_\+create\+\_\+from\+\_\+file}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_ad6ce67f6184f6ead2aaca860f64e9b76}{test2\+\_\+game\+\_\+create\+\_\+from\+\_\+file}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_acc05e3dc9b82dbd4566c26a039646df9}{test1\+\_\+game\+\_\+get\+\_\+space}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a16d48c8d8035f259dedc9460c636e8c5}{test2\+\_\+game\+\_\+get\+\_\+space}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a867c32166bda065e0c64a4a7c8e7b6d8}{test1\+\_\+game\+\_\+get\+\_\+player}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a8a8b3634c39499b44a9211f8f1bf06ba}{test2\+\_\+game\+\_\+get\+\_\+player}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_aa387108e95dba4762d0f2cbfdbf30cd3}{test1\+\_\+game\+\_\+get\+\_\+player\+\_\+location}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a113c52a92fc38e3baa9b6c5e97179a51}{test2\+\_\+game\+\_\+get\+\_\+player\+\_\+location}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_aff63179aad895eeb2f2d5571156fd387}{test1\+\_\+game\+\_\+get\+\_\+object\+\_\+location}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a635a940244bbb00d432a6accee598c20}{test2\+\_\+game\+\_\+get\+\_\+object\+\_\+location}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a6096d34598f9f8bf3ee07ec1364a3d71}{test1\+\_\+game\+\_\+get\+\_\+link\+\_\+at\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_aae34ab75b7716a296095e617ceb1a854}{test2\+\_\+game\+\_\+get\+\_\+link\+\_\+at\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a1350ff4860c2228612ba362113392a44}{test2\+\_\+game\+\_\+get\+\_\+object\+\_\+at\+\_\+name}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a136d0689999cd616ca7925fc68adbf93}{test1\+\_\+game\+\_\+get\+\_\+object\+\_\+at\+\_\+name}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_ad2af5ff01c8bee616a26be9638b0d142}{test1\+\_\+game\+\_\+get\+\_\+object\+\_\+at\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_afe2d5b9cac87bcc56d95ad7185a12837}{test2\+\_\+game\+\_\+get\+\_\+object\+\_\+at\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_ab2bc86675b83951eb7fadcd0dbadeb68}{test1\+\_\+game\+\_\+get\+\_\+object\+\_\+at\+\_\+position}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a01ed53ace712e0723f639df64b4ad4aa}{test2\+\_\+game\+\_\+get\+\_\+object\+\_\+at\+\_\+position}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a49b59f8e75a8a4375c98ded865f16fcc}{test1\+\_\+game\+\_\+add\+\_\+space}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_aed0f40f3ab1c252e548b038542d7409d}{test2\+\_\+game\+\_\+add\+\_\+space}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_ac60415277fc72d0a231b17e482a6609b}{test1\+\_\+game\+\_\+add\+\_\+object}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_ab996895e69c5d41fab5515e88aed3975}{test2\+\_\+game\+\_\+add\+\_\+object}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a4adb115e4624c38738c938b999f6c949}{test1\+\_\+game\+\_\+add\+\_\+player}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_a42bb53c500bf8ae4dce0e144a85cd80b}{test2\+\_\+game\+\_\+add\+\_\+player}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_ab936ab03dff02b8edde97651f12384ea}{test1\+\_\+game\+\_\+add\+\_\+link}} ()
+\item 
+void \mbox{\hyperlink{game__test_8c_af5c4dd79b2a7b67adbeeb8df5791a5de}{test2\+\_\+game\+\_\+add\+\_\+link}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It tests game module. 
+
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{game__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}\label{game__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}} 
+\index{game\_test.c@{game\_test.c}!MAX\_TESTS@{MAX\_TESTS}}
+\index{MAX\_TESTS@{MAX\_TESTS}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_TESTS}{MAX\_TESTS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+E\+S\+TS~26}
+
+Numero máximo de test que se realizaran en este modulo 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{game__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{game\_test.c@{game\_test.c}!main@{main}}
+\index{main@{main}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Main function for G\+A\+ME unit tests. 
+
+You may execute A\+LL or a S\+I\+N\+G\+LE test 1.-\/ No parameter -\/$>$ A\+LL test are executed 2.-\/ A number means a particular test (the one identified by that number) is executed \mbox{\Hypertarget{game__test_8c_ab936ab03dff02b8edde97651f12384ea}\label{game__test_8c_ab936ab03dff02b8edde97651f12384ea}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_add\_link@{test1\_game\_add\_link}}
+\index{test1\_game\_add\_link@{test1\_game\_add\_link}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_add\_link()}{test1\_game\_add\_link()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+add\+\_\+link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000043}{Test}}]Test game\+\_\+add\+\_\+link \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y link create, se añade el link al juego 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_ac60415277fc72d0a231b17e482a6609b}\label{game__test_8c_ac60415277fc72d0a231b17e482a6609b}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_add\_object@{test1\_game\_add\_object}}
+\index{test1\_game\_add\_object@{test1\_game\_add\_object}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_add\_object()}{test1\_game\_add\_object()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+add\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000039}{Test}}]Test game\+\_\+add\+\_\+object \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y object create, se añade el objeto al juego 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a4adb115e4624c38738c938b999f6c949}\label{game__test_8c_a4adb115e4624c38738c938b999f6c949}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_add\_player@{test1\_game\_add\_player}}
+\index{test1\_game\_add\_player@{test1\_game\_add\_player}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_add\_player()}{test1\_game\_add\_player()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+add\+\_\+player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000041}{Test}}]Test game\+\_\+add\+\_\+player \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y player create, se añade el player al juego 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a49b59f8e75a8a4375c98ded865f16fcc}\label{game__test_8c_a49b59f8e75a8a4375c98ded865f16fcc}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_add\_space@{test1\_game\_add\_space}}
+\index{test1\_game\_add\_space@{test1\_game\_add\_space}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_add\_space()}{test1\_game\_add\_space()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+add\+\_\+space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000037}{Test}}]Test game\+\_\+add\+\_\+space \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y space create, se añade el espacio al juego 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a1d5c70cf073b025bb5d74413cecd929b}\label{game__test_8c_a1d5c70cf073b025bb5d74413cecd929b}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_create@{test1\_game\_create}}
+\index{test1\_game\_create@{test1\_game\_create}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_create()}{test1\_game\_create()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000017}{Test}}]Test creación del game \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Puntero a espacio NO N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a867d2e7bebdfa55ee8b8a73764c46f5b}\label{game__test_8c_a867d2e7bebdfa55ee8b8a73764c46f5b}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_create\_from\_file@{test1\_game\_create\_from\_file}}
+\index{test1\_game\_create\_from\_file@{test1\_game\_create\_from\_file}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_create\_from\_file()}{test1\_game\_create\_from\_file()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+create\+\_\+from\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000019}{Test}}]Test game\+\_\+create\+\_\+from\+\_\+file \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y create from file con el nombre del data.\+dat 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Ouput==OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a6096d34598f9f8bf3ee07ec1364a3d71}\label{game__test_8c_a6096d34598f9f8bf3ee07ec1364a3d71}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_get\_link\_at\_id@{test1\_game\_get\_link\_at\_id}}
+\index{test1\_game\_get\_link\_at\_id@{test1\_game\_get\_link\_at\_id}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_get\_link\_at\_id()}{test1\_game\_get\_link\_at\_id()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+get\+\_\+link\+\_\+at\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000029}{Test}}]Test game\+\_\+get\+\_\+link\+\_\+at\+\_\+id \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y link create , añade el link al juego 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==l 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_ad2af5ff01c8bee616a26be9638b0d142}\label{game__test_8c_ad2af5ff01c8bee616a26be9638b0d142}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_get\_object\_at\_id@{test1\_game\_get\_object\_at\_id}}
+\index{test1\_game\_get\_object\_at\_id@{test1\_game\_get\_object\_at\_id}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_get\_object\_at\_id()}{test1\_game\_get\_object\_at\_id()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+get\+\_\+object\+\_\+at\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000033}{Test}}]Test game\+\_\+get\+\_\+object\+\_\+at\+\_\+id \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y objects crate, se añaden al juego y se obtiene el del id 2 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==o2 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a136d0689999cd616ca7925fc68adbf93}\label{game__test_8c_a136d0689999cd616ca7925fc68adbf93}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_get\_object\_at\_name@{test1\_game\_get\_object\_at\_name}}
+\index{test1\_game\_get\_object\_at\_name@{test1\_game\_get\_object\_at\_name}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_get\_object\_at\_name()}{test1\_game\_get\_object\_at\_name()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+get\+\_\+object\+\_\+at\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000031}{Test}}]Test game\+\_\+get\+\_\+object\+\_\+at\+\_\+name \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y object create, y obtiene el nombre nulo, luego no hay 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_ab2bc86675b83951eb7fadcd0dbadeb68}\label{game__test_8c_ab2bc86675b83951eb7fadcd0dbadeb68}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_get\_object\_at\_position@{test1\_game\_get\_object\_at\_position}}
+\index{test1\_game\_get\_object\_at\_position@{test1\_game\_get\_object\_at\_position}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_get\_object\_at\_position()}{test1\_game\_get\_object\_at\_position()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+get\+\_\+object\+\_\+at\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000035}{Test}}]Test game\+\_\+get\+\_\+object\+\_\+at\+\_\+position \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y objects crate, se añaden al juego y se obtiene el de la posicion 1 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==o2 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_aff63179aad895eeb2f2d5571156fd387}\label{game__test_8c_aff63179aad895eeb2f2d5571156fd387}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_get\_object\_location@{test1\_game\_get\_object\_location}}
+\index{test1\_game\_get\_object\_location@{test1\_game\_get\_object\_location}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_get\_object\_location()}{test1\_game\_get\_object\_location()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+get\+\_\+object\+\_\+location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000025}{Test}}]Test game\+\_\+get\+\_\+object\+\_\+location \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game crate , space create y creacion de un objeto, y se establece el objeto al espacio, y se añade el espacio 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a867c32166bda065e0c64a4a7c8e7b6d8}\label{game__test_8c_a867c32166bda065e0c64a4a7c8e7b6d8}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_get\_player@{test1\_game\_get\_player}}
+\index{test1\_game\_get\_player@{test1\_game\_get\_player}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_get\_player()}{test1\_game\_get\_player()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+get\+\_\+player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000023}{Test}}]Test game\+\_\+get\+\_\+player \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y player create y añade el jugador al juego 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==player 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_aa387108e95dba4762d0f2cbfdbf30cd3}\label{game__test_8c_aa387108e95dba4762d0f2cbfdbf30cd3}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_get\_player\_location@{test1\_game\_get\_player\_location}}
+\index{test1\_game\_get\_player\_location@{test1\_game\_get\_player\_location}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_get\_player\_location()}{test1\_game\_get\_player\_location()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+get\+\_\+player\+\_\+location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000027}{Test}}]Test game\+\_\+get\+\_\+player\+\_\+location \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y player create, y añade el jugador al juego 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==player\+\_\+location 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_acc05e3dc9b82dbd4566c26a039646df9}\label{game__test_8c_acc05e3dc9b82dbd4566c26a039646df9}} 
+\index{game\_test.c@{game\_test.c}!test1\_game\_get\_space@{test1\_game\_get\_space}}
+\index{test1\_game\_get\_space@{test1\_game\_get\_space}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_game\_get\_space()}{test1\_game\_get\_space()}}
+{\footnotesize\ttfamily void test1\+\_\+game\+\_\+get\+\_\+space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000021}{Test}}]Test game\+\_\+get\+\_\+space \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y creacion de dos espacios, añade los espacios al juego 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==espacio1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_af5c4dd79b2a7b67adbeeb8df5791a5de}\label{game__test_8c_af5c4dd79b2a7b67adbeeb8df5791a5de}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_add\_link@{test2\_game\_add\_link}}
+\index{test2\_game\_add\_link@{test2\_game\_add\_link}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_add\_link()}{test2\_game\_add\_link()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+add\+\_\+link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000044}{Test}}]Test game\+\_\+add\+\_\+link \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y link = N\+U\+LL y se intenta añadir 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_ab996895e69c5d41fab5515e88aed3975}\label{game__test_8c_ab996895e69c5d41fab5515e88aed3975}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_add\_object@{test2\_game\_add\_object}}
+\index{test2\_game\_add\_object@{test2\_game\_add\_object}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_add\_object()}{test2\_game\_add\_object()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+add\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000040}{Test}}]Test game\+\_\+add\+\_\+object \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y object = N\+U\+LL y se intenta añadir 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a42bb53c500bf8ae4dce0e144a85cd80b}\label{game__test_8c_a42bb53c500bf8ae4dce0e144a85cd80b}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_add\_player@{test2\_game\_add\_player}}
+\index{test2\_game\_add\_player@{test2\_game\_add\_player}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_add\_player()}{test2\_game\_add\_player()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+add\+\_\+player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000042}{Test}}]Test game\+\_\+add\+\_\+player \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y player = N\+U\+LL y se intenta añadir 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_aed0f40f3ab1c252e548b038542d7409d}\label{game__test_8c_aed0f40f3ab1c252e548b038542d7409d}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_add\_space@{test2\_game\_add\_space}}
+\index{test2\_game\_add\_space@{test2\_game\_add\_space}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_add\_space()}{test2\_game\_add\_space()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+add\+\_\+space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000038}{Test}}]Test game\+\_\+add\+\_\+space \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y space = N\+U\+LL y se intenta añadir 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a04c9f940a26c3ec8249f5b1403c7a5c7}\label{game__test_8c_a04c9f940a26c3ec8249f5b1403c7a5c7}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_create@{test2\_game\_create}}
+\index{test2\_game\_create@{test2\_game\_create}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_create()}{test2\_game\_create()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000018}{Test}}]Test creación del game \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y Space create, ademas añadimos un espacio 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+se obtiene el espacio luego ha creado coreectamente el juego 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_ad6ce67f6184f6ead2aaca860f64e9b76}\label{game__test_8c_ad6ce67f6184f6ead2aaca860f64e9b76}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_create\_from\_file@{test2\_game\_create\_from\_file}}
+\index{test2\_game\_create\_from\_file@{test2\_game\_create\_from\_file}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_create\_from\_file()}{test2\_game\_create\_from\_file()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+create\+\_\+from\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000020}{Test}}]Test game\+\_\+create\+\_\+from\+\_\+file \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y create from file con el nombre del noexiste.\+dat 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_aae34ab75b7716a296095e617ceb1a854}\label{game__test_8c_aae34ab75b7716a296095e617ceb1a854}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_get\_link\_at\_id@{test2\_game\_get\_link\_at\_id}}
+\index{test2\_game\_get\_link\_at\_id@{test2\_game\_get\_link\_at\_id}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_get\_link\_at\_id()}{test2\_game\_get\_link\_at\_id()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+get\+\_\+link\+\_\+at\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000030}{Test}}]Test game\+\_\+get\+\_\+link\+\_\+at\+\_\+id \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y link create 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_afe2d5b9cac87bcc56d95ad7185a12837}\label{game__test_8c_afe2d5b9cac87bcc56d95ad7185a12837}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_get\_object\_at\_id@{test2\_game\_get\_object\_at\_id}}
+\index{test2\_game\_get\_object\_at\_id@{test2\_game\_get\_object\_at\_id}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_get\_object\_at\_id()}{test2\_game\_get\_object\_at\_id()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+get\+\_\+object\+\_\+at\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000034}{Test}}]Test game\+\_\+get\+\_\+object\+\_\+at\+\_\+id \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y objects crate, se añaden al juego y se obtiene el del id 2 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output!=o1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a1350ff4860c2228612ba362113392a44}\label{game__test_8c_a1350ff4860c2228612ba362113392a44}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_get\_object\_at\_name@{test2\_game\_get\_object\_at\_name}}
+\index{test2\_game\_get\_object\_at\_name@{test2\_game\_get\_object\_at\_name}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_get\_object\_at\_name()}{test2\_game\_get\_object\_at\_name()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+get\+\_\+object\+\_\+at\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000032}{Test}}]Test game\+\_\+get\+\_\+object\+\_\+at\+\_\+name \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y objects create de dos objetos, añade los objetos al juego 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==o2 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a01ed53ace712e0723f639df64b4ad4aa}\label{game__test_8c_a01ed53ace712e0723f639df64b4ad4aa}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_get\_object\_at\_position@{test2\_game\_get\_object\_at\_position}}
+\index{test2\_game\_get\_object\_at\_position@{test2\_game\_get\_object\_at\_position}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_get\_object\_at\_position()}{test2\_game\_get\_object\_at\_position()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+get\+\_\+object\+\_\+at\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000036}{Test}}]Test game\+\_\+get\+\_\+object\+\_\+at\+\_\+position \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y objects crate, se añaden el 2 y se obtiene el de la posicion 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output!=o1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a635a940244bbb00d432a6accee598c20}\label{game__test_8c_a635a940244bbb00d432a6accee598c20}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_get\_object\_location@{test2\_game\_get\_object\_location}}
+\index{test2\_game\_get\_object\_location@{test2\_game\_get\_object\_location}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_get\_object\_location()}{test2\_game\_get\_object\_location()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+get\+\_\+object\+\_\+location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000026}{Test}}]Test game\+\_\+get\+\_\+object\+\_\+location \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game crate y creacion de un objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a8a8b3634c39499b44a9211f8f1bf06ba}\label{game__test_8c_a8a8b3634c39499b44a9211f8f1bf06ba}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_get\_player@{test2\_game\_get\_player}}
+\index{test2\_game\_get\_player@{test2\_game\_get\_player}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_get\_player()}{test2\_game\_get\_player()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+get\+\_\+player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000024}{Test}}]Test game\+\_\+get\+\_\+player \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y player create 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==player 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a113c52a92fc38e3baa9b6c5e97179a51}\label{game__test_8c_a113c52a92fc38e3baa9b6c5e97179a51}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_get\_player\_location@{test2\_game\_get\_player\_location}}
+\index{test2\_game\_get\_player\_location@{test2\_game\_get\_player\_location}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_get\_player\_location()}{test2\_game\_get\_player\_location()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+get\+\_\+player\+\_\+location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000028}{Test}}]Test game\+\_\+get\+\_\+player\+\_\+location \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y player create 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{game__test_8c_a16d48c8d8035f259dedc9460c636e8c5}\label{game__test_8c_a16d48c8d8035f259dedc9460c636e8c5}} 
+\index{game\_test.c@{game\_test.c}!test2\_game\_get\_space@{test2\_game\_get\_space}}
+\index{test2\_game\_get\_space@{test2\_game\_get\_space}!game\_test.c@{game\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_game\_get\_space()}{test2\_game\_get\_space()}}
+{\footnotesize\ttfamily void test2\+\_\+game\+\_\+get\+\_\+space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000022}{Test}}]Test game\+\_\+get\+\_\+space \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Game create y creacion de un espacios, añade el espacio al juego, pero comprueba otro que no existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Output==N\+U\+LL 
+\end{DoxyPostcond}

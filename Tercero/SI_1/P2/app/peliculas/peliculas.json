@@ -1,0 +1,237 @@
+{
+    "peliculas": [
+        {
+            "id": 1,
+            "titulo": "Star Wars",
+            "poster": "img/logo-starsWars.jpg",
+            "director": "George Lucas",
+            "precio": 18.99,
+            "categoria": "Aventura",
+            "anno": 1999,
+            "actores": [
+        {
+            "nombre": "Jake Lloyd",
+            "personaje": "Anakin Skywalker",
+            "foto": "img/Ana.jpg"
+        },
+        {
+            "nombre": "Ewan McGregor",
+            "personaje": "Obi-Wan Kenobi",
+            "foto": "img/obi.jpg"
+        }
+        ],
+            "descripcion": "Dos Jedis, Qui-Gon Jinn y su Padawan Obi-Wan Kenobi deben proteger a la reina Amidala. En medio de la misión conocen a un niño llamado Anakin Skywalker quien forma parte de una antigua profecía Jedi pues es el elegido que traerá equilibrio a la galaxia. Los enemigos de esta saga son los Sith."
+        },
+
+        {
+            "id": 2,
+            "titulo": "Jurassic Park",
+            "poster": "img/JS.jpg",
+            "director": "Steven Spielberg",
+            "precio": 14.99,
+            "categoria": "CienciaFicción",
+            "anno": 1993,
+            "actores": [
+        {
+            "nombre": "Sam Neill",
+            "personaje": "Dr. Alan Grant",
+            "foto": "img/AG.png"
+        },
+        {
+            "nombre": "Laura Dern",
+            "personaje": "Dra. Ellie Sattler",
+            "foto": "img/ES.jpg"
+        },
+        {
+            "nombre": "Jeff Goldblum",
+            "personaje": "Dr. Ian Malolm",
+            "foto": "img/IM.jpg"
+        },
+        {
+            "nombre": "B. D. Wong",
+            "personaje": "Genetista Henry Wu",
+            "foto": "img/HW.png"
+        }
+        ],
+        "descripcion": "John Hammond, magnate propietario de la empresa multinacional en bioingeniería InGen, ha soñado toda su vida con construir el mayor parque de atracciones del mundo. Una isla en Costa Rica donde habiten las criaturas más espectaculares que han pisado la Tierra: los dinosaurios. Pese a la extinción de estos reptiles, InGen ha logrado clonar diversas especies mediante la manipulación de segmentos de ADN de la propia sangre de dinosaurio, encontrada en mosquitos fosilizados en ámbar."
+        },
+        
+        {
+            "id": 3,
+            "titulo": "The Godfather",
+            "poster": "img/DF.jpg",
+            "director": "Francis Ford Coppola",
+            "precio": 31.99,
+            "categoria": "Gansteres",
+            "anno": 1972,
+            "actores": [
+        {
+            "nombre": "Marlon Brando",
+            "personaje": "Don Vito Corleone",
+            "foto": "img/VC.jpg"
+        },
+        {
+            "nombre": "Al Pacino",
+            "personaje": "Michael Corleone",
+            "foto": "img/MC.jpg"
+        },
+        {
+            "nombre": "James Caan",
+            "personaje": "Santino Corleone",
+            "foto": "img/SC.jpg"
+        },
+        {
+            "nombre": "Robert Duvall",
+            "personaje": "Tomas Hagen",
+            "foto": "img/TH.jpeg"
+        },
+        {
+            "nombre": "Richard Castellano",
+            "personaje": "Peter Clemenza",
+            "foto": "img/PC.jpg"
+        }
+        ],
+        "descripcion": "El Padrino narra la historia de un hombre, Vito Corleone, el capo más respetado de Nueva York. Déspota benevolente, implacable con sus rivales, inteligente y fiel a los principios del honor y la amistad."
+        },
+        
+        {
+            "id": 4,
+            "titulo": "The Shawshank Redemption",
+            "poster": "img/CP.jpg",
+            "director": "Frank Darabont",
+            "precio": 23.99,
+            "categoria": "Drama",
+            "anno": 1995,
+            "actores": [
+        {
+            "nombre": "Tim Robbins",
+            "personaje": "Andrew Dufresne",
+            "foto": "img/Andy-dufresne.jpg"
+        },
+        {
+            "nombre": "Morgan Freeman",
+            "personaje": "Ellis Boyd Redding",
+            "foto": "img/EBR.jpg"
+        },
+        {
+            "nombre": "Clancy Brown",
+            "personaje": "Capitán Byron Hadley",
+            "foto": "img/BH.jpg"
+        },
+        {
+            "nombre": "Bob Gunton",
+            "personaje": "Alcaide Samuel Norton",
+            "foto": "img/SN.jpg"
+        }
+        ],
+        "descripcion": "Cadena Perpetua nos cuenta la historia de Andy Dufresne (Tim Robbins), un banquero normal y corriente con serios problemas personales, puesto que su querida mujer, lo engaña. Un día, nuestro protagonista decide asesinar a su mujer y al amante, prepara la pistola, munición…, pero en el último momento se detiene."
+        }, 
+
+        {
+            "id": 5,
+            "titulo": "Intouchables",
+            "poster": "img/Intocable.jpg",
+            "director": "Eric Toledano y Olivier Nakache",
+            "precio": 26.99,
+            "categoria": "Comedia",
+            "anno": 2011,
+            "actores": [
+        {
+            "nombre": "François Cluzet",
+            "personaje": "Philippe",
+            "foto": "img/cluzet.jpg"
+        },
+        {
+            "nombre": "Omar Sy",
+            "personaje": "Bakary 'Driss' Bassari",
+            "foto": "img/omarSy.png"
+        },
+        {
+            "nombre": "Audrey Fleurot",
+            "personaje": "Magalie",
+            "foto": "img/Fleurot.jpg"
+        }
+        ],
+            "descripcion": "La película narra la relación entre dos personajes totalmente opuestos y procedentes de entornos diferentes. Uno, Driss, un joven de origen senegalés, vive en un barrio obrero de París, con antecedentes penales, vitalista, descarado, divertido e irreflexivo; el otro, Phillippe, un rico tetrapléjico ya mayor, culto y muy poco espontáneo, que necesita un ayudante personal."
+        }, 
+
+        {
+            "id": 6,
+            "titulo": "Interstellar",
+            "poster": "img/Interstellar.jpg",
+            "director": "Christopher Nolan",
+            "precio": 20.99,
+            "categoria": "CienciaFicción",
+            "anno": 2014,
+            "actores": [
+        {
+            "nombre": "Matthew McConaughey",
+            "personaje": "Joseph Cooper",
+            "foto": "img/Cooper.jpg"
+        },
+        {
+            "nombre": "Jessica Chastain",
+            "personaje": "Murphy 'Murph' Cooper",
+            "foto": "img/Murphy.png"
+        },
+        {
+            "nombre": "Michael Caine",
+            "personaje": "John Brand",
+            "foto": "img/Michael.jpg"
+        }
+        ],
+            "descripcion": "En 2067, la destrucción de las cosechas en la Tierra ha hecho que la agricultura sea cada vez más difícil y se vea amenazada la supervivencia de la humanidad. Joseph Cooper, viudo, exingeniero y piloto de la NASA, dirige una granja con su suegro Donald, su hijo Tom y su hija Murph, quien cree que su habitación está embrujada por un poltergeist. Cuando aparecen inexplicablemente extraños patrones de polvo en el suelo de la habitación de Murph, Cooper se da cuenta de que la gravedad está detrás de su formación, no un 'fantasma'. Interpreta el patrón como un conjunto de coordenadas geográficas formadas en código binario. Cooper y Murph siguen las coordenadas a una instalación secreta de la NASA, donde se encuentran con el exprofesor de Cooper, el doctor Brand."
+        }, 
+
+        {
+            "id": 7,
+            "titulo": "Back to the Future",
+            "poster": "img/future.jpg",
+            "director": "Robert Zemeckis",
+            "precio": 11.99,
+            "categoria": "CienciaFicción",
+            "anno": 1985,
+            "actores": [
+        {
+            "nombre": "Michael J. Fox",
+            "personaje": "Marty McFly",
+            "foto": "img/McFly.jpg"
+        },
+        {
+            "nombre": "Christopher Lloyd",
+            "personaje": "Emmett 'Doc' Brown:",
+            "foto": "img/Doc.jpg"
+        }
+        ],
+            "descripcion": "La cinta transcurre en el año 1985, una época en la que el joven Marty McFly lleva una existencia anónima con su novia Jennifer. ... Marty se refugia en el coche y aparece transportado hasta 1955. Allí impide, a su pesar, que sus padres se conozcan y se verá en la obligación de hacer lo necesario para que vuelvan juntos."
+        }, 
+
+        {
+            "id": 8,
+            "titulo": "Life Is Beautiful",
+            "poster": "img/Vida.jpg",
+            "director": "Roberto Benigni",
+            "precio": 9.99,
+            "categoria": "Drama",
+            "anno": 1997,
+            "actores": [
+        {
+            "nombre": "Giorgio Cantarini",
+            "personaje": "Giosuè Orefice, hijo de Guido Orefice y Dora",
+            "foto": "img/Hijo.jpg"
+        },
+        {
+            "nombre": "Roberto Benigni",
+            "personaje": "Guido Orefice",
+            "foto": "img/Padre.jpg"
+        },
+        {
+            "nombre": "Nicoletta Braschi",
+            "personaje": "Dora",
+            "foto": "img/Dora.png"
+        }
+        ],
+            "descripcion": "La vida es bella cuenta la historia de Guido Orefice, un joven italiano de origen judío que conoce en su trabajo a Dora, de quien se enamora perdidamente. ... Aunque Dora no es judía exige subir también al tren para permanecer junto a su familia, pero al llegar al campo, los hombres y mujeres son separados."
+        }
+    ]
+}

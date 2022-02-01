@@ -1,0 +1,43 @@
+-Nombres de Autores:
+	Iván Fernández París
+	Javier Fraile Iglesias
+
+
+-Normativa de entrega cumplida en su totalidad: Realizado: Se ha leido varias veces la funcionalidad de los metodos para entender correctamente el enunciado.
+
+-Recibir tramas Ethernet, realizar comprobaciones y llamar correctamente a la función de callback de nivel superior:  Realizado: 
+Desde WireShark se puede apreciar que cada petición tiene una cabecera Ethernet (Ethernet II)  que indica el origen y el destino 
+y el protocolo de nivel superior que está encapsulado en la trama, apreciando como los origenes y destinos cambian según la 
+petición y la respuesta. Respecto a la llamada a la función de callback superior comprobando que se genera una petición y una response sería 
+suficiente porque la función de callback es la que se encarga de leer el opcode y decidir si procesar peticiones o respuestas.
+
+-Enviar tramas Ethernet  correctamente: Realizado: Desde WireShark tras realizar una protocolo ARP, porq cada peticion 
+se muestra dos respuestas, primera sería la que ofrece el propio sistema y la segunda es la envía nuestro programa y se observa
+como la que envía nuestro programa tienen un length mayor, en concreto 42 vs 60, siendo correcto puesto que rellenamos el payload 
+con 0x00 hasta llegar al tam mínimo que es 60. 
+
+-Enviar correctamente peticiones ARP: Realizado: Desde WireShark se puede comprobar que se captura una petición de tipo ARP 
+y en ella se indica que es de tipo "Request".
+
+-Procesar correctamente peticiones ARP recibidas: Realizado: Si desde WireShark vemos el opcode de la petición observamos 
+que el opcode que sale es 0x0001 (o pinchando en el paquete en la seccion de la cabecera donde sale "opcode" se indica "request (1)")
+
+-Enviar correctamente respuestas ARP: Realizado: Desde WireShark visualizamos como tras introducir la ip del otro nodo
+sale una request y una replay donde los campos origen de la request pasan a ser los destinos en la replay
+y los destino en la request son los de origen en la replay.
+
+-Procesar correctamente respuestas ARP: Realizado: Si desde WireShark vemos el opcode de la respuesta observamos 
+que el opcode que sale es 0x0002 (o pinchando en el paquete en la seccion de la cabecera donde sale "opcode" se indica "replay (2)")
+
+-Manejo correcto de la caché ARP: Realizado: Si una vez se realizado una petición ARP y se devuelve la MAC asociada, se realiza otra
+petición a esa misma IP se devuelve la misma MAC sin realziar todo el protocolo, esto se puede apeciar porque tarda menos tiempo en 
+devolver la dirección y desde WireShark donde no se captura una petición ARP nueva.
+
+-Uso correcto de Locks: Parcialmente-Realizado: Hemos hecho uso de los Locks tanto para leer como para escribir en las variables globales 
+y en la cache pero además hemos incluido un pequeño sleep en el bucle for que envía las tramas para poder dar tiempo a procesar
+cada peticion, pero no sabemos si esto es la solución más correcta u óptima. 
+
+-Realiza correctamente el ARP gratuito: Realizado: Se comprueba que dos dispositivos con la misma ip cuadno uno ya se ha inicializado 
+si el otro lo intenta se devuelve el mensaje "ARP no inicializado", además se adjunta una foto en la que se muestra dicha salida del programa.
+Además si introducimos la misma dirección IP que la que tiene el nodo la salida es la siguiente "Dirección no encontrada".
+E incluso en WireShark se puede ver que al inicializar un terminal aparece una peticion ARP indicando que es una "Gratuitous ARP". 

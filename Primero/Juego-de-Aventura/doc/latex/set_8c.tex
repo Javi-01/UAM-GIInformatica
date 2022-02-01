@@ -1,0 +1,272 @@
+\hypertarget{set_8c}{}\doxysection{src/set.c File Reference}
+\label{set_8c}\index{src/set.c@{src/set.c}}
+
+
+Implementación de la estructura de conjuntos y todas sus funciones.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}space.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+Include dependency graph for set.\+c\+:
+% FIG 0
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__Set}{\+\_\+\+Set}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{set_8c_a4f36010f955a217d30daefc525848978}{set\+\_\+have\+\_\+id}} (\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$set, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Comprueba que el id esté ya en el conjunto. Un conjunto no debe tener datos repetidos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$ \mbox{\hyperlink{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}{set\+\_\+create}} ()
+\begin{DoxyCompactList}\small\item\em Crea un nuevo conjunto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{set_8c_a17fa263a49d6fe209c040e9ca5e0132a}{set\+\_\+destroy}} (\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Elimina un conjunto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{set_8c_a4b26ac12a05562f452ab9f2b43f75be1}{set\+\_\+add}} (\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$set, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} new\+Id)
+\begin{DoxyCompactList}\small\item\em Añade un elemento al conjunto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{set_8c_aec6e2ce2250bbc5ef73329076b80dc27}{set\+\_\+get\+\_\+cantidad}} (\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Devuelve la cantidad actual del conjunto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{set_8c_a766d123b18af5298d23b51bc1ed433e6}{set\+\_\+del}} (\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$set, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Elimina un elemento del conjunto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{set_8c_a8db105a25618f0ae56fe171acce1efec}{set\+\_\+print}} (\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Muestra por pantalla un conjunto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{set_8c_aa213ae17776e64d2bf977140ed034785}{set\+\_\+get\+\_\+id}} (\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$set, int pos)
+\begin{DoxyCompactList}\small\item\em Devuelve el id de una posicion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{set_8c_af731f8898c8e4f780559ba3bcad4ed2b}{set\+\_\+get\+\_\+last\+\_\+id}} (\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Devuelve el id de la ultima posicion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} $\ast$ \mbox{\hyperlink{set_8c_aae1ee77f54957b77e5df4a04dac42ebf}{set\+\_\+get\+\_\+ids}} (\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Devuelve el conjunto de ids que tiene el set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la estructura de conjuntos y todas sus funciones. 
+
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09-\/03-\/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{set_8c_a4b26ac12a05562f452ab9f2b43f75be1}\label{set_8c_a4b26ac12a05562f452ab9f2b43f75be1}} 
+\index{set.c@{set.c}!set\_add@{set\_add}}
+\index{set\_add@{set\_add}!set.c@{set.c}}
+\doxysubsubsection{\texorpdfstring{set\_add()}{set\_add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} set\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$}]{set,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{new\+Id }\end{DoxyParamCaption})}
+
+
+
+Añade un elemento al conjunto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & puntero al conjunto. \\
+\hline
+{\em new\+Id} & Id del nuevo elemento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR en caso de fallo u OK si se ha añadido correctamente. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}\label{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}} 
+\index{set.c@{set.c}!set\_create@{set\_create}}
+\index{set\_create@{set\_create}!set.c@{set.c}}
+\doxysubsubsection{\texorpdfstring{set\_create()}{set\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}}$\ast$ set\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crea un nuevo conjunto. 
+
+\begin{DoxyReturn}{Returns}
+Conjunto creado o N\+U\+LL en caso de error. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{set_8c_a766d123b18af5298d23b51bc1ed433e6}\label{set_8c_a766d123b18af5298d23b51bc1ed433e6}} 
+\index{set.c@{set.c}!set\_del@{set\_del}}
+\index{set\_del@{set\_del}!set.c@{set.c}}
+\doxysubsubsection{\texorpdfstring{set\_del()}{set\_del()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} set\+\_\+del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$}]{set,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Elimina un elemento del conjunto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & puntero al conjunto. \\
+\hline
+{\em id} & Id del elemento a eliminar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR en caso de fallo u OK si se ha eliminado correctamente. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{set_8c_a17fa263a49d6fe209c040e9ca5e0132a}\label{set_8c_a17fa263a49d6fe209c040e9ca5e0132a}} 
+\index{set.c@{set.c}!set\_destroy@{set\_destroy}}
+\index{set\_destroy@{set\_destroy}!set.c@{set.c}}
+\doxysubsubsection{\texorpdfstring{set\_destroy()}{set\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} set\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+Elimina un conjunto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & puntero al conjunto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR en caso de fallo u OK si se ha eliminado correctamente. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{set_8c_aec6e2ce2250bbc5ef73329076b80dc27}\label{set_8c_aec6e2ce2250bbc5ef73329076b80dc27}} 
+\index{set.c@{set.c}!set\_get\_cantidad@{set\_get\_cantidad}}
+\index{set\_get\_cantidad@{set\_get\_cantidad}!set.c@{set.c}}
+\doxysubsubsection{\texorpdfstring{set\_get\_cantidad()}{set\_get\_cantidad()}}
+{\footnotesize\ttfamily int set\+\_\+get\+\_\+cantidad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+Devuelve la cantidad actual del conjunto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & puntero al conjunto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cantidad. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{set_8c_aa213ae17776e64d2bf977140ed034785}\label{set_8c_aa213ae17776e64d2bf977140ed034785}} 
+\index{set.c@{set.c}!set\_get\_id@{set\_get\_id}}
+\index{set\_get\_id@{set\_get\_id}!set.c@{set.c}}
+\doxysubsubsection{\texorpdfstring{set\_get\_id()}{set\_get\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} set\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$}]{set,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Devuelve el id de una posicion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & puntero al conjunto. \\
+\hline
+{\em pos} & número de posición. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{set_8c_aae1ee77f54957b77e5df4a04dac42ebf}\label{set_8c_aae1ee77f54957b77e5df4a04dac42ebf}} 
+\index{set.c@{set.c}!set\_get\_ids@{set\_get\_ids}}
+\index{set\_get\_ids@{set\_get\_ids}!set.c@{set.c}}
+\doxysubsubsection{\texorpdfstring{set\_get\_ids()}{set\_get\_ids()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}$\ast$ set\+\_\+get\+\_\+ids (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+Devuelve el conjunto de ids que tiene el set. 
+
+\begin{DoxyReturn}{Returns}
+ids 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Iván Fernández París 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{set_8c_af731f8898c8e4f780559ba3bcad4ed2b}\label{set_8c_af731f8898c8e4f780559ba3bcad4ed2b}} 
+\index{set.c@{set.c}!set\_get\_last\_id@{set\_get\_last\_id}}
+\index{set\_get\_last\_id@{set\_get\_last\_id}!set.c@{set.c}}
+\doxysubsubsection{\texorpdfstring{set\_get\_last\_id()}{set\_get\_last\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} set\+\_\+get\+\_\+last\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+Devuelve el id de la ultima posicion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & puntero al conjunto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{set_8c_a4f36010f955a217d30daefc525848978}\label{set_8c_a4f36010f955a217d30daefc525848978}} 
+\index{set.c@{set.c}!set\_have\_id@{set\_have\_id}}
+\index{set\_have\_id@{set\_have\_id}!set.c@{set.c}}
+\doxysubsubsection{\texorpdfstring{set\_have\_id()}{set\_have\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} set\+\_\+have\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$}]{set,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Comprueba que el id esté ya en el conjunto. Un conjunto no debe tener datos repetidos. 
+
+Comprueba si hay un elemento en el conjunto.
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & puntero al conjunto. \\
+\hline
+{\em id} & id a comprobar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR en caso de que no esté o OK contrario. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{set_8c_a8db105a25618f0ae56fe171acce1efec}\label{set_8c_a8db105a25618f0ae56fe171acce1efec}} 
+\index{set.c@{set.c}!set\_print@{set\_print}}
+\index{set\_print@{set\_print}!set.c@{set.c}}
+\doxysubsubsection{\texorpdfstring{set\_print()}{set\_print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} set\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+Muestra por pantalla un conjunto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & puntero al conjunto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR en caso de fallo u OK en caso contrario. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}

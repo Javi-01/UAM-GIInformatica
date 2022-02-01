@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends "base.html" %} 
+{% block title %} Home {% endblock %} 
+{% block content %}
+<div class="home-content">
+  <div class="movie-form">
+    <form action="" method="POST">
+      <div class="search-movie">
+        <label for="search">Nombre de la pelicula: </label>
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Busqueda.."
+        />
+      </div>
+      <div class="select-categories">
+        <label for="categories">Selecciona una categoria: </label>
+        <select id="categories" name="categories">
+          {% for category in categories %} {% if category == selected_category
+          %}
+          <option id="{{category}}" selected>{{ category }}</option>
+          {% else %}
+          <option id="{{category}}">{{ category }}</option>
+          {% endif %} {% endfor %}
+        </select>
+        <input type="submit" value="Buscar" />
+      </div>
+    </form>
+  </div>
+  <div class="movie-elements">
+    {% for movie in movies %}
+    <a href="{{ url_for('pelicula', pelicula_id=movie.id) }}">
+      <div class="movie-element">
+        <img
+          src="{{ url_for('static', filename=movie.poster )}}"
+          alt="No se ha podido cargar la imagen"
+        />
+        <div class="movie-title">
+          <p>{{ movie.titulo }}</p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

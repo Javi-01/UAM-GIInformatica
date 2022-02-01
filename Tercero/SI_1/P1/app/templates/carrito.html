@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% block title %} Carrito {% endblock %} 
+{% block content %}
+<div class="cart-content">
+  {% if session['carrito'] %}
+  <h1>Informacion del Carrito</h1>
+  {% for item in range(0, session['carrito']|length) %}
+  <div class="cart-element">
+    <div class="cart-element-img">
+      <img
+        src="{{ url_for('static', filename=session['carrito'][item]['pelicula']['poster'] )}}"
+        alt="No se ha podido cargar la imagen"
+      />
+    </div>
+    <div class="cart-element-data">
+      <h3>{{ session['carrito'][item]['pelicula']['titulo'] }}</h3>
+      <p>
+        Precio :
+        <strong
+          >{{ session['carrito'][item]['pelicula']['precio'] *
+          session['carrito'][item]['cantidad'] }} €
+        </strong>
+      </p>
+      <p>
+        Copias : <strong>{{ session['carrito'][item]['cantidad'] }}</strong>
+      </p>
+    </div>
+
+    <div class="cart-element-options">
+        <a
+          href="{{ url_for('reducir_item_carrito', pelicula_id=session['carrito'][item]['pelicula']['id']) }}"
+          >Reducir</a
+        >        <a
+          href="{{ url_for('aumentar_item_carrito', pelicula_id=session['carrito'][item]['pelicula']['id']) }}"
+          >Aumentar</a
+        >
+        <a
+          href="{{ url_for('borrar_item_carrito', pelicula_id=session['carrito'][item]['pelicula']['id']) }}"
+          >Eliminar</a
+        >
+    </div>
+  </div>
+  {% endfor %}
+
+  <div class="cart-final-actions">
+    <a href="{{ url_for('limpiar_carrito') }}">Limpiar Carrito</a>
+    <form action="" method="POST">
+      <input type="submit" value="Confirmar Carrito" />
+    </form>
+  </div>
+  {% else %}
+  <h1>El carrito no tiene ningun elemento</h1>
+  {% endif %}
+</div>
+{% endblock %}

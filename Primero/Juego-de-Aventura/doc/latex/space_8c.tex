@@ -1,0 +1,814 @@
+\hypertarget{space_8c}{}\doxysection{src/space.c File Reference}
+\label{space_8c}\index{src/space.c@{src/space.c}}
+
+
+It defines a space.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}space.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}link.\+h\char`\"{}}\newline
+Include dependency graph for space.\+c\+:
+% FIG 0
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__Space}{\+\_\+\+Space}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$ \mbox{\hyperlink{space_8c_a162866fcea156b800fd546d0ffd271c9}{space\+\_\+create}} (\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Crea un espacio con el id recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_a5c70c70398923693ddbe4dfac8d72a0d}{space\+\_\+destroy}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Destruye el espacio recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_aab5b468f9822ab78dbe16d1321870d93}{space\+\_\+set\+\_\+name}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Cambia el nombre de un espacio por el nombre recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_a7aecc426029f567d452a0f916fd512d6}{space\+\_\+set\+\_\+description}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, char $\ast$description)
+\begin{DoxyCompactList}\small\item\em Modifica la descripción de un espacio recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_a22b25bc391186f7cd9f25bedfa4cc367}{space\+\_\+set\+\_\+long\+Description}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, char $\ast$description)
+\begin{DoxyCompactList}\small\item\em Modifica la descripción larga de un espacio recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_a9e6e3e3bac4996ac6b8bd555e52bfb26}{space\+\_\+set\+\_\+north}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Cambia el id del link del norte de un espacio por el id del link recibido por parametros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_a422ab9f220b4c471c44256a27377de1a}{space\+\_\+set\+\_\+south}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Cambia el id del link del sur de un espacio por el id del link recibido por parametros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_a860a8f3e0227955ad56d1a12f0bdc44a}{space\+\_\+set\+\_\+east}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Cambia el id del link del este de un espacio por el id del link recibido por parametros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_ad44b14cb38902cf31fa1f341beaab0db}{space\+\_\+set\+\_\+west}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Cambia el id del link del oeste de un espacio por el id del link recibido por parametros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_ae5b9fef52456ffccffbd73f882a56d23}{space\+\_\+set\+\_\+down}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Cambia el id del link de abajo de un espacio por el id del link recibido por parametros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_aa2707bdca8fd356ed8d15fd48e820a4f}{space\+\_\+set\+\_\+up}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Cambia el id del link de arriba de un espacio por el id del link recibido por parametros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_aa325668ad2630bf97143b6b407bfd3d9}{space\+\_\+set\+\_\+object}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Cambia el object de un espacio por el id del espacio recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_a1e213d8a85d9046150d8dd7c877c4e9e}{space\+\_\+set\+\_\+iluminado}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} iluminado)
+\begin{DoxyCompactList}\small\item\em Establece si la casilla del espacio esta iluminada o no. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{space_8c_af80a3271a35305913c12fbb2dcdcc138}{space\+\_\+get\+\_\+iluminado}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene el estado de iluminacion de la casilla del espacio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_af63a0feec3ce9630c5aabd23fea67443}{space\+\_\+set\+\_\+gdesc}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, char $\ast$line, int pos)
+\begin{DoxyCompactList}\small\item\em Añade una línea a de caracteres (dibujos) al espacio. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{space_8c_af80283218ff69cbf0f46c153768bfe24}{space\+\_\+get\+\_\+gdesc}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, int pos)
+\begin{DoxyCompactList}\small\item\em Obtiene una determinada línea de caractreres contenida en el espacio. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{space_8c_a310c540cd6e11073f7328add1f927001}{space\+\_\+get\+\_\+name}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre de un espacio recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{space_8c_ac8ddfd0d8692fd852ee49698c446cb50}{space\+\_\+get\+\_\+id}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene el id de un espacio recibido. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{space_8c_a51e854a2f9b35bd39e60c04ec5f03abd}{space\+\_\+get\+\_\+description}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene la descripción de un espacio recibido. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{space_8c_a6d22e9ae007c8de2fd175137c69b434e}{space\+\_\+get\+\_\+long\+Description}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene la descripción larga de un espacio recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{space_8c_ad331fba774897900f615d9d2e8d81a90}{space\+\_\+get\+\_\+north}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene link\+\_\+id del norte de un espacio recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{space_8c_a9b86e1335c423eaad832e50d4c12cf1f}{space\+\_\+get\+\_\+south}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene link\+\_\+id del sur de un espacio recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{space_8c_a978a22b77f74bb2dab68a00571abbe0b}{space\+\_\+get\+\_\+east}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene id del link\+\_\+id del este de un espacio recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{space_8c_af495ebfd5d13eba1a48cebd10992a17f}{space\+\_\+get\+\_\+west}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene link\+\_\+id del oeste de un espacio recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{space_8c_a174a988b899d5a0db889a31b70763c9c}{space\+\_\+get\+\_\+up}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene link\+\_\+id de arriba de un espacio recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{space_8c_ab269eab72b9ea7254044b34b1c177602}{space\+\_\+get\+\_\+down}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene link\+\_\+id de abajo de un espacio recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_a32c30f0aa89f3f28c06802f1c72c1fdc}{space\+\_\+del\+\_\+object}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Elimina un objeto del espacio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{space_8c_a66ec094fa99f19138fda0ad6086d9ab4}{space\+\_\+object\+\_\+presence}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} obj\+Id)
+\begin{DoxyCompactList}\small\item\em Comprueba si el objeto se ecuentra en el espacio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} $\ast$ \mbox{\hyperlink{space_8c_a9cd5617c6cb1789172fdb315ab002f4b}{space\+\_\+get\+\_\+objects}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene el id de un objeto si hay un objeto en el espacio recibido. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{space_8c_a9a1ff6ef242ec7c80732c3a3e1e5817f}{space\+\_\+get\+\_\+num\+\_\+objects}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Obtiene el numero de objetos que contiene un espacio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} \mbox{\hyperlink{space_8c_a88e0a6269d15e7a20b203cc8e32f7e9b}{space\+\_\+have\+\_\+id}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} object)
+\begin{DoxyCompactList}\small\item\em Comprueba si el espacio contiene un determinado objeto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{space_8c_a18eca058da6cdf20ae5eda9d122d992e}{space\+\_\+print}} (\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$space)
+\begin{DoxyCompactList}\small\item\em Imprime en pantalla los datos del espacio recibido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It defines a space. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{space_8c_a162866fcea156b800fd546d0ffd271c9}\label{space_8c_a162866fcea156b800fd546d0ffd271c9}} 
+\index{space.c@{space.c}!space\_create@{space\_create}}
+\index{space\_create@{space\_create}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_create()}{space\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}}$\ast$ space\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Crea un espacio con el id recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id del espacio a crear \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o un nuevo espacio en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a32c30f0aa89f3f28c06802f1c72c1fdc}\label{space_8c_a32c30f0aa89f3f28c06802f1c72c1fdc}} 
+\index{space.c@{space.c}!space\_del\_object@{space\_del\_object}}
+\index{space\_del\_object@{space\_del\_object}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_del\_object()}{space\_del\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+del\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Elimina un objeto del espacio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere eliminar el objeto \\
+\hline
+{\em id} & id del objeto que que quiere eliminar Retorna E\+R\+R\+OR en caso de error o OK en caso de éxito.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez Reinoso 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a5c70c70398923693ddbe4dfac8d72a0d}\label{space_8c_a5c70c70398923693ddbe4dfac8d72a0d}} 
+\index{space.c@{space.c}!space\_destroy@{space\_destroy}}
+\index{space\_destroy@{space\_destroy}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_destroy()}{space\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Destruye el espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio que se quiere destruir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a51e854a2f9b35bd39e60c04ec5f03abd}\label{space_8c_a51e854a2f9b35bd39e60c04ec5f03abd}} 
+\index{space.c@{space.c}!space\_get\_description@{space\_get\_description}}
+\index{space\_get\_description@{space\_get\_description}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_description()}{space\_get\_description()}}
+{\footnotesize\ttfamily const char$\ast$ space\+\_\+get\+\_\+description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene la descripción de un espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del que se quiere obtener la descripcion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL en caso de fallo o la descripcion del espacio en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_ab269eab72b9ea7254044b34b1c177602}\label{space_8c_ab269eab72b9ea7254044b34b1c177602}} 
+\index{space.c@{space.c}!space\_get\_down@{space\_get\_down}}
+\index{space\_get\_down@{space\_get\_down}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_down()}{space\_get\_down()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} space\+\_\+get\+\_\+down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene link\+\_\+id de abajo de un espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener el enlace de abajo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el id del espacio de abajo en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a978a22b77f74bb2dab68a00571abbe0b}\label{space_8c_a978a22b77f74bb2dab68a00571abbe0b}} 
+\index{space.c@{space.c}!space\_get\_east@{space\_get\_east}}
+\index{space\_get\_east@{space\_get\_east}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_east()}{space\_get\_east()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} space\+\_\+get\+\_\+east (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene id del link\+\_\+id del este de un espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener el enlace al este \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el id del espacio al sur caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_af80283218ff69cbf0f46c153768bfe24}\label{space_8c_af80283218ff69cbf0f46c153768bfe24}} 
+\index{space.c@{space.c}!space\_get\_gdesc@{space\_get\_gdesc}}
+\index{space\_get\_gdesc@{space\_get\_gdesc}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_gdesc()}{space\_get\_gdesc()}}
+{\footnotesize\ttfamily const char$\ast$ space\+\_\+get\+\_\+gdesc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Obtiene una determinada línea de caractreres contenida en el espacio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener una linea de la casilla \\
+\hline
+{\em pos} & numero de fila que representa la linea de dicha casilla \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de error o la línea de caracteres en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez Reinoso 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_ac8ddfd0d8692fd852ee49698c446cb50}\label{space_8c_ac8ddfd0d8692fd852ee49698c446cb50}} 
+\index{space.c@{space.c}!space\_get\_id@{space\_get\_id}}
+\index{space\_get\_id@{space\_get\_id}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_id()}{space\_get\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} space\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene el id de un espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener el id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el id del objeto en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_af80a3271a35305913c12fbb2dcdcc138}\label{space_8c_af80a3271a35305913c12fbb2dcdcc138}} 
+\index{space.c@{space.c}!space\_get\_iluminado@{space\_get\_iluminado}}
+\index{space\_get\_iluminado@{space\_get\_iluminado}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_iluminado()}{space\_get\_iluminado()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} space\+\_\+get\+\_\+iluminado (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene el estado de iluminacion de la casilla del espacio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener la iluminacion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna F\+A\+L\+SE en caso de error o de estado apagado, y T\+R\+UE en caso de estado iluminado
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a6d22e9ae007c8de2fd175137c69b434e}\label{space_8c_a6d22e9ae007c8de2fd175137c69b434e}} 
+\index{space.c@{space.c}!space\_get\_longDescription@{space\_get\_longDescription}}
+\index{space\_get\_longDescription@{space\_get\_longDescription}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_longDescription()}{space\_get\_longDescription()}}
+{\footnotesize\ttfamily const char$\ast$ space\+\_\+get\+\_\+long\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene la descripción larga de un espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del que se quiere obtener la descripcion larga \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL en caso de fallo o la descripcion del espacio en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a310c540cd6e11073f7328add1f927001}\label{space_8c_a310c540cd6e11073f7328add1f927001}} 
+\index{space.c@{space.c}!space\_get\_name@{space\_get\_name}}
+\index{space\_get\_name@{space\_get\_name}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_name()}{space\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ space\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene el nombre de un espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener el nombre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el nombre del espacio en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_ad331fba774897900f615d9d2e8d81a90}\label{space_8c_ad331fba774897900f615d9d2e8d81a90}} 
+\index{space.c@{space.c}!space\_get\_north@{space\_get\_north}}
+\index{space\_get\_north@{space\_get\_north}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_north()}{space\_get\_north()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} space\+\_\+get\+\_\+north (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene link\+\_\+id del norte de un espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener el enlace al norte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el id del espacio al norte caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a9a1ff6ef242ec7c80732c3a3e1e5817f}\label{space_8c_a9a1ff6ef242ec7c80732c3a3e1e5817f}} 
+\index{space.c@{space.c}!space\_get\_num\_objects@{space\_get\_num\_objects}}
+\index{space\_get\_num\_objects@{space\_get\_num\_objects}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_num\_objects()}{space\_get\_num\_objects()}}
+{\footnotesize\ttfamily int space\+\_\+get\+\_\+num\+\_\+objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene el numero de objetos que contiene un espacio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del que se quiere comprobar el numero de objetos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returna el numero de objetos en caso correcto, o N\+O\+\_\+\+ID en caso contrario
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a9cd5617c6cb1789172fdb315ab002f4b}\label{space_8c_a9cd5617c6cb1789172fdb315ab002f4b}} 
+\index{space.c@{space.c}!space\_get\_objects@{space\_get\_objects}}
+\index{space\_get\_objects@{space\_get\_objects}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_objects()}{space\_get\_objects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}$\ast$ space\+\_\+get\+\_\+objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene el id de un objeto si hay un objeto en el espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener los objetos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+O\+\_\+\+ID en caso de error o el id del objeto del espacio en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a9b86e1335c423eaad832e50d4c12cf1f}\label{space_8c_a9b86e1335c423eaad832e50d4c12cf1f}} 
+\index{space.c@{space.c}!space\_get\_south@{space\_get\_south}}
+\index{space\_get\_south@{space\_get\_south}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_south()}{space\_get\_south()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} space\+\_\+get\+\_\+south (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene link\+\_\+id del sur de un espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener el enlace al sur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el id del espacio al sur caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a174a988b899d5a0db889a31b70763c9c}\label{space_8c_a174a988b899d5a0db889a31b70763c9c}} 
+\index{space.c@{space.c}!space\_get\_up@{space\_get\_up}}
+\index{space\_get\_up@{space\_get\_up}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_up()}{space\_get\_up()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} space\+\_\+get\+\_\+up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene link\+\_\+id de arriba de un espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener el enlace de arriba \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el id del espacio de arriba en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_af495ebfd5d13eba1a48cebd10992a17f}\label{space_8c_af495ebfd5d13eba1a48cebd10992a17f}} 
+\index{space.c@{space.c}!space\_get\_west@{space\_get\_west}}
+\index{space\_get\_west@{space\_get\_west}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_get\_west()}{space\_get\_west()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} space\+\_\+get\+\_\+west (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Obtiene link\+\_\+id del oeste de un espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener el enlace al oeste \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el id del espacio al sur caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a88e0a6269d15e7a20b203cc8e32f7e9b}\label{space_8c_a88e0a6269d15e7a20b203cc8e32f7e9b}} 
+\index{space.c@{space.c}!space\_have\_id@{space\_have\_id}}
+\index{space\_have\_id@{space\_have\_id}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_have\_id()}{space\_have\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} space\+\_\+have\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{object }\end{DoxyParamCaption})}
+
+
+
+Comprueba si el espacio contiene un determinado objeto. 
+
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09-\/04-\/2021
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & puntero al espacio \\
+\hline
+{\em object} & del espacio \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True en caso de tenerlo y False en caso contrario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8c_a66ec094fa99f19138fda0ad6086d9ab4}\label{space_8c_a66ec094fa99f19138fda0ad6086d9ab4}} 
+\index{space.c@{space.c}!space\_object\_presence@{space\_object\_presence}}
+\index{space\_object\_presence@{space\_object\_presence}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_object\_presence()}{space\_object\_presence()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}} space\+\_\+object\+\_\+presence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{obj\+Id }\end{DoxyParamCaption})}
+
+
+
+Comprueba si el objeto se ecuentra en el espacio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere comprobar el objeto \\
+\hline
+{\em obj\+Id} & id del objeto que que quiere buscar en dicho espacio \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna F\+A\+L\+SE en caso de error o de que no esté o T\+R\+UE en caso de éxito(el objeto está en el espacio).
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez Reinoso 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a18eca058da6cdf20ae5eda9d122d992e}\label{space_8c_a18eca058da6cdf20ae5eda9d122d992e}} 
+\index{space.c@{space.c}!space\_print@{space\_print}}
+\index{space\_print@{space\_print}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_print()}{space\_print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Imprime en pantalla los datos del espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio el cual se quiere imprimir el contenido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR si no existe el espacio u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a7aecc426029f567d452a0f916fd512d6}\label{space_8c_a7aecc426029f567d452a0f916fd512d6}} 
+\index{space.c@{space.c}!space\_set\_description@{space\_set\_description}}
+\index{space\_set\_description@{space\_set\_description}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_set\_description()}{space\_set\_description()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+set\+\_\+description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{char $\ast$}]{description }\end{DoxyParamCaption})}
+
+
+
+Modifica la descripción de un espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del que se quiere establecer la descripcion \\
+\hline
+{\em description} & descripcion del espacio \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL en caso de fallo u Okay si se ha realizado con éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_ae5b9fef52456ffccffbd73f882a56d23}\label{space_8c_ae5b9fef52456ffccffbd73f882a56d23}} 
+\index{space.c@{space.c}!space\_set\_down@{space\_set\_down}}
+\index{space\_set\_down@{space\_set\_down}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_set\_down()}{space\_set\_down()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+set\+\_\+down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Cambia el id del link de abajo de un espacio por el id del link recibido por parametros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere establecer el enlace al espacio de abajo \\
+\hline
+{\em id} & Id del enlace que representa la conexion que establecera con el espacio de abajo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a860a8f3e0227955ad56d1a12f0bdc44a}\label{space_8c_a860a8f3e0227955ad56d1a12f0bdc44a}} 
+\index{space.c@{space.c}!space\_set\_east@{space\_set\_east}}
+\index{space\_set\_east@{space\_set\_east}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_set\_east()}{space\_set\_east()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+set\+\_\+east (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Cambia el id del link del este de un espacio por el id del link recibido por parametros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere establecer el enlace al este \\
+\hline
+{\em id} & Id del enlace que representa la conexion que establecera con el este \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_af63a0feec3ce9630c5aabd23fea67443}\label{space_8c_af63a0feec3ce9630c5aabd23fea67443}} 
+\index{space.c@{space.c}!space\_set\_gdesc@{space\_set\_gdesc}}
+\index{space\_set\_gdesc@{space\_set\_gdesc}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_set\_gdesc()}{space\_set\_gdesc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+set\+\_\+gdesc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{char $\ast$}]{line,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Añade una línea a de caracteres (dibujos) al espacio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere establecer una linea de la casilla \\
+\hline
+{\em line} & linea (de la casilla )que se quiere insertar a dicho espacio \\
+\hline
+{\em pos} & numero de fila que representa la linea de dicha casilla \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de error o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejandro Jerez Reinoso 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a1e213d8a85d9046150d8dd7c877c4e9e}\label{space_8c_a1e213d8a85d9046150d8dd7c877c4e9e}} 
+\index{space.c@{space.c}!space\_set\_iluminado@{space\_set\_iluminado}}
+\index{space\_set\_iluminado@{space\_set\_iluminado}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_set\_iluminado()}{space\_set\_iluminado()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+set\+\_\+iluminado (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{\mbox{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}}]{iluminado }\end{DoxyParamCaption})}
+
+
+
+Establece si la casilla del espacio esta iluminada o no. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener si esta ilumninada \\
+\hline
+{\em iluminado} & estado al que se quiere cambiar esa casilla \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de error o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a22b25bc391186f7cd9f25bedfa4cc367}\label{space_8c_a22b25bc391186f7cd9f25bedfa4cc367}} 
+\index{space.c@{space.c}!space\_set\_longDescription@{space\_set\_longDescription}}
+\index{space\_set\_longDescription@{space\_set\_longDescription}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_set\_longDescription()}{space\_set\_longDescription()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+set\+\_\+long\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{char $\ast$}]{description }\end{DoxyParamCaption})}
+
+
+
+Modifica la descripción larga de un espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del que se quiere establecer la descripcion larga \\
+\hline
+{\em description} & descripcion larga del espacio \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL en caso de fallo u Okay si se ha realizado con éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_aab5b468f9822ab78dbe16d1321870d93}\label{space_8c_aab5b468f9822ab78dbe16d1321870d93}} 
+\index{space.c@{space.c}!space\_set\_name@{space\_set\_name}}
+\index{space\_set\_name@{space\_set\_name}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_set\_name()}{space\_set\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Cambia el nombre de un espacio por el nombre recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere obtener el establecer el nombre \\
+\hline
+{\em name} & nombre del espacio que se quiere establecer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a9e6e3e3bac4996ac6b8bd555e52bfb26}\label{space_8c_a9e6e3e3bac4996ac6b8bd555e52bfb26}} 
+\index{space.c@{space.c}!space\_set\_north@{space\_set\_north}}
+\index{space\_set\_north@{space\_set\_north}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_set\_north()}{space\_set\_north()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+set\+\_\+north (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Cambia el id del link del norte de un espacio por el id del link recibido por parametros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere establecer el enlace al norte \\
+\hline
+{\em id} & Id del enlace que representa la conexion que establecera con el norte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_aa325668ad2630bf97143b6b407bfd3d9}\label{space_8c_aa325668ad2630bf97143b6b407bfd3d9}} 
+\index{space.c@{space.c}!space\_set\_object@{space\_set\_object}}
+\index{space\_set\_object@{space\_set\_object}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_set\_object()}{space\_set\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+set\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Cambia el object de un espacio por el id del espacio recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere establecer el objeto \\
+\hline
+{\em id} & Id del del objeto que se quiere establecer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alejando Jerez 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_a422ab9f220b4c471c44256a27377de1a}\label{space_8c_a422ab9f220b4c471c44256a27377de1a}} 
+\index{space.c@{space.c}!space\_set\_south@{space\_set\_south}}
+\index{space\_set\_south@{space\_set\_south}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_set\_south()}{space\_set\_south()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+set\+\_\+south (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Cambia el id del link del sur de un espacio por el id del link recibido por parametros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere establecer el enlace al sur \\
+\hline
+{\em id} & Id del enlace que representa la conexion que establecera con el sur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_aa2707bdca8fd356ed8d15fd48e820a4f}\label{space_8c_aa2707bdca8fd356ed8d15fd48e820a4f}} 
+\index{space.c@{space.c}!space\_set\_up@{space\_set\_up}}
+\index{space\_set\_up@{space\_set\_up}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_set\_up()}{space\_set\_up()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+set\+\_\+up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Cambia el id del link de arriba de un espacio por el id del link recibido por parametros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere establecer el enlace al espacio de arriba \\
+\hline
+{\em id} & Id del enlace que representa la conexion que establecera con el espacio de arriba \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{space_8c_ad44b14cb38902cf31fa1f341beaab0db}\label{space_8c_ad44b14cb38902cf31fa1f341beaab0db}} 
+\index{space.c@{space.c}!space\_set\_west@{space\_set\_west}}
+\index{space\_set\_west@{space\_set\_west}!space.c@{space.c}}
+\doxysubsubsection{\texorpdfstring{space\_set\_west()}{space\_set\_west()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} space\+\_\+set\+\_\+west (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}} $\ast$}]{space,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Cambia el id del link del oeste de un espacio por el id del link recibido por parametros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & espacio del cual se quiere establecer el enlace al oeste \\
+\hline
+{\em id} & Id del enlace que representa la conexion que establecera con el oeste \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% block title %} Pelicula {% endblock %}
+{% block content %}
+<div class="movie-content">
+  <div class="movie-content-left">
+    <section>
+      <h2 id="title">{{ movie.titulo }}</h2>
+      <article>
+        <h2>Informacion general:</h2>
+        <ul>
+          <li><strong>Año de lanzamiento: </strong> {{ movie.anno }}</li>
+          <li><strong>Generos: </strong>
+            {% for genero in movie.generos %}
+              {{ genero }}
+              {{ ", " if not loop.last else "" }}
+            {% endfor %}
+          </li>
+          <li><strong>Directores: </strong>
+            {% for director in movie.directores %}
+              {{ director }}
+              {{ ", " if not loop.last else "" }}
+            {% endfor %}
+          </li>
+          <li><strong>Lenguajes disponibles: </strong>
+            {% for lenguaje in movie.lenguajes %}
+              {{ lenguaje }}
+              {{ ", " if not loop.last else "" }}
+            {% endfor %}
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <div class="actor-elements">
+      {% for actores in movie.actores %}
+      <ul class="actor-element">
+        <li>
+          <img
+            src="{{ url_for('static', filename=actores.foto )}}"
+            alt="No se ha podido cargar la imagen"
+          />
+        </li>
+        <li class="actor-title">
+          <strong>{{ actores.nombre }}</strong> interpreta a
+          <strong>{{ actores.personaje }}</strong>
+          <p>Genero: <strong>{{ actores.genero }}</strong></p>
+        </li>
+      </ul>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="movie-content-right">
+    <img
+      src="{{ url_for('static', filename=movie.poster )}}"
+      alt="No se ha podido cargar la imagen"
+    />
+    {%for edicion in movie.ediciones %}
+      <form action="" method="POST">
+        <strong>{{ edicion.tipo }}</strong> edition con precio de <strong>{{ edicion.precio }}</strong> €
+        <input type="submit" name = "submit_edition" value="{{ edicion.tipo }}" />
+      </form>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

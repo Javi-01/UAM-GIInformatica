@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% block title %} Confirmar_compra {% endblock %}
+{% block content %}
+<div class="confirm-cart">
+  <h1>Confirma la compra</h1>
+  <div class="confirm-cart-data">
+    <p>Subtotal: <strong>{{ precio }} €</strong></p>
+    <p>Puntos: <strong>{{ puntos }} </strong></p>
+    <p>Saldo: <strong>{{ saldo }} €</strong></p>
+  </div>
+  <form action="" method="POST">
+    <div class="confirm-cart-checkbox">
+      <label id="usar_puntos">Utilizar puntos para la compra</label>
+      {% if puntos == 0 %}
+      <input type="checkbox" name="usar_puntos" disabled />
+      {% else %}
+      <input type="checkbox" name="usar_puntos" />
+      {% endif %}
+    </div>
+    <div class="cart-final-actions">
+      <a href="{{ url_for('carrito') }}">Volver</a>
+    </div>
+    <div class="confirm-cart-buy">
+      <input type="submit" value="Realizar compra" />
+    </div>
+  </form>
+</div>
+{% endblock %}

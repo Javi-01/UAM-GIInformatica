@@ -1,0 +1,192 @@
+\hypertarget{set__test_8c}{}\doxysection{src/set\+\_\+test.c File Reference}
+\label{set__test_8c}\index{src/set\_test.c@{src/set\_test.c}}
+
+
+Test que compprueba la funcionalidad de set.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}set\+\_\+test.\+h\char`\"{}}\newline
+Include dependency graph for set\+\_\+test.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{set__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}{M\+A\+X\+\_\+\+T\+E\+S\+TS}}~8
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{set__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Main function for set unit tests. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{set__test_8c_a6f654ab4b44e8a9b9cedfb78c378a5d7}{test1\+\_\+set\+\_\+create}} ()
+\item 
+void \mbox{\hyperlink{set__test_8c_abed3d273788e23fc31ae7f5ed59277b9}{test2\+\_\+set\+\_\+create}} ()
+\item 
+void \mbox{\hyperlink{set__test_8c_a014ebe1b46af5ea318143fc61894d9c0}{test1\+\_\+set\+\_\+add}} ()
+\item 
+void \mbox{\hyperlink{set__test_8c_ab09827322a313bf97b9757c98c2bdbb0}{test2\+\_\+set\+\_\+add}} ()
+\item 
+void \mbox{\hyperlink{set__test_8c_a2a15d0c24e7a943dec28b6d8e3850e60}{test1\+\_\+set\+\_\+del}} ()
+\item 
+void \mbox{\hyperlink{set__test_8c_a4e8b8663f067122ea82b83e2d07e685c}{test2\+\_\+set\+\_\+del}} ()
+\item 
+void \mbox{\hyperlink{set__test_8c_af5b80896afe0d23ab4a347bdb4b3c48b}{test1\+\_\+set\+\_\+get\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{set__test_8c_a665b83794eafe832cc4d71aa42dc016d}{test2\+\_\+set\+\_\+get\+\_\+id}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Test que compprueba la funcionalidad de set. 
+
+\begin{DoxyAuthor}{Author}
+José Miguel Nicolás García 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09-\/03-\/2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{set__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}\label{set__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}} 
+\index{set\_test.c@{set\_test.c}!MAX\_TESTS@{MAX\_TESTS}}
+\index{MAX\_TESTS@{MAX\_TESTS}!set\_test.c@{set\_test.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_TESTS}{MAX\_TESTS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+E\+S\+TS~8}
+
+Numero máximo de test que se realizaran en este modulo 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{set__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{set__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{set\_test.c@{set\_test.c}!main@{main}}
+\index{main@{main}!set\_test.c@{set\_test.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Main function for set unit tests. 
+
+You may execute A\+LL or a S\+I\+N\+G\+LE test 1.-\/ No parameter -\/$>$ A\+LL test are executed 2.-\/ A number means a particular test (the one identified by that number) is executed \mbox{\Hypertarget{set__test_8c_a014ebe1b46af5ea318143fc61894d9c0}\label{set__test_8c_a014ebe1b46af5ea318143fc61894d9c0}} 
+\index{set\_test.c@{set\_test.c}!test1\_set\_add@{test1\_set\_add}}
+\index{test1\_set\_add@{test1\_set\_add}!set\_test.c@{set\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_set\_add()}{test1\_set\_add()}}
+{\footnotesize\ttfamily void test1\+\_\+set\+\_\+add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000144}{Test}}]Función de Test 1 para set\+\_\+add \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Set creado e Id objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Id Objeto != N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_a6f654ab4b44e8a9b9cedfb78c378a5d7}\label{set__test_8c_a6f654ab4b44e8a9b9cedfb78c378a5d7}} 
+\index{set\_test.c@{set\_test.c}!test1\_set\_create@{test1\_set\_create}}
+\index{test1\_set\_create@{test1\_set\_create}!set\_test.c@{set\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_set\_create()}{test1\_set\_create()}}
+{\footnotesize\ttfamily void test1\+\_\+set\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000142}{Test}}]Función de Test 1 para set\+\_\+create \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Set creado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Set!=N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_a2a15d0c24e7a943dec28b6d8e3850e60}\label{set__test_8c_a2a15d0c24e7a943dec28b6d8e3850e60}} 
+\index{set\_test.c@{set\_test.c}!test1\_set\_del@{test1\_set\_del}}
+\index{test1\_set\_del@{test1\_set\_del}!set\_test.c@{set\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_set\_del()}{test1\_set\_del()}}
+{\footnotesize\ttfamily void test1\+\_\+set\+\_\+del (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000146}{Test}}]Función de Test 1 para set\+\_\+del \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Set creado e Id objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Id Objeto !=1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_af5b80896afe0d23ab4a347bdb4b3c48b}\label{set__test_8c_af5b80896afe0d23ab4a347bdb4b3c48b}} 
+\index{set\_test.c@{set\_test.c}!test1\_set\_get\_id@{test1\_set\_get\_id}}
+\index{test1\_set\_get\_id@{test1\_set\_get\_id}!set\_test.c@{set\_test.c}}
+\doxysubsubsection{\texorpdfstring{test1\_set\_get\_id()}{test1\_set\_get\_id()}}
+{\footnotesize\ttfamily void test1\+\_\+set\+\_\+get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000148}{Test}}]Función de Test 2 para set\+\_\+del \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Set creado e Id objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Id Objeto == Id Objeto 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_ab09827322a313bf97b9757c98c2bdbb0}\label{set__test_8c_ab09827322a313bf97b9757c98c2bdbb0}} 
+\index{set\_test.c@{set\_test.c}!test2\_set\_add@{test2\_set\_add}}
+\index{test2\_set\_add@{test2\_set\_add}!set\_test.c@{set\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_set\_add()}{test2\_set\_add()}}
+{\footnotesize\ttfamily void test2\+\_\+set\+\_\+add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000145}{Test}}]Función de Test 2 para set\+\_\+add \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Set creado e Id objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Id Objeto == N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_abed3d273788e23fc31ae7f5ed59277b9}\label{set__test_8c_abed3d273788e23fc31ae7f5ed59277b9}} 
+\index{set\_test.c@{set\_test.c}!test2\_set\_create@{test2\_set\_create}}
+\index{test2\_set\_create@{test2\_set\_create}!set\_test.c@{set\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_set\_create()}{test2\_set\_create()}}
+{\footnotesize\ttfamily void test2\+\_\+set\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000143}{Test}}]Función de Test 2 para set\+\_\+create \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Set creado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Id Objeto != N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_a4e8b8663f067122ea82b83e2d07e685c}\label{set__test_8c_a4e8b8663f067122ea82b83e2d07e685c}} 
+\index{set\_test.c@{set\_test.c}!test2\_set\_del@{test2\_set\_del}}
+\index{test2\_set\_del@{test2\_set\_del}!set\_test.c@{set\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_set\_del()}{test2\_set\_del()}}
+{\footnotesize\ttfamily void test2\+\_\+set\+\_\+del (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000147}{Test}}]Función de Test 2 para set\+\_\+del \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Set creado e Id objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Id Objeto !=N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_a665b83794eafe832cc4d71aa42dc016d}\label{set__test_8c_a665b83794eafe832cc4d71aa42dc016d}} 
+\index{set\_test.c@{set\_test.c}!test2\_set\_get\_id@{test2\_set\_get\_id}}
+\index{test2\_set\_get\_id@{test2\_set\_get\_id}!set\_test.c@{set\_test.c}}
+\doxysubsubsection{\texorpdfstring{test2\_set\_get\_id()}{test2\_set\_get\_id()}}
+{\footnotesize\ttfamily void test2\+\_\+set\+\_\+get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000149}{Test}}]Función de Test 2 para set\+\_\+del \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Set creado e Id objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Id Objeto == N\+U\+LL 
+\end{DoxyPostcond}

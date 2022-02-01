@@ -1,0 +1,372 @@
+\hypertarget{link_8h}{}\doxysection{include/link.h File Reference}
+\label{link_8h}\index{include/link.h@{include/link.h}}
+
+
+It defines a Link.  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+Include dependency graph for link.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{link_8h_a660ed1ec8604982002a0d6eced0e0367}{M\+A\+X\+\_\+\+L\+I\+N\+KS}}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__Link}{\+\_\+\+Link}} \mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$ \mbox{\hyperlink{link_8h_a8090d7f529cfd6a2fc5df3dd379fe514}{link\+\_\+create}} (\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Crea un enlace con el id recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{link_8h_a85c4dd77887bf31f651ea1162144d712}{link\+\_\+destroy}} (\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Destruye el enlace recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{link_8h_a2bbd320f995a72b2ea7ea639b1c81892}{link\+\_\+get\+\_\+id}} (\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Obtiene el id de un enlace recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{link_8h_a6c7a3bd7a856288c377edbcd045912e6}{link\+\_\+set\+\_\+name}} (\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$link, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Cambia el nombre del enlace por el nombre recibido. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{link_8h_aaab4c9c7d5492873cafd9e11dc0f8059}{link\+\_\+get\+\_\+name}} (\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre de un enlace recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{link_8h_aec61c888563b121b72898d5f0d3727d9}{link\+\_\+set\+\_\+first\+\_\+id}} (\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$link, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Cambia el id del primer enlace por el id recibido . \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{link_8h_a7fec67cde0ef3808e7e9dd2e32e222f1}{link\+\_\+get\+\_\+first\+\_\+id}} (\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Obtiene el id del primer enlace recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{link_8h_aef31013e03cb15dd7972b972e8e83200}{link\+\_\+set\+\_\+second\+\_\+id}} (\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}}, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Cambia el id del segundo enlace por el id recibido . \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{link_8h_af60fa6da27c2078d7d1ec36d4def451f}{link\+\_\+get\+\_\+second\+\_\+id}} (\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}})
+\begin{DoxyCompactList}\small\item\em Obtiene el id del segundo id de un enlace recibido. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} \mbox{\hyperlink{link_8h_abb2194fff2ae90ba6a21dab25f4fdcf1}{link\+\_\+get\+\_\+pair\+\_\+id}} (\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$link, \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} id)
+\begin{DoxyCompactList}\small\item\em Obtiene el id del link que se corresponde con la pareja del mismo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{link_8h_ab0a240edc41289110ff905d7eba526f1}{link\+\_\+set\+\_\+status}} (\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}}, int status)
+\begin{DoxyCompactList}\small\item\em Cambia el estado del enlace por el pasado en el status. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{link_8h_a4061dec650b9a0f01a704b037f679b51}{link\+\_\+get\+\_\+status}} (\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Obtiene el estado del enlace . \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} \mbox{\hyperlink{link_8h_a95ea756dad592e65440a33dfbe47edcf}{link\+\_\+print}} (\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Imprime en pantalla los datos del enlace recibido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It defines a Link. 
+
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{link_8h_a660ed1ec8604982002a0d6eced0e0367}\label{link_8h_a660ed1ec8604982002a0d6eced0e0367}} 
+\index{link.h@{link.h}!MAX\_LINKS@{MAX\_LINKS}}
+\index{MAX\_LINKS@{MAX\_LINKS}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_LINKS}{MAX\_LINKS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+L\+I\+N\+KS~100}
+
+Número máximo de enlaces 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{link_8h_ae3b299941e67be6971bfd64a25505eff}\label{link_8h_ae3b299941e67be6971bfd64a25505eff}} 
+\index{link.h@{link.h}!Link@{Link}}
+\index{Link@{Link}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{Link}{Link}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__Link}{\+\_\+\+Link}} \mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}}}
+
+Estructura de los enlaces 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{link_8h_a8090d7f529cfd6a2fc5df3dd379fe514}\label{link_8h_a8090d7f529cfd6a2fc5df3dd379fe514}} 
+\index{link.h@{link.h}!link\_create@{link\_create}}
+\index{link\_create@{link\_create}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_create()}{link\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}}$\ast$ link\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Crea un enlace con el id recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id del link que se quiere crear \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o un nuevo enlace en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{link_8h_a85c4dd77887bf31f651ea1162144d712}\label{link_8h_a85c4dd77887bf31f651ea1162144d712}} 
+\index{link.h@{link.h}!link\_destroy@{link\_destroy}}
+\index{link\_destroy@{link\_destroy}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_destroy()}{link\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} link\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+Destruye el enlace recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & id del link que se quiere destruir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{link_8h_a7fec67cde0ef3808e7e9dd2e32e222f1}\label{link_8h_a7fec67cde0ef3808e7e9dd2e32e222f1}} 
+\index{link.h@{link.h}!link\_get\_first\_id@{link\_get\_first\_id}}
+\index{link\_get\_first\_id@{link\_get\_first\_id}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_get\_first\_id()}{link\_get\_first\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} link\+\_\+get\+\_\+first\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+Obtiene el id del primer enlace recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link del cual se quiere obtener el primer id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el id del enlace al norte caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{link_8h_a2bbd320f995a72b2ea7ea639b1c81892}\label{link_8h_a2bbd320f995a72b2ea7ea639b1c81892}} 
+\index{link.h@{link.h}!link\_get\_id@{link\_get\_id}}
+\index{link\_get\_id@{link\_get\_id}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_get\_id()}{link\_get\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} link\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+Obtiene el id de un enlace recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link del cual se quiere obtener el id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el id del objeto en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{link_8h_aaab4c9c7d5492873cafd9e11dc0f8059}\label{link_8h_aaab4c9c7d5492873cafd9e11dc0f8059}} 
+\index{link.h@{link.h}!link\_get\_name@{link\_get\_name}}
+\index{link\_get\_name@{link\_get\_name}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_get\_name()}{link\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ link\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+Obtiene el nombre de un enlace recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link del cual se quiere obtener el nombre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el nombre del enlace en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{link_8h_abb2194fff2ae90ba6a21dab25f4fdcf1}\label{link_8h_abb2194fff2ae90ba6a21dab25f4fdcf1}} 
+\index{link.h@{link.h}!link\_get\_pair\_id@{link\_get\_pair\_id}}
+\index{link\_get\_pair\_id@{link\_get\_pair\_id}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_get\_pair\_id()}{link\_get\_pair\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} link\+\_\+get\+\_\+pair\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$}]{link,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Obtiene el id del link que se corresponde con la pareja del mismo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link del cual se quiere obtener la pareja \\
+\hline
+{\em id} & id del que se quiere buscar la pareja \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna el id en caso de que sea valido o N\+O\+\_\+\+ID en caso de no encontrarlo
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{link_8h_af60fa6da27c2078d7d1ec36d4def451f}\label{link_8h_af60fa6da27c2078d7d1ec36d4def451f}} 
+\index{link.h@{link.h}!link\_get\_second\_id@{link\_get\_second\_id}}
+\index{link\_get\_second\_id@{link\_get\_second\_id}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_get\_second\_id()}{link\_get\_second\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}} link\+\_\+get\+\_\+second\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$}]{Link }\end{DoxyParamCaption})}
+
+
+
+Obtiene el id del segundo id de un enlace recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Link} & link del cual se quiere obtener el segundo id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna N\+U\+LL en caso de fallo o el id del enlace al sur caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{link_8h_a4061dec650b9a0f01a704b037f679b51}\label{link_8h_a4061dec650b9a0f01a704b037f679b51}} 
+\index{link.h@{link.h}!link\_get\_status@{link\_get\_status}}
+\index{link\_get\_status@{link\_get\_status}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_get\_status()}{link\_get\_status()}}
+{\footnotesize\ttfamily int link\+\_\+get\+\_\+status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+Obtiene el estado del enlace . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link del cual se quiere obtener el estado del enlace \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna -\/1 en caso de fallo o el estado del enlace al este caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{link_8h_a95ea756dad592e65440a33dfbe47edcf}\label{link_8h_a95ea756dad592e65440a33dfbe47edcf}} 
+\index{link.h@{link.h}!link\_print@{link\_print}}
+\index{link\_print@{link\_print}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_print()}{link\_print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} link\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+Imprime en pantalla los datos del enlace recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link el cual se quiere imprimir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR si no existe el enlace u OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{link_8h_aec61c888563b121b72898d5f0d3727d9}\label{link_8h_aec61c888563b121b72898d5f0d3727d9}} 
+\index{link.h@{link.h}!link\_set\_first\_id@{link\_set\_first\_id}}
+\index{link\_set\_first\_id@{link\_set\_first\_id}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_set\_first\_id()}{link\_set\_first\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} link\+\_\+set\+\_\+first\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$}]{link,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Cambia el id del primer enlace por el id recibido . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link del cual se quiere establecer el primer id \\
+\hline
+{\em id} & id que se quiere establecer como primero \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{link_8h_a6c7a3bd7a856288c377edbcd045912e6}\label{link_8h_a6c7a3bd7a856288c377edbcd045912e6}} 
+\index{link.h@{link.h}!link\_set\_name@{link\_set\_name}}
+\index{link\_set\_name@{link\_set\_name}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_set\_name()}{link\_set\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} link\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$}]{link,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Cambia el nombre del enlace por el nombre recibido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link del cual se quiere establecer el nombre \\
+\hline
+{\em name} & nombre que se quiere establecer al enlace \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{link_8h_aef31013e03cb15dd7972b972e8e83200}\label{link_8h_aef31013e03cb15dd7972b972e8e83200}} 
+\index{link.h@{link.h}!link\_set\_second\_id@{link\_set\_second\_id}}
+\index{link\_set\_second\_id@{link\_set\_second\_id}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_set\_second\_id()}{link\_set\_second\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} link\+\_\+set\+\_\+second\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$}]{Link,  }\item[{\mbox{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Cambia el id del segundo enlace por el id recibido . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Link} & link del cual se quiere establecer el segundo id \\
+\hline
+{\em id} & id que se quiere establecer como segundo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{link_8h_ab0a240edc41289110ff905d7eba526f1}\label{link_8h_ab0a240edc41289110ff905d7eba526f1}} 
+\index{link.h@{link.h}!link\_set\_status@{link\_set\_status}}
+\index{link\_set\_status@{link\_set\_status}!link.h@{link.h}}
+\doxysubsubsection{\texorpdfstring{link\_set\_status()}{link\_set\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}} link\+\_\+set\+\_\+status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}} $\ast$}]{Link,  }\item[{int}]{status }\end{DoxyParamCaption})}
+
+
+
+Cambia el estado del enlace por el pasado en el status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Link} & link del cual se quiere establecer el estado del enlace \\
+\hline
+{\em status} & estado del enlace (Abierto = A\+B\+I\+E\+R\+TO, Cerrado = C\+E\+R\+R\+A\+DO) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna E\+R\+R\+OR en caso de fallo o OK en caso de éxito.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Javier Fraile Iglesias 
+\end{DoxyAuthor}
