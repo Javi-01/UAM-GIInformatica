@@ -1,0 +1,7 @@
+server
+scrips/media/*.png
+scrips/media/*.gif
+scrips/media/*.jpng
+scrips/media/*.mpeg
+obj/*.o
+lib/*.a
