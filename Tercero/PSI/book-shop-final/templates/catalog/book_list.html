@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+   Book-List
+{% endblock %}
+{% block content %}
+
+    <h2 class="mt-2 mb-2"> Search results: </h2>
+    {% if book_list %}
+        <table class="table">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">Image</th>
+                    <th class="text-center" scope="col">Title</th>
+                    <th class="text-center" scope="col">Authors</th>
+                    <th class="text-center" scope="col">Score</th>
+                    <th class="text-center" scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for book in book_list %}
+            <tr>
+                    <td><img src="{%static 'covers/'%}{{ book.path_to_cover_image }}" class="img-thumbnail" alt="Imagen no encontrada"></td>
+                    <td class="text-center"><a href="{{ book.get_absolute_url }}" class="text-decoration-none">{{book.title}}</a></td>
+                    <td class="text-center">{{ book.display_authors }}</td>
+                    <td class="text-center">{{ book.score }}</td>
+                    <td class="text-center">{{ book.price }} $</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    {% if is_paginated %}
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Previous" href="?{% if query %}q={{ search }}&{% endif %}page={{ page_obj.previous_page_number }}">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                {% endif %}
+                    <li class="page-item">
+                        <a class="page-link disabled">{{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</a>
+                    </li>
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Next" href="?{% if query %}q={{ search }}&{% endif %}page={{ page_obj.next_page_number }}">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
+    {% else %}
+        <p>No hay resultados para dicha busquda</p>
+    {% endif %}
+
+{% endblock %}

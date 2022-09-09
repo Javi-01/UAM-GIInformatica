@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-floating mb-3">
+                    {{ field }}
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                </div>
+            {% endfor %}
+            <input type="submit" value="Log In" class="btn btn-outline-success">
+        </form>
+        <div class="d-flex w-100 justify-content-between mt-2">
+            <p>Need an Account? <a href="{% url 'signup' %}" class="btn btn-primary">Sign Up</a></p>
+            <p>Forgot Password? <a href="{% url 'password_reset' %}" class="btn btn-outline-secondary">recover password</a></p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+Name                                          Stmts   Miss  Cover   Missing
+---------------------------------------------------------------------------
+authentication/__init__.py                        0      0   100%
+authentication/admin.py                           0      0   100%
+authentication/apps.py                            4      0   100%
+authentication/forms.py                          18      0   100%
+authentication/models.py                          0      0   100%
+authentication/urls.py                            5      0   100%
+authentication/views.py                          21      4    81%   21-22, 39-40
+catalog/__init__.py                               0      0   100%
+catalog/admin.py                                  9      0   100%
+catalog/apps.py                                   4      0   100%
+catalog/forms.py                                  3      0   100%
+catalog/management/commands/populate.py          90      1    99%   50
+catalog/migrations/0001_initial.py                9      0   100%
+catalog/migrations/0002_alter_book_score.py       4      0   100%
+catalog/migrations/__init__.py                    0      0   100%
+catalog/models.py                                52      1    98%   135
+catalog/urls.py                                   3      0   100%
+catalog/views.py                                 61      0   100%
+catalog/vote.py                                  10      0   100%
+orders/__init__.py                                0      0   100%
+orders/admin.py                                   4      0   100%
+orders/apps.py                                    4      0   100%
+orders/cart.py                                   53      0   100%
+orders/context_preprocessors.py                   3      0   100%
+orders/forms.py                                   9      0   100%
+orders/migrations/0001_initial.py                 7      0   100%
+orders/migrations/__init__.py                     0      0   100%
+orders/models.py                                 29      0   100%
+orders/urls.py                                    3      0   100%
+orders/views.py                                  37      2    95%   98-99
+---------------------------------------------------------------------------
+TOTAL                                           442      8    98%

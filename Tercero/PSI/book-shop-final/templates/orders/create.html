@@ -1,0 +1,19 @@
+{% extends "base.html"%}
+{% block content %}
+    <h2 class="mb-2">Confirm Buy</h2>
+    <div>
+        <form method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-floating mb-3">
+                {{ field }}
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            </div>
+        {% endfor %}
+        <div class="d-flex w-100 justify-content-between mt-2">
+            <input type="submit" value="Confirm Buy" class="btn btn-outline-success">
+            </form>
+            <a href="{% url 'home' %}" class="btn btn-primary">Continue Shopping</a>
+        </div>
+    </div>
+{% endblock %}

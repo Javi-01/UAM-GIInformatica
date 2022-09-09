@@ -1,0 +1,1766 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 10.20 (Ubuntu 10.20-1.pgdg18.04+1)
+-- Dumped by pg_dump version 14.2 (Ubuntu 14.2-1.pgdg18.04+1)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+--
+-- Name: auth_group; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.auth_group (
+    id integer NOT NULL,
+    name character varying(150) NOT NULL
+);
+
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.auth_group_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.auth_group_id_seq OWNED BY public.auth_group.id;
+
+
+--
+-- Name: auth_group_permissions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.auth_group_permissions (
+    id bigint NOT NULL,
+    group_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.auth_group_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.auth_group_permissions_id_seq OWNED BY public.auth_group_permissions.id;
+
+
+--
+-- Name: auth_permission; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.auth_permission (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    content_type_id integer NOT NULL,
+    codename character varying(100) NOT NULL
+);
+
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.auth_permission_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.auth_permission_id_seq OWNED BY public.auth_permission.id;
+
+
+--
+-- Name: auth_user; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.auth_user (
+    id integer NOT NULL,
+    password character varying(128) NOT NULL,
+    last_login timestamp with time zone,
+    is_superuser boolean NOT NULL,
+    username character varying(150) NOT NULL,
+    first_name character varying(150) NOT NULL,
+    last_name character varying(150) NOT NULL,
+    email character varying(254) NOT NULL,
+    is_staff boolean NOT NULL,
+    is_active boolean NOT NULL,
+    date_joined timestamp with time zone NOT NULL
+);
+
+
+--
+-- Name: auth_user_groups; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.auth_user_groups (
+    id bigint NOT NULL,
+    user_id integer NOT NULL,
+    group_id integer NOT NULL
+);
+
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.auth_user_groups_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.auth_user_groups_id_seq OWNED BY public.auth_user_groups.id;
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.auth_user_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.auth_user_id_seq OWNED BY public.auth_user.id;
+
+
+--
+-- Name: auth_user_user_permissions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.auth_user_user_permissions (
+    id bigint NOT NULL,
+    user_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.auth_user_user_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.auth_user_user_permissions_id_seq OWNED BY public.auth_user_user_permissions.id;
+
+
+--
+-- Name: catalog_author; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.catalog_author (
+    id bigint NOT NULL,
+    first_name character varying(255) NOT NULL,
+    last_name character varying(255) NOT NULL
+);
+
+
+--
+-- Name: catalog_author_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.catalog_author_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: catalog_author_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.catalog_author_id_seq OWNED BY public.catalog_author.id;
+
+
+--
+-- Name: catalog_book; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.catalog_book (
+    id bigint NOT NULL,
+    isbn character varying(13) NOT NULL,
+    title character varying(255) NOT NULL,
+    price numeric(5,2),
+    path_to_cover_image character varying(100) NOT NULL,
+    number_copies_stock integer,
+    date date,
+    score numeric(3,1),
+    number_votes integer NOT NULL,
+    slug character varying(255) NOT NULL
+);
+
+
+--
+-- Name: catalog_book_author; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.catalog_book_author (
+    id bigint NOT NULL,
+    book_id bigint NOT NULL,
+    author_id bigint NOT NULL
+);
+
+
+--
+-- Name: catalog_book_author_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.catalog_book_author_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: catalog_book_author_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.catalog_book_author_id_seq OWNED BY public.catalog_book_author.id;
+
+
+--
+-- Name: catalog_book_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.catalog_book_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: catalog_book_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.catalog_book_id_seq OWNED BY public.catalog_book.id;
+
+
+--
+-- Name: catalog_comment; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.catalog_comment (
+    id bigint NOT NULL,
+    date timestamp with time zone,
+    msg text NOT NULL,
+    book_id bigint NOT NULL,
+    user_id integer NOT NULL
+);
+
+
+--
+-- Name: catalog_comment_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.catalog_comment_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: catalog_comment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.catalog_comment_id_seq OWNED BY public.catalog_comment.id;
+
+
+--
+-- Name: catalog_votebook; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.catalog_votebook (
+    id bigint NOT NULL,
+    user_score integer NOT NULL,
+    book_id bigint NOT NULL,
+    user_id integer NOT NULL
+);
+
+
+--
+-- Name: catalog_votebook_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.catalog_votebook_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: catalog_votebook_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.catalog_votebook_id_seq OWNED BY public.catalog_votebook.id;
+
+
+--
+-- Name: django_admin_log; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.django_admin_log (
+    id integer NOT NULL,
+    action_time timestamp with time zone NOT NULL,
+    object_id text,
+    object_repr character varying(200) NOT NULL,
+    action_flag smallint NOT NULL,
+    change_message text NOT NULL,
+    content_type_id integer,
+    user_id integer NOT NULL,
+    CONSTRAINT django_admin_log_action_flag_check CHECK ((action_flag >= 0))
+);
+
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.django_admin_log_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.django_admin_log_id_seq OWNED BY public.django_admin_log.id;
+
+
+--
+-- Name: django_content_type; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.django_content_type (
+    id integer NOT NULL,
+    app_label character varying(100) NOT NULL,
+    model character varying(100) NOT NULL
+);
+
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.django_content_type_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.django_content_type_id_seq OWNED BY public.django_content_type.id;
+
+
+--
+-- Name: django_migrations; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.django_migrations (
+    id bigint NOT NULL,
+    app character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    applied timestamp with time zone NOT NULL
+);
+
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.django_migrations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.django_migrations_id_seq OWNED BY public.django_migrations.id;
+
+
+--
+-- Name: django_session; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.django_session (
+    session_key character varying(40) NOT NULL,
+    session_data text NOT NULL,
+    expire_date timestamp with time zone NOT NULL
+);
+
+
+--
+-- Name: orders_order; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.orders_order (
+    id bigint NOT NULL,
+    first_name character varying(255) NOT NULL,
+    last_name character varying(255) NOT NULL,
+    email character varying(254) NOT NULL,
+    address character varying(50) NOT NULL,
+    postal_code character varying(5) NOT NULL,
+    city character varying(50) NOT NULL,
+    created timestamp with time zone NOT NULL,
+    updated timestamp with time zone NOT NULL,
+    paid boolean NOT NULL
+);
+
+
+--
+-- Name: orders_order_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.orders_order_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: orders_order_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.orders_order_id_seq OWNED BY public.orders_order.id;
+
+
+--
+-- Name: orders_orderitem; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.orders_orderitem (
+    id bigint NOT NULL,
+    price numeric(10,2) NOT NULL,
+    quantity integer NOT NULL,
+    book_id bigint NOT NULL,
+    order_id bigint NOT NULL
+);
+
+
+--
+-- Name: orders_orderitem_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.orders_orderitem_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: orders_orderitem_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.orders_orderitem_id_seq OWNED BY public.orders_orderitem.id;
+
+
+--
+-- Name: auth_group id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_group ALTER COLUMN id SET DEFAULT nextval('public.auth_group_id_seq'::regclass);
+
+
+--
+-- Name: auth_group_permissions id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_group_permissions ALTER COLUMN id SET DEFAULT nextval('public.auth_group_permissions_id_seq'::regclass);
+
+
+--
+-- Name: auth_permission id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_permission ALTER COLUMN id SET DEFAULT nextval('public.auth_permission_id_seq'::regclass);
+
+
+--
+-- Name: auth_user id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user ALTER COLUMN id SET DEFAULT nextval('public.auth_user_id_seq'::regclass);
+
+
+--
+-- Name: auth_user_groups id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user_groups ALTER COLUMN id SET DEFAULT nextval('public.auth_user_groups_id_seq'::regclass);
+
+
+--
+-- Name: auth_user_user_permissions id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions ALTER COLUMN id SET DEFAULT nextval('public.auth_user_user_permissions_id_seq'::regclass);
+
+
+--
+-- Name: catalog_author id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_author ALTER COLUMN id SET DEFAULT nextval('public.catalog_author_id_seq'::regclass);
+
+
+--
+-- Name: catalog_book id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_book ALTER COLUMN id SET DEFAULT nextval('public.catalog_book_id_seq'::regclass);
+
+
+--
+-- Name: catalog_book_author id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_book_author ALTER COLUMN id SET DEFAULT nextval('public.catalog_book_author_id_seq'::regclass);
+
+
+--
+-- Name: catalog_comment id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_comment ALTER COLUMN id SET DEFAULT nextval('public.catalog_comment_id_seq'::regclass);
+
+
+--
+-- Name: catalog_votebook id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_votebook ALTER COLUMN id SET DEFAULT nextval('public.catalog_votebook_id_seq'::regclass);
+
+
+--
+-- Name: django_admin_log id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.django_admin_log ALTER COLUMN id SET DEFAULT nextval('public.django_admin_log_id_seq'::regclass);
+
+
+--
+-- Name: django_content_type id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.django_content_type ALTER COLUMN id SET DEFAULT nextval('public.django_content_type_id_seq'::regclass);
+
+
+--
+-- Name: django_migrations id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.django_migrations ALTER COLUMN id SET DEFAULT nextval('public.django_migrations_id_seq'::regclass);
+
+
+--
+-- Name: orders_order id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.orders_order ALTER COLUMN id SET DEFAULT nextval('public.orders_order_id_seq'::regclass);
+
+
+--
+-- Name: orders_orderitem id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.orders_orderitem ALTER COLUMN id SET DEFAULT nextval('public.orders_orderitem_id_seq'::regclass);
+
+
+--
+-- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.auth_group (id, name) FROM stdin;
+\.
+
+
+--
+-- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.auth_group_permissions (id, group_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.auth_permission (id, name, content_type_id, codename) FROM stdin;
+1	Can add author	1	add_author
+2	Can change author	1	change_author
+3	Can delete author	1	delete_author
+4	Can view author	1	view_author
+5	Can add book	2	add_book
+6	Can change book	2	change_book
+7	Can delete book	2	delete_book
+8	Can view book	2	view_book
+9	Can add vote book	3	add_votebook
+10	Can change vote book	3	change_votebook
+11	Can delete vote book	3	delete_votebook
+12	Can view vote book	3	view_votebook
+13	Can add comment	4	add_comment
+14	Can change comment	4	change_comment
+15	Can delete comment	4	delete_comment
+16	Can view comment	4	view_comment
+17	Can add order	5	add_order
+18	Can change order	5	change_order
+19	Can delete order	5	delete_order
+20	Can view order	5	view_order
+21	Can add order item	6	add_orderitem
+22	Can change order item	6	change_orderitem
+23	Can delete order item	6	delete_orderitem
+24	Can view order item	6	view_orderitem
+25	Can add log entry	7	add_logentry
+26	Can change log entry	7	change_logentry
+27	Can delete log entry	7	delete_logentry
+28	Can view log entry	7	view_logentry
+29	Can add permission	8	add_permission
+30	Can change permission	8	change_permission
+31	Can delete permission	8	delete_permission
+32	Can view permission	8	view_permission
+33	Can add group	9	add_group
+34	Can change group	9	change_group
+35	Can delete group	9	delete_group
+36	Can view group	9	view_group
+37	Can add user	10	add_user
+38	Can change user	10	change_user
+39	Can delete user	10	delete_user
+40	Can view user	10	view_user
+41	Can add content type	11	add_contenttype
+42	Can change content type	11	change_contenttype
+43	Can delete content type	11	delete_contenttype
+44	Can view content type	11	view_contenttype
+45	Can add session	12	add_session
+46	Can change session	12	change_session
+47	Can delete session	12	delete_session
+48	Can view session	12	view_session
+\.
+
+
+--
+-- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
+44	pbkdf2_sha256$260000$P1LcdosuGWpQiH8hgJBErI$BrTr9bbOPC9aAcJKlhdRIuNOs7s/odq4mXXTT7+MDZg=	\N	f	patricia06@hotmail.com	Daniel	Gill	patricia06@hotmail.com	f	t	2022-06-11 13:13:20.148171+02
+45	pbkdf2_sha256$260000$VDjhOsoxDk1j8e7NpYtghS$SuCksQBdiyVGB5NFeRgy0br0u72Dks90Qln/mxJ9O1g=	\N	f	sarah57@greene-lopez.org	Lindsay	Moore	sarah57@greene-lopez.org	f	t	2022-06-11 13:13:20.271221+02
+46	pbkdf2_sha256$260000$CrdgsMrLfbx7Wo4UlsYnam$kwfABCtxgc+MbSrVGvjwtEILlphKTPDt2jStEbI0Hgs=	\N	f	michaelwillis@lopez-armstrong.com	Misty	Holmes	michaelwillis@lopez-armstrong.com	f	t	2022-06-11 13:13:20.392972+02
+47	pbkdf2_sha256$260000$d37tTngk7GZpEfKw7BItMs$8+Z/UqXvpMGVCaByqi/fozDgZO8t9sG9dUEeNYptVGw=	\N	f	cynthiaramirez@long.com	Tammy	Clark	cynthiaramirez@long.com	f	t	2022-06-11 13:13:20.518197+02
+48	pbkdf2_sha256$260000$3MKtrrhIQlMBUVe7ubwAJk$VQtWYDCITyr2l4iG6IFdMh6JmZEZrFscVLywO0Sw5Qk=	\N	f	bryanlopez@hall-johnson.com	Arthur	Morgan	bryanlopez@hall-johnson.com	f	t	2022-06-11 13:13:20.643535+02
+49	pbkdf2_sha256$260000$YTOPXJBujMcTkOEmkrmGGp$EwG86UGCnpQO+3TDXsdrM5VDPcRji35L+jA3puuD02k=	\N	f	melinda79@yahoo.com	William	Mcknight	melinda79@yahoo.com	f	t	2022-06-11 13:13:20.76721+02
+50	pbkdf2_sha256$260000$0juAX0VpLAzYZ13n7qkFS3$I/iG4Rc9YgSd7+CDloqk6zBDTS7sG5BMWthLm7VKmnM=	\N	f	pfischer@smith.net	Christine	Luna	pfischer@smith.net	f	t	2022-06-11 13:13:20.891697+02
+51	pbkdf2_sha256$260000$40xtbEMBGYfzVYOPx9abla$rLrhm0aW+NzBD/UTUxMtWHZEskXG3o72CaeVfiUrrV4=	\N	f	tannerashley@yahoo.com	Jennifer	Chavez	tannerashley@yahoo.com	f	t	2022-06-11 13:13:21.016879+02
+52	pbkdf2_sha256$260000$BT3VFPs7QvaL9TxiCMkPs0$2HtiwSFmrcV78O0Em+QR1KpOIhUNJLq7ZjHfHwWYuvk=	\N	f	kyle08@gmail.com	Jasmine	Griffin	kyle08@gmail.com	f	t	2022-06-11 13:13:21.14952+02
+53	pbkdf2_sha256$260000$MsfnHICzmTcas8mBT2m1jn$bhiCpRgYLgjcXjf2pyvRHhOAFzszPOJMTaMEop+IVjY=	\N	f	megan08@parsons.com	Nicole	Stanton	megan08@parsons.com	f	t	2022-06-11 13:13:21.275441+02
+54	pbkdf2_sha256$260000$ecSLeE9ovhjhWOQE70u6D4$lgc5Gba0HqnrhxSLcUuye1OPVpETotVNuZHBYyXufAM=	\N	f	ukaiser@sanchez.net	Cheryl	Obrien	ukaiser@sanchez.net	f	t	2022-06-11 13:13:21.400504+02
+55	pbkdf2_sha256$260000$ZCOx12ZESz4ci4sNYwsLTD$qIWPycyQ6zXhyHmxoR1ARf7ytylhvgUpgBv2sUWBomg=	\N	f	alexanderstout@yahoo.com	David	Ellis	alexanderstout@yahoo.com	f	t	2022-06-11 13:13:21.525299+02
+56	pbkdf2_sha256$260000$273CKfdmZokREa1Vvn4ycL$tMgo/UzT2umZfeme+KI3HpDg3yE1FKidat6r/Vxso6k=	\N	f	courtneygoodman@goodman.info	John	Farrell	courtneygoodman@goodman.info	f	t	2022-06-11 13:13:21.652134+02
+57	pbkdf2_sha256$260000$Akadl4pUzUEV2Ans6S7cHb$0Jy4/IO0SsOnNGRKLZ1tEbHmfoGChg6p/zv24UoYf0g=	\N	f	pcastaneda@alvarez.org	Edward	Grant	pcastaneda@alvarez.org	f	t	2022-06-11 13:13:21.777531+02
+58	pbkdf2_sha256$260000$OZux8h8uOL6tAEHksrhvMi$pKu/JD6/f6u9EqZmdhBphxiSdSME4B1CDO4K9MQSOTo=	\N	f	hubbarddenise@johnson-wu.org	Jacqueline	Montgomery	hubbarddenise@johnson-wu.org	f	t	2022-06-11 13:13:21.902847+02
+59	pbkdf2_sha256$260000$Ec806843LbSNSmnMsjjcJi$VlkTamUkemsJJXurWyFeal+G+vEyDlDFZvMTj2/zskk=	\N	f	uphillips@jackson-russell.com	Linda	Sanchez	uphillips@jackson-russell.com	f	t	2022-06-11 13:13:22.02833+02
+60	pbkdf2_sha256$260000$Zz9GKMgOcsxg4wHleMJFtJ$7BShCmQblORVlNWQGrXA935i63QTAa0X+V+ZsDvWhtQ=	\N	f	linkenneth@gmail.com	Alyssa	Mccarty	linkenneth@gmail.com	f	t	2022-06-11 13:13:22.153643+02
+61	pbkdf2_sha256$260000$NK9iiyj8jOOPcpZqa0Vy1y$3At/Vpal7HCEn2xJv0c2qn/xVYtpehLbE/PgN1RRhWs=	\N	f	kjackson@gmail.com	Elizabeth	Bradley	kjackson@gmail.com	f	t	2022-06-11 13:13:22.285592+02
+62	pbkdf2_sha256$260000$6uPQFdXY2EegiOx0u8wGqN$33hExQKv21z8EtxYVNSoyZadb/3u1mG5juugtX05zqY=	\N	f	cannontiffany@roberts.com	Joseph	Martin	cannontiffany@roberts.com	f	t	2022-06-11 13:13:22.411178+02
+63	pbkdf2_sha256$260000$ik9KABraHdBLiEzU6ZTD5w$Glkuh6KAOtLRhcFqWp3kD620790uYo3UjKytOmWw7u4=	\N	f	craigjohn@russell-williams.com	Mark	Williams	craigjohn@russell-williams.com	f	t	2022-06-11 13:13:22.536793+02
+43	pbkdf2_sha256$260000$Vp3rdxawNjnexOm2DZBqeV$itGUSph1HRCbT0IZurXeojmw5EeJ3RgqTNYO0dTg510=	2022-06-12 18:27:37.372028+02	t	alumnodb			admin@myproject.com	t	t	2022-06-11 13:13:20.008249+02
+\.
+
+
+--
+-- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.auth_user_groups (id, user_id, group_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: catalog_author; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.catalog_author (id, first_name, last_name) FROM stdin;
+13	Lisa	Taylor
+14	Logan	Arnold
+15	Kenneth	Salinas
+16	Sandra	Christensen
+17	Savannah	Wilson
+18	Jennifer	Cox
+\.
+
+
+--
+-- Data for Name: catalog_book; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.catalog_book (id, isbn, title, price, path_to_cover_image, number_copies_stock, date, score, number_votes, slug) FROM stdin;
+26	1-897502-30-3	Mark Brown	43.00	mark-brown-16549460029611979.jpg	3	2002-05-08	\N	0	mark-brown-16549460029611979
+5	0-222-47263-4	John Wheeler	43.00	john-wheeler-16549460026998007.jpg	16	2010-06-06	\N	0	john-wheeler-16549460026998007
+8	0-88834-062-1	Hannah Salinas	38.00	hannah-salinas-16549460027356703.jpg	26	2014-03-17	\N	0	hannah-salinas-16549460027356703
+9	0-698-17843-2	Mr. Victor Gonzales DDS	20.00	mr-victor-gonzales-dds-16549460027483876.jpg	23	2011-05-05	\N	0	mr-victor-gonzales-dds-16549460027483876
+10	0-607-07196-6	Jessica Hansen	38.00	jessica-hansen-16549460027612882.jpg	16	2018-03-15	\N	0	jessica-hansen-16549460027612882
+11	0-18-938985-0	Jon Romero	33.00	jon-romero-16549460027732234.jpg	23	2017-02-05	\N	0	jon-romero-16549460027732234
+12	0-556-40582-X	Nicole Johnson	29.00	nicole-johnson-16549460027857733.jpg	24	1997-07-11	\N	0	nicole-johnson-16549460027857733
+13	0-355-15122-7	Rose Henry	29.00	rose-henry-165494600279856.jpg	8	1985-05-13	\N	0	rose-henry-165494600279856
+14	1-76122-505-7	Shelby Jones	39.00	shelby-jones-16549460028098927.jpg	21	1992-09-20	\N	0	shelby-jones-16549460028098927
+16	1-883352-72-X	Michael Mejia	28.00	michael-mejia-1654946002840796.jpg	28	1976-03-29	\N	0	michael-mejia-1654946002840796
+17	0-14-226211-0	Jack Durham	21.00	jack-durham-1654946002853485.jpg	23	2000-12-22	\N	0	jack-durham-1654946002853485
+18	1-953587-60-7	Linda Cook	30.00	linda-cook-16549460028653376.jpg	29	1990-01-10	\N	0	linda-cook-16549460028653376
+19	1-318-15341-7	Jason Avery	34.00	jason-avery-16549460028767388.jpg	15	1982-12-19	\N	0	jason-avery-16549460028767388
+20	1-342-78013-2	Christopher Clark	24.00	christopher-clark-16549460028892574.jpg	10	1986-08-25	\N	0	christopher-clark-16549460028892574
+21	0-7855-2436-3	Dr. Gabrielle Miller	23.00	dr-gabrielle-miller-16549460029004827.jpg	3	1976-09-04	\N	0	dr-gabrielle-miller-16549460029004827
+22	0-8299-6479-7	Donna Weaver	23.00	donna-weaver-1654946002913287.jpg	0	2009-08-18	\N	0	donna-weaver-1654946002913287
+23	0-05-164571-8	Rodney Duffy	38.00	rodney-duffy-16549460029245825.jpg	12	1988-05-03	\N	0	rodney-duffy-16549460029245825
+24	1-72225-571-4	Katherine Wright	40.00	katherine-wright-1654946002937832.jpg	14	1982-04-20	\N	0	katherine-wright-1654946002937832
+25	0-19-244749-1	Maria Morrison	29.00	maria-morrison-1654946002949685.jpg	8	1995-01-10	\N	0	maria-morrison-1654946002949685
+27	0-13-071023-7	Jackson Guerrero	41.00	jackson-guerrero-16549460029742486.jpg	6	2004-12-13	\N	0	jackson-guerrero-16549460029742486
+28	0-9570279-4-X	Scott Bray	20.00	scott-bray-16549460029873772.jpg	11	1989-08-26	\N	0	scott-bray-16549460029873772
+29	1-388-71496-5	Jeffery Miller	23.00	jeffery-miller-16549460029986284.jpg	20	2005-11-01	\N	0	jeffery-miller-16549460029986284
+30	1-4613-1842-4	Lauren Diaz	30.00	lauren-diaz-16549460030100582.jpg	15	1980-06-03	\N	0	lauren-diaz-16549460030100582
+31	1-04-303613-X	Robin Morgan	30.00	robin-morgan-1654946003022417.jpg	23	2016-10-13	\N	0	robin-morgan-1654946003022417
+32	0-219-80610-1	Richard Moore	39.00	richard-moore-16549460030334888.jpg	10	2012-08-24	\N	0	richard-moore-16549460030334888
+6	0-510-79381-9	Amy Rasmussen	20.00	amy-rasmussen-16549460027125146.jpg	11	1992-08-10	5.0	1	amy-rasmussen-16549460027125146
+4	1-997920-40-9	Angela Wright	20.00	angela-wright-16549460026875653.jpg	17	1985-09-25	9.0	1	angela-wright-16549460026875653
+15	1-04-389475-6	Carrie Curry	37.00	carrie-curry-16549460028262577.jpg	29	1974-01-15	6.0	1	carrie-curry-16549460028262577
+3	0-414-13045-6	Amber Gutierrez	45.00	amber-gutierrez-16549460026680334.jpg	0	1978-06-13	6.0	1	amber-gutierrez-16549460026680334
+7	0-507-40366-5	Brandon Williams	21.00	brandon-williams-16549460027242517.jpg	29	1976-03-05	6.0	1	brandon-williams-16549460027242517
+\.
+
+
+--
+-- Data for Name: catalog_book_author; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.catalog_book_author (id, book_id, author_id) FROM stdin;
+3	3	13
+4	3	16
+5	4	16
+6	5	14
+7	5	16
+8	6	15
+9	7	13
+10	8	14
+11	8	15
+12	9	16
+13	9	18
+14	10	16
+15	11	18
+16	11	15
+17	12	14
+18	12	15
+19	13	17
+20	14	16
+21	14	13
+22	15	13
+23	15	17
+24	16	18
+25	17	14
+26	18	13
+27	19	13
+28	19	18
+29	20	13
+30	21	14
+31	21	16
+32	22	17
+33	23	17
+34	23	15
+35	24	16
+36	25	16
+37	26	17
+38	26	15
+39	27	15
+40	27	14
+41	28	15
+42	29	18
+43	30	14
+44	30	16
+45	31	14
+46	32	16
+47	32	14
+\.
+
+
+--
+-- Data for Name: catalog_comment; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.catalog_comment (id, date, msg, book_id, user_id) FROM stdin;
+1	1994-09-28 14:21:00+01	Idea help executive prepare section. Fear speech yes civil discuss buy.\nExpert loss computer toward. New morning quality company finish bring local. Just as close along worry.	31	61
+2	2003-08-08 08:00:20+02	Hour talk especially role. Still drop dog which page buy. Performance hear keep brother law site available blood. Company five bring leave television around.	27	46
+3	1988-08-21 04:25:06+02	Worry according baby late when hard. White leg effect art care.\nView agree social wish fall. Ready claim father three dinner different hold.	21	49
+4	1972-11-13 21:56:18+01	Evening his level discover main table paper world.\nSecond nor career society. Push ago down loss include such turn. Company everyone sense important month floor.	18	61
+5	2011-02-14 22:51:42+01	Office choose interesting long store various write. Buy send identify beyond. Man from onto weight start often before treatment.	4	51
+6	1971-11-25 16:37:47+01	Author history bed. Officer back hair this law forget.\nSide country movie mind receive movie five. Mind assume young site. Thus north Mr reality commercial in their.	19	54
+7	2007-07-15 21:23:10+02	Attorney minute player. Eat view answer real respond. Notice science success expert.\nPart game time south. Anyone read why stage. Increase down future rest mouth though.	24	60
+8	1982-05-02 10:03:21+02	Seek month wonder decide final. Whole room attention direction support car employee card. Past leg top avoid.\nEnough fine recognize organization reality meet. Me claim reveal after feel why.	9	55
+9	2009-01-30 18:19:56+01	Project three specific mission establish newspaper say. Force structure thank now it positive.\nStandard pretty and use. Quickly result daughter. List sound interview.	21	44
+10	2015-08-03 09:18:02+02	Star something last. Democratic focus blood law miss.	12	43
+11	1986-01-02 02:29:56+01	Commercial traditional kitchen rich. Property already under hit mention. Government wear shake kind. Marriage prove new you ask.	25	48
+12	1998-11-04 17:58:24+01	Institution but yes expect. Along go music soon country stay future discover.\nThen community across member PM. Draw join process since down newspaper.	15	54
+13	1995-02-26 16:43:12+01	Main more site day consumer cultural available worker. Democrat far child his leg education part. Field machine next live Republican almost. Travel executive open question lot paper.	4	50
+14	2017-12-24 11:40:58+01	Difference live natural environmental loss shake teach. Mouth range weight room.\nCulture especially group answer. Social within large letter explain ten.	22	59
+15	2017-11-01 23:28:05+01	Doctor money reduce society like executive writer among. Knowledge its carry test offer film style born. American expect stage.\nBase word age find talk as. Expect spend bring call space.	31	58
+16	1982-12-09 01:40:19+01	Less see hear voice cause them husband. Draw finally campaign Democrat key tree hair.\nAttention mind explain human enter popular. Yourself political between late.	14	52
+17	1985-06-08 03:12:55+02	Director anyone community try. Edge responsibility process I expect sound artist way. Interesting particular pick win team.\nTime among activity week realize apply of. Clear all sign.	3	59
+18	1993-11-02 15:06:50+01	Almost watch believe before. Manage detail give specific.\nSpeech consider public win mind member. Strategy bad cost reason design sell sense front. Same upon science enough.	12	49
+19	1991-03-04 01:33:02+01	Line claim soldier picture. Attorney offer fund whom. First middle purpose security.\nBlack industry town special none bed together. Drug everybody police six.	30	58
+20	1983-08-20 06:58:17+02	Effect husband suddenly share reveal. During school executive offer consumer before teach. Big not hold past data them.	29	43
+21	2021-06-12 17:43:20+02	Know particularly health what would. Indicate bag mean education senior who.\nBag interesting much stand. Pull effort special traditional force opportunity. Good power near answer ago way.	7	46
+22	2003-07-27 08:47:37+02	Religious economic measure it peace throughout attorney decade.\nPm board camera adult. Share money case street somebody forward open.\nProduce long him some some him phone.	29	54
+23	1993-12-23 08:36:33+01	Thank million party soon drop majority. Manage condition sport television.	17	56
+24	2014-04-17 16:29:48+02	Senior story seem future worry. Experience consumer center toward ever.\nAll fish state.\nAir listen food yard. Detail up continue theory evening shake minute.	4	50
+25	1996-06-28 05:22:48+02	Sort education process message. At international approach month movement per. Picture when high or to include which Mrs.\nInside tonight day goal hear idea.	5	54
+26	1972-10-18 21:47:15+01	Seat central sea. System many ago guy still involve within. Simply may miss market little ago.\nImprove beautiful eye family half. Though what hospital everybody bit affect single.	25	52
+27	1998-03-23 19:16:45+01	Order hit without sing grow teacher two agreement. Skill bit Mrs modern the control through.\nHimself car moment chair make. Hand democratic attack good.	14	43
+28	1986-03-07 11:20:50+01	Young option heart necessary receive and nation former. Suggest allow box tough. Study at those along.\nTraditional vote industry environment. Hold sign late.	23	49
+29	1982-04-28 04:04:54+02	Toward television notice area. Bill leave sing relationship change successful. Network along another city serious industry second.	19	49
+30	1996-05-11 12:09:51+02	Measure quality good. Letter newspaper politics gas suffer rest. Industry whole fill thought. Ok summer institution discussion environmental name.	20	57
+31	2003-12-20 18:42:51+01	Seven evening strategy perform need organization friend source. Note wonder along beat take. Difficult character adult short responsibility rate. Town community I note can.	23	43
+32	2015-07-02 10:52:56+02	By method weight school radio. Collection structure without religious idea. Away in simply test doctor within TV.\nWind time soldier professor.	26	55
+33	1988-09-01 20:09:45+02	Like game truth miss either long yet community. Return exist new make tell.\nSet really music true note bar. Choice news blue.\nIndicate beat example simple material.	5	57
+34	2017-01-09 02:54:33+01	Recently wall help part direction. Force type kitchen term admit individual them. Usually side politics idea concern well.\nLose another young term size he. Why thousand risk rate executive create.	26	45
+35	2022-05-11 04:08:04+02	I civil professional should control. From bring today million act financial. Whatever why play born. Old word enter here yeah.	5	43
+36	1975-06-10 05:39:11+02	Hard political finish guess probably blood month. Doctor must reason movement prove do step room.	11	59
+37	1971-12-19 23:17:05+01	Professor try body cell so. Detail least local activity themselves article.\nProve value we go.\nThis everything plan glass herself American citizen attack. Rock wish ready.	4	54
+38	1992-09-13 01:07:39+02	Remember trial pretty majority public away little. Style protect down.\nDetermine right human whom everybody. Amount later feel house themselves.	7	56
+39	1999-11-14 16:16:34+01	Quickly me like why after. Space decade statement short second wonder. Meeting serious detail recent.	3	44
+40	1986-10-13 08:38:17+01	Most speak pay rate firm after. Industry later beautiful pattern. Apply individual keep though check do under.	28	60
+41	2000-08-02 04:41:55+02	Service someone sense pretty know move. Really choice movie. Concern true yet serve official opportunity.	25	55
+42	1999-12-17 14:06:38+01	Meet statement rich. Challenge page against our face environment.\nEnter energy leader involve some. Amount society analysis adult society area lay. Human song order let action little.	29	47
+43	2013-09-14 12:52:28+02	Best PM total. Oil these she same number crime consider. Station professional season.\nFew performance executive onto fear quality. Week clear yet already despite create positive.	3	45
+44	1998-12-27 05:06:24+01	Would sign realize PM discuss almost him. Nearly quickly practice at morning.\nPolice skill true within Congress cell. Best return address care floor tonight bar agreement. Body west our technology.	5	57
+45	2020-06-12 12:32:20+02	New go thousand can. Per fill ready most free.\nAttention point wall yeah activity. Door enter new region program to. Assume instead since training though audience long.	22	52
+46	1977-01-17 20:21:45+01	Campaign character center maybe image lot. Prevent artist economic president mouth point. Sound by American raise entire quite.\nCandidate account condition college.	8	56
+47	1998-12-17 16:20:04+01	Much ten politics book citizen. Low ground international amount care.\nWriter have south most conference. Goal maybe discussion under letter born quite. Full ever institution.	24	54
+48	1986-08-25 23:49:33+02	Democrat quite source current. Poor watch white less. Many edge detail specific.	26	51
+49	2019-03-14 13:13:14+01	New on several at its. Same these fact group.\nHope yet may figure. Better police thousand night see likely red. Detail stay someone executive again.	24	53
+50	1989-12-10 01:02:13+01	Success record place public exist benefit tonight century. Leave because arm four movement especially. Lot type list choose.	6	52
+51	2009-10-23 07:21:15+02	Republican wear according perform agree. Moment better answer determine decade. Brother against join himself reach.\nPopulation should call piece kid fast recent. Compare them edge stuff.	18	60
+52	2020-07-04 05:57:04+02	Full group whom likely audience. Among suffer activity again audience unit process.\nCause card exactly smile challenge. Beyond best too case pressure everyone she sing.	28	53
+53	1976-12-02 10:15:11+01	Right begin debate military large her eat. Commercial support military what only.\nBegin issue staff expert hot whom involve. Why bring technology until under writer game.	9	49
+54	2014-03-19 23:31:33+01	Enough after phone build. Fast city decide raise financial manager.\nBlack attention mouth of environment individual audience school. Wrong minute three everybody.	6	57
+55	1995-02-27 01:39:02+01	Hit successful watch guess since husband. Particularly market prevent. Citizen less us whole. Share during product.	22	46
+56	1979-06-08 05:56:59+02	Movie body friend seek level clearly. Open public back operation camera nice.\nSocial natural citizen challenge view. Beyond face follow game learn important trade. Spend building season expect.	5	46
+57	2002-04-27 19:36:34+02	Movie on machine per. Action gas who approach teacher nearly turn.\nMain sign scene he. Decide letter fight affect bag.\nPretty since course good month administration. Two western speech town fund.	27	54
+58	2020-05-05 12:27:11+02	Today fund wide them. Wonder source science. Arrive green least.\nSong song process staff better. Pressure would skin go true hope.\nGun town both shoulder.	6	44
+59	2001-06-28 11:24:08+02	Technology firm check sell memory voice throw. Energy consumer authority next knowledge class this court. Anyone up pick degree state fight amount member.	14	49
+60	1993-01-12 19:30:47+01	A item consider always article close. Apply reason and into standard major suddenly. Free true politics board model threat.	24	45
+61	2008-10-06 19:33:56+02	Space lose leg. Determine beat just relate medical kid meet hot. Pay indeed service deep front. Be theory majority call.	5	53
+62	1970-03-27 18:35:46+01	Over front place scene course tonight face. Two reality model. Role deal simply mission long bed.\nWay public on war weight. List anything bank board.\nValue not local coach safe. Network what cell.	6	46
+63	2009-09-10 21:06:58+02	Not military thought. Change board college natural easy call though television.\nReceive evening defense view. Shoulder fine than ball.	3	54
+64	2018-11-09 21:18:02+01	Position hear office activity. Occur bag court newspaper soldier. Red ask attention positive project create office. Many south president even respond stand.	32	55
+65	2012-04-07 05:49:10+02	Let wide yet edge remember resource light bag. Friend third yeah. Though right teacher support entire protect.\nStrong degree produce her medical.	27	56
+66	1974-10-20 01:32:15+01	Small laugh put single. Either this wall large reduce instead find. Difference opportunity even this. Parent capital sense break feel remember war.	6	44
+67	1997-03-04 05:38:29+01	Maintain serve better movie drive item. Little bit father list ever. Age him bill.\nLaw join play main. Receive expert position each soldier mean. Finish become half sing bring appear.	17	55
+68	2011-03-11 22:51:00+01	Close move tough a raise stage again.\nMake trouble join war health. College court series shake. Exist wear soldier go.	26	50
+69	2000-11-05 07:31:08+01	Thing start down soldier. Page source fund maybe. Court light late degree clearly thought state character. Campaign quite ball.\nReflect fall hundred arrive only why more. Large take a analysis radio.	29	59
+70	1980-06-24 18:37:27+02	Us approach bank. Speak someone hear easy care note throughout. Around point poor detail former structure.\nImpact section along office.\nBuy billion can life. Key stuff decision stock fish use.	28	60
+71	1987-09-13 09:48:07+02	School myself white imagine appear will so.\nAdmit ever score out leader science however second. Method fall charge author knowledge.	9	51
+72	2002-02-15 20:20:35+01	She year behind work off.\nTerm interest when.\nMeasure consider someone factor. Grow and to. World cell various suddenly continue nice.	16	51
+73	1990-10-29 10:26:17+01	Health also every young. Shoulder worry bed know hundred west.\nShort indicate friend last. Visit best talk nearly fund share common. Page worker example travel back together question.	8	44
+74	1991-10-02 14:36:41+01	Success data positive mother. Defense kid foot president it American truth. I evening reduce let money ahead by push.\nStyle serve establish back agency.	3	55
+75	1992-12-01 21:16:36+01	Range state mention teacher. Star computer between do mention.\nInstitution job television tough country executive several. Really direction affect. Television admit treatment million then scientist.	22	56
+76	2018-03-04 03:34:45+01	They imagine all. Mr research campaign Congress public their.\nConsider particularly fill. Pay various lawyer see choose possible agreement.	15	57
+77	2014-08-31 12:33:00+02	Try their free effect challenge model. Far pass then stand bed. East response where probably PM director. However make usually news industry require interest.	17	53
+78	1993-06-30 14:19:35+02	Gas catch despite. Animal you church example. President mean message century past hair.	15	50
+79	1975-06-08 16:20:42+02	Rather dream state address politics. Lose help finally safe likely suddenly.\nWhom investment resource today during. Enter talk company job.\nSystem care season woman. Car care term agree respond kind.	14	58
+80	1972-01-15 04:43:51+01	Record I he often fish who.\nAt put hair who under whom. Left seven everybody response.	27	51
+81	1977-05-09 18:31:36+02	Kid ever evidence recent. Blood reach maintain test true expect. Visit college have team my personal bad write.\nIf ball loss thus book southern sit.	23	48
+82	1974-06-12 12:29:35+02	Beautiful rest manage program happen seven. Mind owner face up collection when century important. Perform none call. Because the one political.	15	48
+83	1983-02-04 09:25:25+01	Leg today use Democrat. From however particular service according seem. Century final test better.	24	57
+84	2007-09-01 19:36:38+02	Question pressure service thought soon myself south. Seat air clearly require trade. Argue company wind street trial position.	12	60
+85	1997-06-07 12:16:12+02	Suffer his turn fish church tough. Field both imagine international both push course.\nRule water usually brother east trade. Me respond husband specific thing.	20	60
+86	1984-07-24 19:52:54+02	Evidence research last eight skin. Lawyer early leave idea level term great.\nNature traditional art. Body remain themselves add it guess language.	5	55
+87	1996-11-01 14:42:17+01	Threat mention huge phone. Kind mean save whether fire join. Actually economic first participant along center both.\nName impact save father need fine. Field leg book common.	30	55
+88	1978-06-25 15:44:25+02	Above kitchen rule available sell executive. Past their road arm clearly. Cultural class walk on decide.	24	45
+89	1981-10-01 03:06:39+01	Peace paper control affect Republican pretty central save. Under same husband.\nWhatever challenge role tax then relate each pattern. Fight hard save door gas artist someone.	16	55
+90	1978-06-17 11:58:56+02	Past dream exist industry page direction nation need. Forget he something leader begin call describe better.	18	61
+91	1979-12-14 03:28:16+01	Young this beyond voice from. Call figure down himself cold other kid.\nExpect author eye section PM nice her. Without almost mother lawyer.	20	50
+92	2014-07-12 17:49:44+02	Smile way law however toward common until. Attorney interest gas ok near behavior practice. Issue admit bed health think. Song matter finish for majority daughter agency.	13	50
+93	1970-04-29 17:00:51+01	People as east young hour. Professor information bad attack politics house.\nTv best develop office. Bad there may even generation about plant. Medical degree with once.	25	57
+94	2018-11-30 17:03:40+01	American high read find bed from. Religious agreement TV because recognize against like enjoy.\nBecome natural around look ready none. Very chance policy role.	22	60
+95	1993-06-15 02:10:50+02	Difference coach reality natural course believe.\nWith human others table claim wish. Process song tend enough raise pass boy human. Agree serve assume walk important.\nWorld finish human investment.	27	55
+96	1985-12-15 18:18:24+01	Writer management unit fear might present less.\nResponsibility compare lead industry draw plan page behavior. Program return black senior.	27	48
+97	1975-03-26 09:00:14+01	Administration watch in represent law then. Affect majority recognize above.	22	56
+98	2020-04-06 19:01:55+02	Ground subject art foreign usually executive standard. Audience foot money even whether.\nSecond listen different. Drive again live build fine.	28	50
+99	1983-10-31 03:40:18+01	Result national me tax. Beautiful over say.\nMeasure television paper nice thought. Stay here big today.	25	50
+100	2020-06-26 19:00:55+02	Response enter this art. Through specific miss stuff crime treatment despite.\nTrouble cost wife anything. Work suffer short skill central. Hope animal purpose hit this.	30	53
+101	2012-02-13 22:09:35+01	Growth film direction keep form.\nLikely change beautiful staff. Well Mr perform admit peace doctor leader.\nCommercial mind president never candidate. Father part side whom gas concern themselves.	13	50
+102	2011-06-20 16:35:18+02	Play enjoy herself force.\nGas know person whose. Unit eat contain suggest authority each. Specific develop even crime a.	19	55
+103	1981-09-17 12:06:20+02	Tough receive whether these professor. Voice wall lead. Score oil about provide.\nOver help without.\nHalf program past. Discover with ten arm plant.	14	45
+104	1973-07-03 19:17:09+01	Prove could conference employee. It century arm budget operation future here bag.\nBag goal head notice dog country. Leg before enough sense their chance very. Far eat city town.	8	51
+105	1978-03-06 17:18:15+01	Purpose administration situation. He reflect development such good. Clearly staff floor could. Later receive mother force blood suddenly task.\nOk after leader tree. Soldier do news you.	20	59
+106	2005-07-03 18:50:45+02	Really set glass she power. Charge term fire no.\nChair Congress thus capital school recent.\nSense personal spring image others. Stand table quality arrive operation of physical. Almost measure fund.	32	59
+107	1970-03-25 15:51:31+01	Establish summer determine finish environmental person. Today various send society painting share method political.	29	56
+108	1990-10-18 01:20:15+01	Deep price building anything. Left individual bring media discuss after.\nFar scientist alone wall across since there word. Each positive unit deal camera. Whole actually almost spend.	19	55
+109	1980-04-18 17:03:01+02	Family course win though themselves point management.\nLow administration control attack. Summer red sister. First through right until nature them decision less. Age must fund marriage.	9	45
+110	2018-04-13 18:44:56+02	Almost position bring worry. Industry either tax none point school rock. End but stuff analysis traditional seem.\nPractice situation wall close TV. Again beat house.	28	53
+111	1997-05-03 08:02:03+02	Certainly tell establish thank money will. Theory middle light later before unit.	20	43
+112	1986-02-10 23:59:03+01	Development result relate serve always adult. If finish star threat.\nSave teach husband thank approach. If understand small store minute air option suffer. Research become lot trade shake speech.	18	47
+113	1974-12-26 05:52:18+01	Help important bit security air. Away believe five clearly sometimes early either professor.	5	43
+114	1972-10-13 02:27:55+01	Event suddenly affect structure. Rest will base management. Create another huge open.\nWestern local professor lose know growth. Me partner phone rest know guess.	7	48
+115	2003-08-28 06:30:20+02	Keep black board save. Character what you hard vote quite.\nAble sign today name fill mouth. Budget issue industry why road.	9	59
+116	1977-07-11 19:08:29+02	Voice away husband fish measure three. Some article call join create water raise. Near idea land station.	32	44
+117	2020-04-11 10:41:08+02	Home benefit to within cultural. Year the face state individual bed join commercial.	28	46
+118	1976-04-15 00:37:43+02	Yourself fire control think forget away mean deep. Ready more growth new group benefit member.	24	47
+119	1992-04-13 08:00:58+02	Source rate quite view road evening. Avoid try offer we doctor allow.\nMust nor notice black use. Family conference whose send specific heart. Particularly project month we American Democrat each.	32	57
+120	2008-05-18 00:52:16+02	Tough read dog attorney fight who. Now compare reflect himself star. Property draw at market man experience product.\nI tell beautiful word. By Democrat when break possible.	32	46
+121	2003-08-28 12:29:04+02	However let federal. Which past street soldier ready glass increase event.\nSpecial like father best animal statement. Politics protect religious than interview. Until character future.	7	46
+122	1986-08-13 12:32:10+02	Area look seven. Home interesting chance through most establish goal. Move focus maintain three.\nTv or interesting space.	12	45
+123	1995-07-26 10:04:21+02	Politics call none knowledge speak strategy. Democrat wind from special pass drive new. Road important recent remain describe.	8	46
+124	1983-05-11 18:56:24+02	Method meeting white sing skin whether strong. Value how culture night particular perhaps.\nMethod wonder director allow chance. Style control movement result quality.	29	46
+125	1985-06-07 22:21:21+02	Concern upon throw camera site law.\nDecade star attorney attorney mind. Deal research resource send. Check discuss this performance stock stock.	11	58
+126	1974-06-10 12:33:23+02	Music better whether six fish environmental. Several indicate degree note part during. Score performance world firm suggest economy.	16	48
+127	1984-09-14 00:58:09+02	Word health onto politics eight. Interview blood century husband call network yes.	30	58
+128	2012-12-07 18:32:31+01	Someone president local. Window name plant position alone.\nDinner serve beat hour ago business. Stage provide score stand finally media. Pretty bank hot join both response expect figure.	25	49
+129	1979-05-06 04:03:55+02	Reveal type determine on quality people. Mind too individual receive attention after.\nOthers too build available. Forget affect green student support yard. Ten seat trial also decide.	19	58
+130	2015-08-28 11:14:17+02	Power very first product response point age. Way wind compare goal left network. The understand dog smile to goal player.\nCultural arm after field moment doctor among. Indeed machine game.	26	51
+131	2020-06-24 01:41:15+02	Hundred environmental staff method.\nBudget leader player history people. Place tough which someone child I sort. Happen buy full last deep deep.	16	57
+132	2018-07-13 07:16:45+02	Speech along across feel player occur new may. Just need her ago. Former success game culture bit ever care.	25	48
+133	1982-01-20 14:50:15+01	Third expect deep third blue decide magazine. Human item money expect focus south dinner.	22	45
+134	2019-11-18 04:02:57+01	Data picture start prevent particularly sure. Job hear stay fund result technology herself.\nTrip enough lay fine short.\nFew painting relate modern former future.	24	50
+135	1989-04-02 13:33:43+02	Book politics matter. Inside beat believe dog why little win.\nAuthority try person surface protect base.	27	46
+136	1984-04-30 12:47:15+02	Across tend production now customer compare political. Parent ever establish force keep visit community among.	4	55
+137	2010-04-07 19:16:19+02	Program dinner support mind. Lose enjoy total series world marriage. Believe southern especially he letter care age. Experience something while idea least dream spend.	31	48
+138	1976-09-17 15:35:26+02	Set enough matter body you difference music establish. Rest imagine especially guess have. Billion offer course the recently management pattern.	27	53
+139	1992-09-18 10:23:17+02	Begin ask owner a suffer spend child. Performance science which include approach. Long mind score policy unit health play.	18	51
+140	1979-05-29 18:08:07+02	Operation wait interview treatment very care. Yes pass friend until main above.\nStreet million mouth my. Hard product moment easy. Board institution argue thus.	5	59
+141	2017-01-06 20:24:26+01	Question girl weight run. Cost interesting study week.\nLook outside garden himself former right safe. Great happen glass air all loss fish truth. Stage direction central play control sell situation.	21	60
+142	1978-02-25 23:09:40+01	Now newspaper what one however your. Onto situation community know.\nTend south head several himself decide from actually. Plant store although join.\nSit meeting top. House listen behavior with.	16	52
+143	2013-09-06 07:12:20+02	Record site clear support of. We society whether if. Occur many represent build sea year.	14	54
+144	1993-11-09 00:54:10+01	Ahead ahead hit against. Assume task buy.\nSafe food yard if up discussion hospital sport. Hour surface then rather onto ever by. Create degree others.	14	59
+145	1988-04-01 14:45:44+02	Phone above entire compare responsibility safe serve. Left reach station fast skill. Same half rate person security full plant.	30	44
+146	1984-11-09 17:49:45+01	Send because east energy technology wife. Property training similar good or last recently.\nAlong clear pay such fire.	24	53
+147	2020-08-31 12:18:39+02	Check million part else.\nAhead step into field happen. Partner economy artist them ahead conference individual speak. Civil agency group power.	22	43
+148	1994-11-21 02:28:12+01	Last prove someone win particularly value world bank. Strong relate gas mission seven country small. Care choice goal share consider red now.	13	54
+149	1992-09-25 14:33:03+02	Meet truth space worker. There down skill assume.\nBest compare address thus war. Official crime she. Long door owner than.	5	53
+150	1982-12-02 15:07:27+01	Along above avoid world. Discover common between especially indicate sound deal. Spring others hundred.\nMay after total through condition.	9	53
+\.
+
+
+--
+-- Data for Name: catalog_votebook; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.catalog_votebook (id, user_score, book_id, user_id) FROM stdin;
+1	5	6	43
+2	9	4	43
+4	6	15	43
+3	6	3	43
+5	6	7	43
+\.
+
+
+--
+-- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.django_content_type (id, app_label, model) FROM stdin;
+1	catalog	author
+2	catalog	book
+3	catalog	votebook
+4	catalog	comment
+5	orders	order
+6	orders	orderitem
+7	admin	logentry
+8	auth	permission
+9	auth	group
+10	auth	user
+11	contenttypes	contenttype
+12	sessions	session
+\.
+
+
+--
+-- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.django_migrations (id, app, name, applied) FROM stdin;
+1	contenttypes	0001_initial	2022-06-11 13:08:37.628451+02
+2	auth	0001_initial	2022-06-11 13:08:37.693814+02
+3	admin	0001_initial	2022-06-11 13:08:37.712913+02
+4	admin	0002_logentry_remove_auto_add	2022-06-11 13:08:37.724737+02
+5	admin	0003_logentry_add_action_flag_choices	2022-06-11 13:08:37.73356+02
+6	contenttypes	0002_remove_content_type_name	2022-06-11 13:08:37.755839+02
+7	auth	0002_alter_permission_name_max_length	2022-06-11 13:08:37.765347+02
+8	auth	0003_alter_user_email_max_length	2022-06-11 13:08:37.780022+02
+9	auth	0004_alter_user_username_opts	2022-06-11 13:08:37.790672+02
+10	auth	0005_alter_user_last_login_null	2022-06-11 13:08:37.800336+02
+11	auth	0006_require_contenttypes_0002	2022-06-11 13:08:37.802389+02
+12	auth	0007_alter_validators_add_error_messages	2022-06-11 13:08:37.811187+02
+13	auth	0008_alter_user_username_max_length	2022-06-11 13:08:37.827636+02
+14	auth	0009_alter_user_last_name_max_length	2022-06-11 13:08:37.8379+02
+15	auth	0010_alter_group_name_max_length	2022-06-11 13:08:37.85472+02
+16	auth	0011_update_proxy_permissions	2022-06-11 13:08:37.865506+02
+17	auth	0012_alter_user_first_name_max_length	2022-06-11 13:08:37.883229+02
+18	catalog	0001_initial	2022-06-11 13:08:37.951057+02
+19	catalog	0002_alter_book_score	2022-06-11 13:08:37.961624+02
+20	orders	0001_initial	2022-06-11 13:08:37.993617+02
+21	sessions	0001_initial	2022-06-11 13:08:38.006234+02
+\.
+
+
+--
+-- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.django_session (session_key, session_data, expire_date) FROM stdin;
+0ljinyxkx6nlnggr1uqjhfb6lf9mdzug	eyJjYXJ0Ijp7fX0:1o0RN3:2z1fDyuVkOEqjtqrec3WloynF5vZca_MduNViSP38g0	2022-06-26 19:27:29.158488+02
+\.
+
+
+--
+-- Data for Name: orders_order; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.orders_order (id, first_name, last_name, email, address, postal_code, city, created, updated, paid) FROM stdin;
+\.
+
+
+--
+-- Data for Name: orders_orderitem; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.orders_orderitem (id, price, quantity, book_id, order_id) FROM stdin;
+\.
+
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.auth_group_id_seq', 1, false);
+
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
+
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.auth_permission_id_seq', 48, true);
+
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 1, false);
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.auth_user_id_seq', 63, true);
+
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
+
+
+--
+-- Name: catalog_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.catalog_author_id_seq', 18, true);
+
+
+--
+-- Name: catalog_book_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.catalog_book_author_id_seq', 47, true);
+
+
+--
+-- Name: catalog_book_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.catalog_book_id_seq', 32, true);
+
+
+--
+-- Name: catalog_comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.catalog_comment_id_seq', 150, true);
+
+
+--
+-- Name: catalog_votebook_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.catalog_votebook_id_seq', 5, true);
+
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.django_admin_log_id_seq', 1, false);
+
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.django_content_type_id_seq', 12, true);
+
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 21, true);
+
+
+--
+-- Name: orders_order_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.orders_order_id_seq', 1, false);
+
+
+--
+-- Name: orders_orderitem_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.orders_orderitem_id_seq', 1, false);
+
+
+--
+-- Name: auth_group auth_group_name_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_group
+    ADD CONSTRAINT auth_group_name_key UNIQUE (name);
+
+
+--
+-- Name: auth_group_permissions auth_group_permissions_group_id_permission_id_0cd325b0_uniq; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_permission_id_0cd325b0_uniq UNIQUE (group_id, permission_id);
+
+
+--
+-- Name: auth_group_permissions auth_group_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_group auth_group_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_group
+    ADD CONSTRAINT auth_group_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_permission auth_permission_content_type_id_codename_01ab375a_uniq; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_permission
+    ADD CONSTRAINT auth_permission_content_type_id_codename_01ab375a_uniq UNIQUE (content_type_id, codename);
+
+
+--
+-- Name: auth_permission auth_permission_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_permission
+    ADD CONSTRAINT auth_permission_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups auth_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups auth_user_groups_user_id_group_id_94350c0c_uniq; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_group_id_94350c0c_uniq UNIQUE (user_id, group_id);
+
+
+--
+-- Name: auth_user auth_user_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user
+    ADD CONSTRAINT auth_user_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permissions_user_id_permission_id_14a6b632_uniq; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_permission_id_14a6b632_uniq UNIQUE (user_id, permission_id);
+
+
+--
+-- Name: auth_user auth_user_username_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user
+    ADD CONSTRAINT auth_user_username_key UNIQUE (username);
+
+
+--
+-- Name: catalog_author catalog_author_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_author
+    ADD CONSTRAINT catalog_author_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: catalog_book_author catalog_book_author_book_id_author_id_6fa31ecf_uniq; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_book_author
+    ADD CONSTRAINT catalog_book_author_book_id_author_id_6fa31ecf_uniq UNIQUE (book_id, author_id);
+
+
+--
+-- Name: catalog_book_author catalog_book_author_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_book_author
+    ADD CONSTRAINT catalog_book_author_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: catalog_book catalog_book_isbn_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_book
+    ADD CONSTRAINT catalog_book_isbn_key UNIQUE (isbn);
+
+
+--
+-- Name: catalog_book catalog_book_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_book
+    ADD CONSTRAINT catalog_book_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: catalog_book catalog_book_slug_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_book
+    ADD CONSTRAINT catalog_book_slug_key UNIQUE (slug);
+
+
+--
+-- Name: catalog_comment catalog_comment_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_comment
+    ADD CONSTRAINT catalog_comment_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: catalog_votebook catalog_votebook_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_votebook
+    ADD CONSTRAINT catalog_votebook_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_admin_log django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.django_admin_log
+    ADD CONSTRAINT django_admin_log_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_content_type django_content_type_app_label_model_76bd3d3b_uniq; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.django_content_type
+    ADD CONSTRAINT django_content_type_app_label_model_76bd3d3b_uniq UNIQUE (app_label, model);
+
+
+--
+-- Name: django_content_type django_content_type_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.django_content_type
+    ADD CONSTRAINT django_content_type_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_migrations django_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.django_migrations
+    ADD CONSTRAINT django_migrations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_session django_session_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.django_session
+    ADD CONSTRAINT django_session_pkey PRIMARY KEY (session_key);
+
+
+--
+-- Name: orders_order orders_order_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.orders_order
+    ADD CONSTRAINT orders_order_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: orders_orderitem orders_orderitem_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.orders_orderitem
+    ADD CONSTRAINT orders_orderitem_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_group_name_a6ea08ec_like; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX auth_group_name_a6ea08ec_like ON public.auth_group USING btree (name varchar_pattern_ops);
+
+
+--
+-- Name: auth_group_permissions_group_id_b120cbf9; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX auth_group_permissions_group_id_b120cbf9 ON public.auth_group_permissions USING btree (group_id);
+
+
+--
+-- Name: auth_group_permissions_permission_id_84c5c92e; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX auth_group_permissions_permission_id_84c5c92e ON public.auth_group_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_permission_content_type_id_2f476e4b; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX auth_permission_content_type_id_2f476e4b ON public.auth_permission USING btree (content_type_id);
+
+
+--
+-- Name: auth_user_groups_group_id_97559544; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX auth_user_groups_group_id_97559544 ON public.auth_user_groups USING btree (group_id);
+
+
+--
+-- Name: auth_user_groups_user_id_6a12ed8b; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX auth_user_groups_user_id_6a12ed8b ON public.auth_user_groups USING btree (user_id);
+
+
+--
+-- Name: auth_user_user_permissions_permission_id_1fbb5f2c; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX auth_user_user_permissions_permission_id_1fbb5f2c ON public.auth_user_user_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_user_user_permissions_user_id_a95ead1b; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX auth_user_user_permissions_user_id_a95ead1b ON public.auth_user_user_permissions USING btree (user_id);
+
+
+--
+-- Name: auth_user_username_6821ab7c_like; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX auth_user_username_6821ab7c_like ON public.auth_user USING btree (username varchar_pattern_ops);
+
+
+--
+-- Name: catalog_book_author_author_id_7cb75b74; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX catalog_book_author_author_id_7cb75b74 ON public.catalog_book_author USING btree (author_id);
+
+
+--
+-- Name: catalog_book_author_book_id_c16d17b8; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX catalog_book_author_book_id_c16d17b8 ON public.catalog_book_author USING btree (book_id);
+
+
+--
+-- Name: catalog_book_isbn_30805834_like; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX catalog_book_isbn_30805834_like ON public.catalog_book USING btree (isbn varchar_pattern_ops);
+
+
+--
+-- Name: catalog_book_slug_4eebf644_like; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX catalog_book_slug_4eebf644_like ON public.catalog_book USING btree (slug varchar_pattern_ops);
+
+
+--
+-- Name: catalog_comment_book_id_d8d57b4b; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX catalog_comment_book_id_d8d57b4b ON public.catalog_comment USING btree (book_id);
+
+
+--
+-- Name: catalog_comment_user_id_30926d6e; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX catalog_comment_user_id_30926d6e ON public.catalog_comment USING btree (user_id);
+
+
+--
+-- Name: catalog_votebook_book_id_e7ab89d6; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX catalog_votebook_book_id_e7ab89d6 ON public.catalog_votebook USING btree (book_id);
+
+
+--
+-- Name: catalog_votebook_user_id_21135909; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX catalog_votebook_user_id_21135909 ON public.catalog_votebook USING btree (user_id);
+
+
+--
+-- Name: django_admin_log_content_type_id_c4bce8eb; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX django_admin_log_content_type_id_c4bce8eb ON public.django_admin_log USING btree (content_type_id);
+
+
+--
+-- Name: django_admin_log_user_id_c564eba6; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX django_admin_log_user_id_c564eba6 ON public.django_admin_log USING btree (user_id);
+
+
+--
+-- Name: django_session_expire_date_a5c62663; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX django_session_expire_date_a5c62663 ON public.django_session USING btree (expire_date);
+
+
+--
+-- Name: django_session_session_key_c0390e0f_like; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX django_session_session_key_c0390e0f_like ON public.django_session USING btree (session_key varchar_pattern_ops);
+
+
+--
+-- Name: orders_orderitem_book_id_ed013cad; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX orders_orderitem_book_id_ed013cad ON public.orders_orderitem USING btree (book_id);
+
+
+--
+-- Name: orders_orderitem_order_id_fe61a34d; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX orders_orderitem_order_id_fe61a34d ON public.orders_orderitem USING btree (order_id);
+
+
+--
+-- Name: auth_group_permissions auth_group_permissio_permission_id_84c5c92e_fk_auth_perm; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissio_permission_id_84c5c92e_fk_auth_perm FOREIGN KEY (permission_id) REFERENCES public.auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_group_permissions auth_group_permissions_group_id_b120cbf9_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_b120cbf9_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES public.auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_permission auth_permission_content_type_id_2f476e4b_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_permission
+    ADD CONSTRAINT auth_permission_content_type_id_2f476e4b_fk_django_co FOREIGN KEY (content_type_id) REFERENCES public.django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups auth_user_groups_group_id_97559544_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_group_id_97559544_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES public.auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups auth_user_groups_user_id_6a12ed8b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_6a12ed8b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm FOREIGN KEY (permission_id) REFERENCES public.auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: catalog_book_author catalog_book_author_author_id_7cb75b74_fk_catalog_author_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_book_author
+    ADD CONSTRAINT catalog_book_author_author_id_7cb75b74_fk_catalog_author_id FOREIGN KEY (author_id) REFERENCES public.catalog_author(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: catalog_book_author catalog_book_author_book_id_c16d17b8_fk_catalog_book_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_book_author
+    ADD CONSTRAINT catalog_book_author_book_id_c16d17b8_fk_catalog_book_id FOREIGN KEY (book_id) REFERENCES public.catalog_book(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: catalog_comment catalog_comment_book_id_d8d57b4b_fk_catalog_book_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_comment
+    ADD CONSTRAINT catalog_comment_book_id_d8d57b4b_fk_catalog_book_id FOREIGN KEY (book_id) REFERENCES public.catalog_book(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: catalog_comment catalog_comment_user_id_30926d6e_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_comment
+    ADD CONSTRAINT catalog_comment_user_id_30926d6e_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: catalog_votebook catalog_votebook_book_id_e7ab89d6_fk_catalog_book_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_votebook
+    ADD CONSTRAINT catalog_votebook_book_id_e7ab89d6_fk_catalog_book_id FOREIGN KEY (book_id) REFERENCES public.catalog_book(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: catalog_votebook catalog_votebook_user_id_21135909_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.catalog_votebook
+    ADD CONSTRAINT catalog_votebook_user_id_21135909_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_log django_admin_log_content_type_id_c4bce8eb_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.django_admin_log
+    ADD CONSTRAINT django_admin_log_content_type_id_c4bce8eb_fk_django_co FOREIGN KEY (content_type_id) REFERENCES public.django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_log django_admin_log_user_id_c564eba6_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.django_admin_log
+    ADD CONSTRAINT django_admin_log_user_id_c564eba6_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: orders_orderitem orders_orderitem_book_id_ed013cad_fk_catalog_book_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.orders_orderitem
+    ADD CONSTRAINT orders_orderitem_book_id_ed013cad_fk_catalog_book_id FOREIGN KEY (book_id) REFERENCES public.catalog_book(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: orders_orderitem orders_orderitem_order_id_fe61a34d_fk_orders_order_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.orders_orderitem
+    ADD CONSTRAINT orders_orderitem_order_id_fe61a34d_fk_orders_order_id FOREIGN KEY (order_id) REFERENCES public.orders_order(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
