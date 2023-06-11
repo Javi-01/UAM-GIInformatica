@@ -1,0 +1,91 @@
+- El frontend del cluster cuenta con dos adaptadores de red, uno de ellos (eth0) esta condigurado en modo "host-only" y el otro en modo "NAT" (eth1) para que con eth1 se conecte al Pulic Ethernet y con eth0 a una red privada para comunicarse con los nodos del cluster (Private Network o Ethernet Network)
+
+- El backend o mejor dichos los nodos del cluster solo cuentan con un adaptador de red eth0 en modo "host-only" que se conectan a la red "Ethernet Network" para comunicarse con le frontend, es decir, se comunican mediante la misma red
+
+- Con el comando "qstat -f" comprobamos si el sistema está listo y que nodos estan disponibles ejecutando en el cluster, en la columna "states" indica con "au" si el nodo esta inactivo o estará vacia si se encuentra activo
+
+- Con el comando "rocks list host" podemos comprobar que nodos se han instalado
+
+- Con el comando "rocks list roll" podemos comprobar que rolls estan instalado 
+
+- Con el comando "rocks run host o rocks run host computeX" podemos ejecutar el mismo comando en los nodos 
+
+- Con el comando "rocks run host reboot/poweroff" reiniciamos / apagamos todos los nodos o el nodo que se indique despues de host
+
+- Con el comando "rocks list host boot" comprobamos la configuración de arranque y en la columna ACTION indica que accion realizar a la hora de arrancar al nodo de computo. Con el comando "rocks set host boot compute-0-0 action=install" indicamos que lo reinstale 
+
+- Con el comando "insert-ethers --remove computeX; rocks list host; rocks sync config " eliminamos el nodo que sea  
+
+- Para añadir usuarios al cluster basta con ejecutar los comando "usseradd nombre" establecer la password con "password nombre" e introducirla y sincronizar "rocks sync users"
+
+- Con el comando "qstat -f" podemos comprobar el estado de la cola
+
+- Con el comando "qsub ficher" lanzamos el script a la cola de ejecucion 
+
+- Con el comando "qdel PID" elimina el proceso de la cola con el PID indicado
+
+- Con el comando "qconf -sql" se muestran las colas disponibles
+
+- Con el comando "qconf -spl" se muestran entornos paralelos
+
+- Con el comando "qconf -shgrpl" se muestran los grupos de hosts
+
+- Para crear un grupo de equipos usamos el comando "qconf -shgrp @allhosts"
+
+- Para crear y configurar una cola de trabajo alternativa a all.q:
+	1º: Siendo root, ver todas las colas de trabajo gestionadas por SGE (qconf -sql)
+	2º: Mostrar en detalle la configuración de una cola en concreto (qconf -sq all.q)
+	3º: Copiar la configuración de la cola en un archivo 8qconf -sq all.q >/nuestra/ruta/ejemplo/MyCola.txt)
+	4º: Modificar los campos qname, hostlist y slots 
+	5º: Después se añade a las colas gestionadas por SGE y se modifican el resto de campos que 
+se deseen con los dos siguientes comandos 8qconf -Aq / nuestra/ruta/ejemplo/MyCola.txt)
+	6º: Se puede modificar con (qconf -mq MyCola.q)
+	
+- Para enviar tareas MPI al gestor de colas debemos incluir "-pe orte N" despues de qsub para que la ejecución sea paralela
+
+- La salida estará en el ficher nombre.qsub.o* y los mensajes de error en nombre.qsub.po*
+
+- La vectorización es el proceso por el cual aquellas operaciones matemáticas que se encuentran dentro de un bucle se realizan en paralelo.
+
+- Para compiladores GCC la flag -O3 activa la auto vectorizacion pero no da el mejor rendimiento posible
+
+- En compiladores GNU la flag -march=native junto a -O3 produce un codigo binario para la maquina donde se compilo el codigo pero si la maquina en la que se ejecuta es diferente a en la que se compilo habra que indicar en -march la arquitectura correspondiente (por ejemplo para Skylake indicar =skylake-avx512
+
+- En compiladores GCC la flag -fwhole-program hace que el compilador logre mejor optimizacion y active la auto vectorizacion en aquellos codigos con llamadas a funciones
+
+- En compiladores GNU la flag -fopt-info-all muestra un reporte de optimizacion completo y -fopt-info-vec optimized solo muestra un reporte en la parte de la vectorizacion
+
+- La flag -S generara un fichero X.s con las intrucciones que la propia cpu vee al correr el programa
+
+- Con mXXX se genera un vector de Y valores de Z bits donde en total son XXX bits
+
+- Igual para 128 que para 256 y 512 bits:
+	* __m128: tipo de coma flotante de precsion simple
+	* __m128d: tipo de coma flotante de doble precision 
+	* __m128i: tipo integer 
+	
+- Referencia de las instrucciones: _mm<size>_<action>_<type>
+
+Here are a few more examples, just so that you get the gist of it:
+	• _mm_add_epi16: add two 128-bit vectors of 16-bit extended packed integers, or simply 
+	said, shorts.
+	• _mm256_acos_pd: calculate elementwise arccos for 4 packed doubles.
+	• _mm256_broadcast_sd: broadcast (copy) a double from a memory location to all 4 
+	elements of the result vector.
+	• _mm256_ceil_pd: round up each of 4 doubles to the nearest integer.
+	• _mm256_cmpeq_epi32: compare 8+8 packed ints and return a mask that contains ones 
+	for equal element pairs.
+	• _mm256_blendv_ps: pick elements from one of two vectors according to a mask.
+
+- La u en los load y store indica que lo haga unaligned
+
+
+
+
+
+
+
+
+
+
+- mmXXX: float de precision simple

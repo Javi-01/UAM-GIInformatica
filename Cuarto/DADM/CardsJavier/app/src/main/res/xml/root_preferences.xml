@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/app_decks">
+
+        <EditTextPreference
+            app:key="max_number_cards"
+            app:title="@string/number_cards_to_study"
+            app:defaultValue="20" />
+        <SwitchPreferenceCompat
+            app:key="board"
+            android:defaultValue="false"
+            app:summaryOff="@string/board_summary_off"
+            app:summaryOn="@string/board_summary_on"
+            app:title="@string/board_title" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

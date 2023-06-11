@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "198069853464",
+    "firebase_url": "https://javierfraileiglesiascard-46c11-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "javierfraileiglesiascard-46c11",
+    "storage_bucket": "javierfraileiglesiascard-46c11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198069853464:android:9694c49298007ed697126d",
+        "android_client_info": {
+          "package_name": "es.uam.eps.dadm.cardsjavier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198069853464-9odevae11tmgdcqkse6dnmju4rq9vilq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "es.uam.eps.dadm.cardsjavier",
+            "certificate_hash": "c593ca454350aa5b912cd9f4387c0aafb1384d31"
+          }
+        },
+        {
+          "client_id": "198069853464-agpm516qq0171d2mpebaamkf1s1j4olf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx_7-zZYu6oayWrzsip-s-n9NCDRcf7C8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198069853464-agpm516qq0171d2mpebaamkf1s1j4olf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

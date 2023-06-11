@@ -1,0 +1,959 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>p312 API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>p312</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import numpy as np
+import itertools
+import sys
+
+from typing import List, Tuple, Dict, Callable, Iterable, Union
+
+
+def split(t: np.ndarray) -&gt; Tuple[np.ndarray, int, np.ndarray]:
+    &#34;&#34;&#34;Esta función se encarga de repartir los elementos de t en dos arrays con
+        los elementos menores y mayores al pivote siendo el pivote el primer
+        elemento de t
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+
+    Returns:
+        Tuple[np.ndarray, int, np.ndarray]: Un array con los elementos menores
+        al pivote, el pivote, y otro array con los elementos mayores al pivote.
+    &#34;&#34;&#34;
+
+    if len(t) == 1:
+        return ([], t[0], [])
+
+    taux = t[1:]
+    menores = [ele for ele in taux if ele &lt;= t[0]]
+    mayores = [ele for ele in taux if ele &gt; t[0]]
+
+    return (menores, t[0], mayores)
+
+
+def qsel(t: np.ndarray, k: int) -&gt; Union[int, None]:
+    &#34;&#34;&#34;Esta función se encarga realizar el quickselect sobre
+        una lista a partir de un pivoite de forma recursiva
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+        k (int): Indice en una ordenacion de t.
+
+    Returns:
+        Union[int, None]: El valor del elemento que ocuparia en una ordenacion
+        de t si existe o None si no existe.
+    &#34;&#34;&#34;
+
+    if k &lt; 0 or k &gt;= len(t):
+        return None
+
+    menores, t0, mayores = split(t)
+
+    if k == len(menores):
+        return t0
+
+    elif k &lt;= len(menores):
+        return qsel(menores, k)
+
+    else:
+        return qsel(mayores, k - (len(menores) + 1))
+
+
+def qsel_nr(t: np.ndarray, k: int) -&gt; Union[int, None]:
+    &#34;&#34;&#34;Esta función se encarga realizar el quickselect sobre
+        una lista a partir de un pivoite eliminando la recursion
+        de cola
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+        k (int): Indice en una ordenacion de t.
+
+    Returns:
+        Union[int, None]: El valor del elemento que ocuparia en una ordenacion
+        de t si existe o None si no existe.
+    &#34;&#34;&#34;
+
+    if k &lt; 0 or k &gt;= len(t):
+        return None
+
+    menores, t0, mayores = split(t)
+
+    while k != len(menores):
+
+        if k &lt;= len(menores):
+            t = menores
+
+        else:
+            t = mayores
+            k -= (len(menores) + 1)
+
+        menores, t0, mayores = split(t)
+
+    return t0
+
+
+def split_pivot(t: np.ndarray, mid: int) -&gt; Tuple[np.ndarray, int, np.ndarray]:
+    &#34;&#34;&#34;Esta función se encarga de repartir los elementos de t en dos arrays con
+        los elementos menores y mayores al pivote siendo el pivote la mediana (mid)
+        del array
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+        mid (int): Elemento mediana del array.
+
+    Returns:
+        Tuple[np.ndarray, int, np.ndarray]: Un array con los elementos menores
+        al pivote, el pivote, y otro array con los elementos mayores al pivote.
+    &#34;&#34;&#34;
+
+    taux = np.delete(t, list(t).index(mid))
+    menores = [ele for ele in taux if ele &lt;= mid]
+    mayores = [ele for ele in taux if ele &gt; mid]
+
+    return (menores, mid, mayores)
+
+
+def pivot5(t: np.ndarray) -&gt; int:
+    &#34;&#34;&#34;Esta función se encarga de aplicar el procedimiento
+        “mediana de medianas de 5 elementos”
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+
+    Returns:
+        int: El “pivote 5” del array t
+    &#34;&#34;&#34;
+
+    if len(t) &lt;= 5:
+        return sorted(t)[len(t)//2]
+
+    m = []
+    u = 0
+
+    for i in range(5, len(t), 5):
+        m.append(sorted(t[u:i])[2])
+        u = i
+
+    if u != len(t):
+        m.append(sorted(t[u:])[len(t[u:])//2])
+
+    return qsel_nr(m, len(m)//2)
+
+
+def qsel5_nr(t: np.ndarray, k: int) -&gt; Union[int, None]:
+    &#34;&#34;&#34;Esta función se encarga realizar el quickselect5 sobre
+        una lista a partir de un pivoite obtenido mediante
+        pivot5 y eliminando la recursion de cola
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+        k (int): Indice en una ordenacion de t.
+
+    Returns:
+        Union[int, None]: El valor del elemento que ocuparia en una ordenacion
+        de t si existe o None si no existe.
+    &#34;&#34;&#34;
+
+    if k &lt; 0 or k &gt;= len(t):
+        return None
+
+    m = pivot5(t)
+    menores, t0, mayores = split_pivot(t, m)
+
+    while k != len(menores):
+
+        if k &lt;= len(menores):
+            t = menores
+
+        else:
+            t = mayores
+            k -= (len(menores) + 1)
+
+        m = pivot5(t)
+        menores, t0, mayores = split_pivot(t, m)
+
+    return t0
+
+
+def qsort_5(t: np.ndarray) -&gt; np.ndarray:
+    &#34;&#34;&#34;Esta función se encarga realizar la ordenacion de una tabla haciendo
+        uso de pivot5
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+
+    Returns:
+        np.ndarray: Ordenacion de la lista t.
+    &#34;&#34;&#34;
+
+    if len(t) == 0:
+        return []
+    if len(t) == 1:
+        return t
+
+    m = pivot5(t)
+    menores, t0, mayores = split_pivot(t, m)
+
+    return np.concatenate((qsort_5(menores), np.concatenate(([t0], qsort_5(mayores)), axis=None)), axis=None)
+
+
+def edit_distance(str_1: str, str_2: str) -&gt; int:
+    &#34;&#34;&#34;Esta función se encarga de calcular la distancia
+        de edición entre dos cadenas.
+
+    Args:
+        str_1 (str): Cadena de caracteres.
+        str_2 (str): Cadena de caracteres.
+
+    Returns:
+        int: Distancia de edicion entre la cadena str_1 y str_2.
+    &#34;&#34;&#34;
+
+    # Creamos la matriz de numero de operaciones necesarias
+    # para cambiar una cadena a otra
+    mtx = np.zeros([len(str_2) + 1, len(str_1) + 1], dtype=np.int32)
+
+    # Completamos la fila 0
+    for i in range(0, len(str_1)):
+        mtx[0][i + 1] += (i + 1)
+
+    # Completamos la columna 0
+    for i in range(0, len(str_2)):
+        mtx[i + 1][0] += (i + 1)
+
+    # Completamos el resto de la matriz de distancias
+    for fil in range(1, len(str_2) + 1):
+        for col in range(1, len(str_1) + 1):
+            if str_2[fil - 1] == str_1[col - 1]:  # Si = Tj
+                mtx[fil][col] = mtx[fil-1][col-1]
+            else:  # Si != Tj
+                mtx[fil][col] = 1 + \
+                    min(mtx[fil-1][col-1], mtx[fil-1][col], mtx[fil][col-1])
+
+    return mtx[mtx.shape[0]-1][mtx.shape[1]-1]
+
+
+def max_subsequence_length(str_1: str, str_2: str) -&gt; int:
+    &#34;&#34;&#34;Esta función se encarga de calcular la longitud de una subcadena
+        común a las cadenas str_1 y str_2 aunque no necesariamente consecutivas.
+
+    Args:
+        str_1 (str): Cadena de caracteres.
+        str_2 (str): Cadena de caracteres.
+
+    Returns:
+        int: Longitud de una subcadena común.
+    &#34;&#34;&#34;
+
+    # Creamos la matriz de numero de operaciones necesarias
+    # para cambiar una cadena a otra
+    mtx = np.zeros([len(str_2) + 1, len(str_1) + 1], dtype=np.int32)
+
+    # Completamos el resto de la matriz de distancias
+    for fil in range(1, len(str_2) + 1):
+        for col in range(1, len(str_1) + 1):
+            if str_2[fil - 1] == str_1[col - 1]:  # Si = Tj
+                mtx[fil][col] = 1 + mtx[fil-1][col-1]
+            else:  # Si != Tj
+                mtx[fil][col] = max(mtx[fil-1][col], mtx[fil][col-1])
+
+    return mtx[mtx.shape[0]-1][mtx.shape[1]-1]
+
+
+def max_common_subsequence(str_1: str, str_2: str) -&gt; str:
+    &#34;&#34;&#34;Esta función se encarga de encontrar la subcadena común
+        a las cadenas str_1 y str_2 aunque no necesariamente consecutiva.
+
+    Args:
+        str_1 (str): Cadena de caracteres.
+        str_2 (str): Cadena de caracteres.
+
+    Returns:
+        str: Subcadena común.
+    &#34;&#34;&#34;
+
+    # Creamos una matriz de cadenas vacías
+    mtx = [[&#34;&#34; for _ in range(len(str_2))] for _ in range(len(str_1))]
+
+    # Recorremos la matriz y generamos subcadenas
+    for i in range(0, len(str_1)):
+        for j in range(0, len(str_2)):
+            if str_1[i] == str_2[j]:
+                if i == 0 or j == 0:
+                    mtx[i][j] = str_1[i]
+                else:
+                    mtx[i][j] = mtx[i-1][j-1] + str_1[i]
+            else:
+                mtx[i][j] = max(mtx[i-1][j], mtx[i][j-1], key=len)
+
+    subsequence = mtx[len(str_1) - 1][len(str_2) - 1]
+
+    return subsequence
+
+
+def min_mult_matrix(l_dims: List[int]) -&gt; int:
+    &#34;&#34;&#34;Esta función se encarga de calcular el número mínimo de productos
+        para multiplicar n matrices cuyas dimensiones vienen indicadas en
+        la lista l_dims.
+
+    Args:
+        l_dims (List[int]): Lista de números con las dimensiones
+                            de las matrices.
+
+    Returns:
+        int: Mínimo numero de productos para multiplicar n matrices.
+    &#34;&#34;&#34;
+
+    # Creamos una matriz triangular donde se iran almacenando las soluciones
+    mtx = [[0 for _ in range(len(l_dims))] for _ in range(len(l_dims))]
+
+    # Calculamos los valores mi,i+2 para 1 ≤ i ≤ N − 2
+    for l in range(2, len(l_dims)):
+
+        # Calculamos los valores mi,i+1 para 1 ≤ i ≤ N − 1
+        for i in range(1, len(l_dims)-l+1):
+            j = i+l-1
+
+            # Almacenamos un valor que será máximo para posteriores comparaciones
+            mtx[i][j] = sys.maxsize
+
+            for k in range(i, j):
+                # Aplicamos la siguiente fórmula:
+                #   C[i,j] = min { C[i,k] + C[k+1,j] + d[i-1]*d[k]*d[j] } para i&lt;=k&lt;j
+                mtx[i][j] = min(mtx[i][k]+mtx[k+1][j]+l_dims[i-1]
+                                * l_dims[k]*l_dims[j], mtx[i][j])
+
+    # last element of first row contains the result to the entire problem
+    return mtx[1][len(l_dims)-1]</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="p312.edit_distance"><code class="name flex">
+<span>def <span class="ident">edit_distance</span></span>(<span>str_1: str, str_2: str) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Esta función se encarga de calcular la distancia
+de edición entre dos cadenas.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>str_1</code></strong> :&ensp;<code>str</code></dt>
+<dd>Cadena de caracteres.</dd>
+<dt><strong><code>str_2</code></strong> :&ensp;<code>str</code></dt>
+<dd>Cadena de caracteres.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>Distancia de edicion entre la cadena str_1 y str_2.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def edit_distance(str_1: str, str_2: str) -&gt; int:
+    &#34;&#34;&#34;Esta función se encarga de calcular la distancia
+        de edición entre dos cadenas.
+
+    Args:
+        str_1 (str): Cadena de caracteres.
+        str_2 (str): Cadena de caracteres.
+
+    Returns:
+        int: Distancia de edicion entre la cadena str_1 y str_2.
+    &#34;&#34;&#34;
+
+    # Creamos la matriz de numero de operaciones necesarias
+    # para cambiar una cadena a otra
+    mtx = np.zeros([len(str_2) + 1, len(str_1) + 1], dtype=np.int32)
+
+    # Completamos la fila 0
+    for i in range(0, len(str_1)):
+        mtx[0][i + 1] += (i + 1)
+
+    # Completamos la columna 0
+    for i in range(0, len(str_2)):
+        mtx[i + 1][0] += (i + 1)
+
+    # Completamos el resto de la matriz de distancias
+    for fil in range(1, len(str_2) + 1):
+        for col in range(1, len(str_1) + 1):
+            if str_2[fil - 1] == str_1[col - 1]:  # Si = Tj
+                mtx[fil][col] = mtx[fil-1][col-1]
+            else:  # Si != Tj
+                mtx[fil][col] = 1 + \
+                    min(mtx[fil-1][col-1], mtx[fil-1][col], mtx[fil][col-1])
+
+    return mtx[mtx.shape[0]-1][mtx.shape[1]-1]</code></pre>
+</details>
+</dd>
+<dt id="p312.max_common_subsequence"><code class="name flex">
+<span>def <span class="ident">max_common_subsequence</span></span>(<span>str_1: str, str_2: str) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Esta función se encarga de encontrar la subcadena común
+a las cadenas str_1 y str_2 aunque no necesariamente consecutiva.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>str_1</code></strong> :&ensp;<code>str</code></dt>
+<dd>Cadena de caracteres.</dd>
+<dt><strong><code>str_2</code></strong> :&ensp;<code>str</code></dt>
+<dd>Cadena de caracteres.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>str</code></dt>
+<dd>Subcadena común.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def max_common_subsequence(str_1: str, str_2: str) -&gt; str:
+    &#34;&#34;&#34;Esta función se encarga de encontrar la subcadena común
+        a las cadenas str_1 y str_2 aunque no necesariamente consecutiva.
+
+    Args:
+        str_1 (str): Cadena de caracteres.
+        str_2 (str): Cadena de caracteres.
+
+    Returns:
+        str: Subcadena común.
+    &#34;&#34;&#34;
+
+    # Creamos una matriz de cadenas vacías
+    mtx = [[&#34;&#34; for _ in range(len(str_2))] for _ in range(len(str_1))]
+
+    # Recorremos la matriz y generamos subcadenas
+    for i in range(0, len(str_1)):
+        for j in range(0, len(str_2)):
+            if str_1[i] == str_2[j]:
+                if i == 0 or j == 0:
+                    mtx[i][j] = str_1[i]
+                else:
+                    mtx[i][j] = mtx[i-1][j-1] + str_1[i]
+            else:
+                mtx[i][j] = max(mtx[i-1][j], mtx[i][j-1], key=len)
+
+    subsequence = mtx[len(str_1) - 1][len(str_2) - 1]
+
+    return subsequence</code></pre>
+</details>
+</dd>
+<dt id="p312.max_subsequence_length"><code class="name flex">
+<span>def <span class="ident">max_subsequence_length</span></span>(<span>str_1: str, str_2: str) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Esta función se encarga de calcular la longitud de una subcadena
+común a las cadenas str_1 y str_2 aunque no necesariamente consecutivas.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>str_1</code></strong> :&ensp;<code>str</code></dt>
+<dd>Cadena de caracteres.</dd>
+<dt><strong><code>str_2</code></strong> :&ensp;<code>str</code></dt>
+<dd>Cadena de caracteres.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>Longitud de una subcadena común.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def max_subsequence_length(str_1: str, str_2: str) -&gt; int:
+    &#34;&#34;&#34;Esta función se encarga de calcular la longitud de una subcadena
+        común a las cadenas str_1 y str_2 aunque no necesariamente consecutivas.
+
+    Args:
+        str_1 (str): Cadena de caracteres.
+        str_2 (str): Cadena de caracteres.
+
+    Returns:
+        int: Longitud de una subcadena común.
+    &#34;&#34;&#34;
+
+    # Creamos la matriz de numero de operaciones necesarias
+    # para cambiar una cadena a otra
+    mtx = np.zeros([len(str_2) + 1, len(str_1) + 1], dtype=np.int32)
+
+    # Completamos el resto de la matriz de distancias
+    for fil in range(1, len(str_2) + 1):
+        for col in range(1, len(str_1) + 1):
+            if str_2[fil - 1] == str_1[col - 1]:  # Si = Tj
+                mtx[fil][col] = 1 + mtx[fil-1][col-1]
+            else:  # Si != Tj
+                mtx[fil][col] = max(mtx[fil-1][col], mtx[fil][col-1])
+
+    return mtx[mtx.shape[0]-1][mtx.shape[1]-1]</code></pre>
+</details>
+</dd>
+<dt id="p312.min_mult_matrix"><code class="name flex">
+<span>def <span class="ident">min_mult_matrix</span></span>(<span>l_dims: List[int]) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Esta función se encarga de calcular el número mínimo de productos
+para multiplicar n matrices cuyas dimensiones vienen indicadas en
+la lista l_dims.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>l_dims</code></strong> :&ensp;<code>List[int]</code></dt>
+<dd>Lista de números con las dimensiones
+de las matrices.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>Mínimo numero de productos para multiplicar n matrices.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def min_mult_matrix(l_dims: List[int]) -&gt; int:
+    &#34;&#34;&#34;Esta función se encarga de calcular el número mínimo de productos
+        para multiplicar n matrices cuyas dimensiones vienen indicadas en
+        la lista l_dims.
+
+    Args:
+        l_dims (List[int]): Lista de números con las dimensiones
+                            de las matrices.
+
+    Returns:
+        int: Mínimo numero de productos para multiplicar n matrices.
+    &#34;&#34;&#34;
+
+    # Creamos una matriz triangular donde se iran almacenando las soluciones
+    mtx = [[0 for _ in range(len(l_dims))] for _ in range(len(l_dims))]
+
+    # Calculamos los valores mi,i+2 para 1 ≤ i ≤ N − 2
+    for l in range(2, len(l_dims)):
+
+        # Calculamos los valores mi,i+1 para 1 ≤ i ≤ N − 1
+        for i in range(1, len(l_dims)-l+1):
+            j = i+l-1
+
+            # Almacenamos un valor que será máximo para posteriores comparaciones
+            mtx[i][j] = sys.maxsize
+
+            for k in range(i, j):
+                # Aplicamos la siguiente fórmula:
+                #   C[i,j] = min { C[i,k] + C[k+1,j] + d[i-1]*d[k]*d[j] } para i&lt;=k&lt;j
+                mtx[i][j] = min(mtx[i][k]+mtx[k+1][j]+l_dims[i-1]
+                                * l_dims[k]*l_dims[j], mtx[i][j])
+
+    # last element of first row contains the result to the entire problem
+    return mtx[1][len(l_dims)-1]</code></pre>
+</details>
+</dd>
+<dt id="p312.pivot5"><code class="name flex">
+<span>def <span class="ident">pivot5</span></span>(<span>t: numpy.ndarray) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Esta función se encarga de aplicar el procedimiento
+“mediana de medianas de 5 elementos”</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>t</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Lista de numeros.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>El “pivote 5” del array t</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pivot5(t: np.ndarray) -&gt; int:
+    &#34;&#34;&#34;Esta función se encarga de aplicar el procedimiento
+        “mediana de medianas de 5 elementos”
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+
+    Returns:
+        int: El “pivote 5” del array t
+    &#34;&#34;&#34;
+
+    if len(t) &lt;= 5:
+        return sorted(t)[len(t)//2]
+
+    m = []
+    u = 0
+
+    for i in range(5, len(t), 5):
+        m.append(sorted(t[u:i])[2])
+        u = i
+
+    if u != len(t):
+        m.append(sorted(t[u:])[len(t[u:])//2])
+
+    return qsel_nr(m, len(m)//2)</code></pre>
+</details>
+</dd>
+<dt id="p312.qsel"><code class="name flex">
+<span>def <span class="ident">qsel</span></span>(<span>t: numpy.ndarray, k: int) ‑> Optional[int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Esta función se encarga realizar el quickselect sobre
+una lista a partir de un pivoite de forma recursiva</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>t</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Lista de numeros.</dd>
+<dt><strong><code>k</code></strong> :&ensp;<code>int</code></dt>
+<dd>Indice en una ordenacion de t.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Union[int, None]</code></dt>
+<dd>El valor del elemento que ocuparia en una ordenacion</dd>
+</dl>
+<p>de t si existe o None si no existe.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def qsel(t: np.ndarray, k: int) -&gt; Union[int, None]:
+    &#34;&#34;&#34;Esta función se encarga realizar el quickselect sobre
+        una lista a partir de un pivoite de forma recursiva
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+        k (int): Indice en una ordenacion de t.
+
+    Returns:
+        Union[int, None]: El valor del elemento que ocuparia en una ordenacion
+        de t si existe o None si no existe.
+    &#34;&#34;&#34;
+
+    if k &lt; 0 or k &gt;= len(t):
+        return None
+
+    menores, t0, mayores = split(t)
+
+    if k == len(menores):
+        return t0
+
+    elif k &lt;= len(menores):
+        return qsel(menores, k)
+
+    else:
+        return qsel(mayores, k - (len(menores) + 1))</code></pre>
+</details>
+</dd>
+<dt id="p312.qsel5_nr"><code class="name flex">
+<span>def <span class="ident">qsel5_nr</span></span>(<span>t: numpy.ndarray, k: int) ‑> Optional[int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Esta función se encarga realizar el quickselect5 sobre
+una lista a partir de un pivoite obtenido mediante
+pivot5 y eliminando la recursion de cola</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>t</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Lista de numeros.</dd>
+<dt><strong><code>k</code></strong> :&ensp;<code>int</code></dt>
+<dd>Indice en una ordenacion de t.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Union[int, None]</code></dt>
+<dd>El valor del elemento que ocuparia en una ordenacion</dd>
+</dl>
+<p>de t si existe o None si no existe.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def qsel5_nr(t: np.ndarray, k: int) -&gt; Union[int, None]:
+    &#34;&#34;&#34;Esta función se encarga realizar el quickselect5 sobre
+        una lista a partir de un pivoite obtenido mediante
+        pivot5 y eliminando la recursion de cola
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+        k (int): Indice en una ordenacion de t.
+
+    Returns:
+        Union[int, None]: El valor del elemento que ocuparia en una ordenacion
+        de t si existe o None si no existe.
+    &#34;&#34;&#34;
+
+    if k &lt; 0 or k &gt;= len(t):
+        return None
+
+    m = pivot5(t)
+    menores, t0, mayores = split_pivot(t, m)
+
+    while k != len(menores):
+
+        if k &lt;= len(menores):
+            t = menores
+
+        else:
+            t = mayores
+            k -= (len(menores) + 1)
+
+        m = pivot5(t)
+        menores, t0, mayores = split_pivot(t, m)
+
+    return t0</code></pre>
+</details>
+</dd>
+<dt id="p312.qsel_nr"><code class="name flex">
+<span>def <span class="ident">qsel_nr</span></span>(<span>t: numpy.ndarray, k: int) ‑> Optional[int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Esta función se encarga realizar el quickselect sobre
+una lista a partir de un pivoite eliminando la recursion
+de cola</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>t</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Lista de numeros.</dd>
+<dt><strong><code>k</code></strong> :&ensp;<code>int</code></dt>
+<dd>Indice en una ordenacion de t.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Union[int, None]</code></dt>
+<dd>El valor del elemento que ocuparia en una ordenacion</dd>
+</dl>
+<p>de t si existe o None si no existe.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def qsel_nr(t: np.ndarray, k: int) -&gt; Union[int, None]:
+    &#34;&#34;&#34;Esta función se encarga realizar el quickselect sobre
+        una lista a partir de un pivoite eliminando la recursion
+        de cola
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+        k (int): Indice en una ordenacion de t.
+
+    Returns:
+        Union[int, None]: El valor del elemento que ocuparia en una ordenacion
+        de t si existe o None si no existe.
+    &#34;&#34;&#34;
+
+    if k &lt; 0 or k &gt;= len(t):
+        return None
+
+    menores, t0, mayores = split(t)
+
+    while k != len(menores):
+
+        if k &lt;= len(menores):
+            t = menores
+
+        else:
+            t = mayores
+            k -= (len(menores) + 1)
+
+        menores, t0, mayores = split(t)
+
+    return t0</code></pre>
+</details>
+</dd>
+<dt id="p312.qsort_5"><code class="name flex">
+<span>def <span class="ident">qsort_5</span></span>(<span>t: numpy.ndarray) ‑> numpy.ndarray</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Esta función se encarga realizar la ordenacion de una tabla haciendo
+uso de pivot5</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>t</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Lista de numeros.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.ndarray</code></dt>
+<dd>Ordenacion de la lista t.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def qsort_5(t: np.ndarray) -&gt; np.ndarray:
+    &#34;&#34;&#34;Esta función se encarga realizar la ordenacion de una tabla haciendo
+        uso de pivot5
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+
+    Returns:
+        np.ndarray: Ordenacion de la lista t.
+    &#34;&#34;&#34;
+
+    if len(t) == 0:
+        return []
+    if len(t) == 1:
+        return t
+
+    m = pivot5(t)
+    menores, t0, mayores = split_pivot(t, m)
+
+    return np.concatenate((qsort_5(menores), np.concatenate(([t0], qsort_5(mayores)), axis=None)), axis=None)</code></pre>
+</details>
+</dd>
+<dt id="p312.split"><code class="name flex">
+<span>def <span class="ident">split</span></span>(<span>t: numpy.ndarray) ‑> Tuple[numpy.ndarray, int, numpy.ndarray]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Esta función se encarga de repartir los elementos de t en dos arrays con
+los elementos menores y mayores al pivote siendo el pivote el primer
+elemento de t</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>t</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Lista de numeros.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Tuple[np.ndarray, int, np.ndarray]</code></dt>
+<dd>Un array con los elementos menores</dd>
+</dl>
+<p>al pivote, el pivote, y otro array con los elementos mayores al pivote.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def split(t: np.ndarray) -&gt; Tuple[np.ndarray, int, np.ndarray]:
+    &#34;&#34;&#34;Esta función se encarga de repartir los elementos de t en dos arrays con
+        los elementos menores y mayores al pivote siendo el pivote el primer
+        elemento de t
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+
+    Returns:
+        Tuple[np.ndarray, int, np.ndarray]: Un array con los elementos menores
+        al pivote, el pivote, y otro array con los elementos mayores al pivote.
+    &#34;&#34;&#34;
+
+    if len(t) == 1:
+        return ([], t[0], [])
+
+    taux = t[1:]
+    menores = [ele for ele in taux if ele &lt;= t[0]]
+    mayores = [ele for ele in taux if ele &gt; t[0]]
+
+    return (menores, t[0], mayores)</code></pre>
+</details>
+</dd>
+<dt id="p312.split_pivot"><code class="name flex">
+<span>def <span class="ident">split_pivot</span></span>(<span>t: numpy.ndarray, mid: int) ‑> Tuple[numpy.ndarray, int, numpy.ndarray]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Esta función se encarga de repartir los elementos de t en dos arrays con
+los elementos menores y mayores al pivote siendo el pivote la mediana (mid)
+del array</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>t</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Lista de numeros.</dd>
+<dt><strong><code>mid</code></strong> :&ensp;<code>int</code></dt>
+<dd>Elemento mediana del array.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Tuple[np.ndarray, int, np.ndarray]</code></dt>
+<dd>Un array con los elementos menores</dd>
+</dl>
+<p>al pivote, el pivote, y otro array con los elementos mayores al pivote.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def split_pivot(t: np.ndarray, mid: int) -&gt; Tuple[np.ndarray, int, np.ndarray]:
+    &#34;&#34;&#34;Esta función se encarga de repartir los elementos de t en dos arrays con
+        los elementos menores y mayores al pivote siendo el pivote la mediana (mid)
+        del array
+
+    Args:
+        t (np.ndarray): Lista de numeros.
+        mid (int): Elemento mediana del array.
+
+    Returns:
+        Tuple[np.ndarray, int, np.ndarray]: Un array con los elementos menores
+        al pivote, el pivote, y otro array con los elementos mayores al pivote.
+    &#34;&#34;&#34;
+
+    taux = np.delete(t, list(t).index(mid))
+    menores = [ele for ele in taux if ele &lt;= mid]
+    mayores = [ele for ele in taux if ele &gt; mid]
+
+    return (menores, mid, mayores)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="p312.edit_distance" href="#p312.edit_distance">edit_distance</a></code></li>
+<li><code><a title="p312.max_common_subsequence" href="#p312.max_common_subsequence">max_common_subsequence</a></code></li>
+<li><code><a title="p312.max_subsequence_length" href="#p312.max_subsequence_length">max_subsequence_length</a></code></li>
+<li><code><a title="p312.min_mult_matrix" href="#p312.min_mult_matrix">min_mult_matrix</a></code></li>
+<li><code><a title="p312.pivot5" href="#p312.pivot5">pivot5</a></code></li>
+<li><code><a title="p312.qsel" href="#p312.qsel">qsel</a></code></li>
+<li><code><a title="p312.qsel5_nr" href="#p312.qsel5_nr">qsel5_nr</a></code></li>
+<li><code><a title="p312.qsel_nr" href="#p312.qsel_nr">qsel_nr</a></code></li>
+<li><code><a title="p312.qsort_5" href="#p312.qsort_5">qsort_5</a></code></li>
+<li><code><a title="p312.split" href="#p312.split">split</a></code></li>
+<li><code><a title="p312.split_pivot" href="#p312.split_pivot">split_pivot</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

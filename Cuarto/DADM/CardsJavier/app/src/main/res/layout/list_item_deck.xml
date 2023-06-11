@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="deckCards"
+            type="es.uam.eps.dadm.cardsjavier.deck.DeckWithCards" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_box"
+        android:elevation="10dp"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/list_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@{deckCards.deck.name}"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/list_item_edit_deck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/expand_more_info"
+            android:src="@drawable/edit"
+            app:layout_constraintEnd_toStartOf="@+id/list_item_delete_deck"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/list_item_delete_deck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/expand_more_info"
+            android:src="@drawable/clear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/list_item_number_cards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text='@{String.format("%d", deckCards.cards.size())}'
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_name" />
+
+
+        <TextView
+            android:id="@+id/list_item_number_cards_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:text='@string/number_cards'
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/list_item_number_cards"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

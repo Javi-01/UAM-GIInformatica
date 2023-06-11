@@ -1,0 +1,13 @@
+package Main
+
+val String.last : Char
+    get() = get(length - 1)
+
+val String.dif: Int
+    get() = get(0) - get(length - 1)
+fun main() {
+
+    println("Aldea".last)
+    println("Aldea".dif)
+
+}

@@ -1,0 +1,12 @@
+BO/node_modules
+
+
+src/pickles/*
+!src/pickles/.gitkeep
+
+documents/recived/*
+!documents/recived/.gitkeep
+
+src/__pycache__
+src/peers/__pycache__
+__pycache__

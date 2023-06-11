@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tarjetas</string>
+    <string name="app_decks">Mazos</string>
+    <string name="app_review">Repasar Tarjetas</string>
+    <string name="app_statistics">Estadisticas</string>
+    <string name="app_about">Acerca de</string>
+    <string name="app_tutorial">Tutorial</string>
+
+    <string name="card_answer_btn">ver respuesta</string>
+    <string name="card_back_btn">volver</string>
+    <string name="card_question_text">Pregunta</string>
+    <string name="card_deck_text">Nombre del Mazo</string>
+    <string name="card_answer_text">Respuesta</string>
+    <string name="card_date_text">Fecha</string>
+    <string name="card_easiness_text">Facilidad</string>
+    <string name="card_easiness_value">%.2f</string>
+    <string name="card_repetitions_text">Repeticiones</string>
+    <string name="card_interval_text">Intervalo</string>
+    <string name="card_nextPracticeDay_text">Siguiente día de estudio</string>
+
+    <string name="card_help_btn">ayuda</string>
+    <string name="card_easy_btn">fácil</string>
+    <string name="card_doubt_btn">duda</string>
+    <string name="card_hard_btn">difícil</string>
+    <string name="empty_card_list">No hay mas cartas que repasar</string>
+    <string name="due_cards_format">%d tarjetas restantes</string>
+    <string name="subtitle_text">Pulsa para comenzar a estudiar</string>
+    <string name="expand_more_info">Mostrar más</string>
+    <string name="expand_less_info">Mostrar menos</string>
+    <string name="card_add_info">Crea una carta</string>
+    <string name="deck_add_info">Crear un Mazo</string>
+
+
+    <string name="card_create_question_hint">Escribe la pregunta</string>
+    <string name="card_create_answer_hint">Escribe la respuesta</string>
+    <string name="deck_create_hint">Escribe el nombre del mazo</string>
+    <string name="card_accept">Aceptar</string>
+    <string name="card_cancel">Cancelar</string>
+    <string name="number_cards">cartas</string>
+    <string name="number_cards_to_study">cartas a estudiar</string>
+    <string name="app_decks_to_study">Mazos a Estudiar</string>
+
+    <string name="stats_next_practice">Siguientes Prácticas</string>
+    <string name="stats_eassines_practice">Dificultad de la práctica</string>
+    <string name="descripction_about1">Una aplicación de repaso espaciado de tarjetas es una herramienta que utiliza un método de aprendizaje basado en la repetición espaciada para ayudar a los usuarios a memorizar información y mejorar su retención a largo plazo.</string>
+    <string name="descripction_about2">El usuario puede crear sus propias tarjetas de estudio o utilizar las tarjetas ya disponibles en la aplicación. Luego, la aplicación presenta las tarjetas al usuario en un orden aleatorio y le pide que recuerde la respuesta. Después de que el usuario responde, la aplicación le muestra la respuesta correcta y le permite evaluar su respuesta, calificándola para presentarsela de nuevo en un futuro.</string>
+    <string name="descripction_about3">Esta aplicación ha sido realizada por Javier Fraile Iglesias con fines académicos para la asignatura de Desarrollo de Aplicaciones De Dispositivos Móviles en el año 2023.</string>
+
+    <string name="descripction_tutorial1">Mazos -> Sección donde se pueden editar, añadir y eliminar mazos y cartas dentro de cada mazo con el fin de preparar las cartas para su revisión. En esta sección, también se puede ver información adicional sobre cada carta.</string>
+    <string name="descripction_tutorial2">Repasar tarjetas -> Esta sección muestra para cada mazo las cartas disponibles para repasar en cada momento, y permite iniciar el repaso de todas las cartas de cada mazo, actualizandose a tiempo real.</string>
+    <string name="descripction_tutorial3">Estadísticas -> Permite observar para cada mazo o por defecto de manera global, estadisticas sobre la dificultad de los mazos, dependiendo de las opciones seleccionadas, y los siguientes días de repaso.</string>
+    <string name="settings_menu_title">Ajustes</string>
+    <string name="board_summary_off">Mostrar Pizarra</string>
+    <string name="board_summary_on">Esconder Pizarra</string>
+    <string name="board_title">Pizarra</string>
+    <string name="max_number_cards">Numero máximo de cartas</string>
+    <string name="upload_menu_title">Subir a Firebase</string>
+    <string name="download_menu_title">Descargar de Firebase</string>
+
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_active_login">Página de Autenticación</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Inicia Sesión</string>
+    <string name="signup">Registrarse</string>
+
+</resources>

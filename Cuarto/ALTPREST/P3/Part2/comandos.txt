@@ -1,0 +1,10 @@
+SPARK_VERSION = 3.3.0
+HADOOP_VERSION = 3.3.0
+
+Ruta archivo Spark: http://archive.apache.org/dist/spark/spark-3.3.0/spark-3.3.0-bin-hadoop3.tgz
+Ruta archivo Hadoop: http://archive.apache.org/dist/hadoop/common/hadoop-3.0.0/hadoop-3.0.0.tar.gz
+
+minikube start --driver=docker --container-runtime=containerd
+alias kubectl="minikube kubectl --"
+export PATH=$PATH:$(pwd)
+which minikube

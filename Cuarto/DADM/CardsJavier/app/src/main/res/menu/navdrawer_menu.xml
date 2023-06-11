@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@id/deckListFragment"
+        android:enabled="true"
+        android:icon="@drawable/decks"
+        android:title="@string/app_decks"/>
+    <item
+        android:id="@+id/studyFragment"
+        android:enabled="true"
+        android:icon="@drawable/play"
+        android:title="@string/app_review"/>
+    <item
+        android:id="@id/statisticsFragment2"
+        android:enabled="true"
+        android:icon="@drawable/statistics"
+        android:title="@string/app_statistics"/>
+
+    <item
+        android:id="@+id/aboutFragment"
+        android:enabled="true"
+        android:icon="@drawable/info"
+        android:title="@string/app_about"/>
+
+
+</menu>

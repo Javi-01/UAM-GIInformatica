@@ -1,0 +1,5 @@
+Grupo: 1472
+Pareja: 04
+Miembros:
+	- Javier Fraile Iglesias
+	- Ivan Fernandez Paris
